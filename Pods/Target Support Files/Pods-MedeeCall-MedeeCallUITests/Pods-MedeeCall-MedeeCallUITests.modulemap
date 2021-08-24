@@ -1,0 +1,6 @@
+framework module Pods_MedeeCall_MedeeCallUITests {
+  umbrella header "Pods-MedeeCall-MedeeCallUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,2495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		061735257575794EFF8503CA /* Pods_MedeeCall_MedeeCallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893E4FAF0405B0672B7D256F /* Pods_MedeeCall_MedeeCallUITests.framework */; };
+		3E51166FA9FA5F54F80BE3F2 /* Pods_MedeeCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2658BDC7D442B13EDF33FA2 /* Pods_MedeeCall.framework */; };
+		630D8A124ED585C3E4948D5E /* Pods_MedeeCall_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49A0007D93546C77E971E10 /* Pods_MedeeCall_WatchKit_App.framework */; };
+		8A2A847525F64A38001FA5EC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2A847425F64A38001FA5EC /* HealthKit.framework */; };
+		8A2A849025F74328001FA5EC /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924AE25D66205004D8A49 /* HeartRateManager.swift */; };
+		8A2A849125F74328001FA5EC /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924A825D66205004D8A49 /* AuthorizationManager.swift */; };
+		8A2A849225F74328001FA5EC /* WatchToPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924AC25D66205004D8A49 /* WatchToPhone.swift */; };
+		8A6A7E4F25D641B500CE29A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6A7E4E25D641B500CE29A2 /* Preview Assets.xcassets */; };
+		8A85E57C260AE90D000A696B /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 8A85E57B260AE90D000A696B /* Charts */; };
+		8A8A972526085C5E002D92AF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8A972426085C5E002D92AF /* AVFoundation.framework */; };
+		8A8A972726085C6A002D92AF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8A972626085C6A002D92AF /* CoreMedia.framework */; };
+		8A8A972926085D04002D92AF /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8A972826085D04002D92AF /* opencv2.framework */; };
+		8A8A973D26085D81002D92AF /* libDSPFiltersiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8A973626085D56002D92AF /* libDSPFiltersiOS.a */; };
+		8A8A979226085FC4002D92AF /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A979126085FC4002D92AF /* haarcascade_frontalface_default.xml */; };
+		8A8A97AC26087141002D92AF /* OpenCVImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A97AB26087141002D92AF /* OpenCVImageProcessor.mm */; };
+		8A8A97BC2608723D002D92AF /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A97BB2608723D002D92AF /* OpenCVWrapper.mm */; };
+		8A8A97CF26087337002D92AF /* DSPFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A97CE26087337002D92AF /* DSPFilter.mm */; };
+		8AA5017C25C9ACBE001CDC17 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA5017B25C9ACBE001CDC17 /* HealthKit.framework */; };
+		8AD923B125D649F8004D8A49 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AD923AF25D649F8004D8A49 /* appstore.png */; };
+		8AD923B225D649F8004D8A49 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AD923AF25D649F8004D8A49 /* appstore.png */; };
+		8AD923B325D649F8004D8A49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD923B025D649F8004D8A49 /* Assets.xcassets */; };
+		8AD923B425D649F8004D8A49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD923B025D649F8004D8A49 /* Assets.xcassets */; };
+		8AD923D125D65E86004D8A49 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD923D025D65E86004D8A49 /* MainView.swift */; };
+		8AD923D925D65FBA004D8A49 /* LabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD923D825D65FBA004D8A49 /* LabView.swift */; };
+		8AD923E025D65FCB004D8A49 /* MedeeLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD923DF25D65FCB004D8A49 /* MedeeLab.swift */; };
+		8AD9240825D660D4004D8A49 /* FilteredDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9240425D660D4004D8A49 /* FilteredDataChartView.swift */; };
+		8AD9240925D660D4004D8A49 /* BarCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9240525D660D4004D8A49 /* BarCharts.swift */; };
+		8AD9240A25D660D4004D8A49 /* LineCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9240625D660D4004D8A49 /* LineCharts.swift */; };
+		8AD9240B25D660D4004D8A49 /* RawDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9240725D660D4004D8A49 /* RawDataChartView.swift */; };
+		8AD9241925D660E4004D8A49 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9241125D660E3004D8A49 /* UserSettings.swift */; };
+		8AD9241A25D660E4004D8A49 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9241225D660E3004D8A49 /* NotificationView.swift */; };
+		8AD9241B25D660E4004D8A49 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9241325D660E3004D8A49 /* NotificationViewModel.swift */; };
+		8AD9241C25D660E4004D8A49 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9241425D660E3004D8A49 /* ContactViewModel.swift */; };
+		8AD9241D25D660E4004D8A49 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9241525D660E3004D8A49 /* AppView.swift */; };
+		8AD9241E25D660E4004D8A49 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9241625D660E3004D8A49 /* ContactView.swift */; };
+		8AD9241F25D660E4004D8A49 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9241725D660E3004D8A49 /* SettingsView.swift */; };
+		8AD9242025D660E4004D8A49 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9241825D660E4004D8A49 /* AppViewModel.swift */; };
+		8AD9242E25D660EE004D8A49 /* VideoSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9242625D660EE004D8A49 /* VideoSettings.swift */; };
+		8AD9242F25D660EE004D8A49 /* MedeeCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9242725D660EE004D8A49 /* MedeeCallViewModel.swift */; };
+		8AD9243025D660EE004D8A49 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9242825D660EE004D8A49 /* CallView.swift */; };
+		8AD9243125D660EE004D8A49 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9242925D660EE004D8A49 /* ChartViewModel.swift */; };
+		8AD9243225D660EE004D8A49 /* FftICADataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9242A25D660EE004D8A49 /* FftICADataChartView.swift */; };
+		8AD9243325D660EE004D8A49 /* MedeeCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9242B25D660EE004D8A49 /* MedeeCallView.swift */; };
+		8AD9243425D660EE004D8A49 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9242C25D660EE004D8A49 /* VideoView.swift */; };
+		8AD9243525D660EE004D8A49 /* FilteredICADataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9242D25D660EE004D8A49 /* FilteredICADataChartView.swift */; };
+		8AD9243E25D6617C004D8A49 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9243B25D6617B004D8A49 /* ViewExtensions.swift */; };
+		8AD9243F25D6617C004D8A49 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9243C25D6617B004D8A49 /* Extensions.swift */; };
+		8AD9244025D6617C004D8A49 /* MedeeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9243D25D6617C004D8A49 /* MedeeExtensions.swift */; };
+		8AD9246025D661AD004D8A49 /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9244725D661AD004D8A49 /* FaceDetector.swift */; };
+		8AD9246125D661AD004D8A49 /* FaceRoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9244825D661AD004D8A49 /* FaceRoi.swift */; };
+		8AD9246225D661AD004D8A49 /* PulseDectector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9244A25D661AD004D8A49 /* PulseDectector.swift */; };
+		8AD9246325D661AD004D8A49 /* MedeePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9244B25D661AD004D8A49 /* MedeePulse.swift */; };
+		8AD9246425D661AD004D8A49 /* MedeeRealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9244D25D661AD004D8A49 /* MedeeRealTime.swift */; };
+		8AD9246525D661AD004D8A49 /* EyeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9244F25D661AD004D8A49 /* EyeDetector.swift */; };
+		8AD9246625D661AD004D8A49 /* EyeRoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245025D661AD004D8A49 /* EyeRoi.swift */; };
+		8AD9246725D661AD004D8A49 /* MedeeDiagnosis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245225D661AD004D8A49 /* MedeeDiagnosis.swift */; };
+		8AD9246825D661AD004D8A49 /* PeakCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245425D661AD004D8A49 /* PeakCalculation.swift */; };
+		8AD9246925D661AD004D8A49 /* TestAccelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245525D661AD004D8A49 /* TestAccelerate.swift */; };
+		8AD9246A25D661AD004D8A49 /* RGBSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245625D661AD004D8A49 /* RGBSampleData.swift */; };
+		8AD9246B25D661AD004D8A49 /* PulseCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245725D661AD004D8A49 /* PulseCalculation.swift */; };
+		8AD9246C25D661AD004D8A49 /* MedeeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245825D661AD004D8A49 /* MedeeCalculator.swift */; };
+		8AD9246D25D661AD004D8A49 /* PRVCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245925D661AD004D8A49 /* PRVCalculation.swift */; };
+		8AD9246E25D661AD004D8A49 /* MedeeBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245B25D661AD004D8A49 /* MedeeBot.swift */; };
+		8AD9246F25D661AD004D8A49 /* MedeeTrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245C25D661AD004D8A49 /* MedeeTrain.swift */; };
+		8AD9247025D661AD004D8A49 /* VirtualDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245D25D661AD004D8A49 /* VirtualDoctor.swift */; };
+		8AD9247125D661AD004D8A49 /* VideoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9245F25D661AD004D8A49 /* VideoProcessor.swift */; };
+		8AD9248C25D661CB004D8A49 /* MedeeAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9247925D661CB004D8A49 /* MedeeAuth.swift */; };
+		8AD9248D25D661CB004D8A49 /* MedeeConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9247B25D661CB004D8A49 /* MedeeConnect.swift */; };
+		8AD9248E25D661CB004D8A49 /* MedeeFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9247C25D661CB004D8A49 /* MedeeFirebase.swift */; };
+		8AD9248F25D661CB004D8A49 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9247E25D661CB004D8A49 /* AppManager.swift */; };
+		8AD9249025D661CB004D8A49 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9247F25D661CB004D8A49 /* ApiManager.swift */; };
+		8AD9249125D661CB004D8A49 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248025D661CB004D8A49 /* WatchManager.swift */; };
+		8AD9249225D661CB004D8A49 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248125D661CB004D8A49 /* AuthManager.swift */; };
+		8AD9249325D661CB004D8A49 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248225D661CB004D8A49 /* DatabaseManager.swift */; };
+		8AD9249425D661CB004D8A49 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248325D661CB004D8A49 /* FirebaseManager.swift */; };
+		8AD9249525D661CB004D8A49 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248525D661CB004D8A49 /* Api.swift */; };
+		8AD9249625D661CB004D8A49 /* MedeeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248625D661CB004D8A49 /* MedeeApi.swift */; };
+		8AD9249725D661CB004D8A49 /* SocialConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248825D661CB004D8A49 /* SocialConnect.swift */; };
+		8AD9249825D661CB004D8A49 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248925D661CB004D8A49 /* Helpers.swift */; };
+		8AD9249925D661CB004D8A49 /* WatchConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248A25D661CB004D8A49 /* WatchConnect.swift */; };
+		8AD9249A25D661CB004D8A49 /* Deeplinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9248B25D661CB004D8A49 /* Deeplinking.swift */; };
+		8AD924B125D66205004D8A49 /* WatchConnectPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924A625D66205004D8A49 /* WatchConnectPreview.swift */; };
+		8AD924B225D66205004D8A49 /* LiveHealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924A725D66205004D8A49 /* LiveHealthViewModel.swift */; };
+		8AD924B425D66205004D8A49 /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924A925D66205004D8A49 /* Deeplink.swift */; };
+		8AD924B525D66205004D8A49 /* PhoneToWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924AA25D66205004D8A49 /* PhoneToWatch.swift */; };
+		8AD924B625D66205004D8A49 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924AB25D66205004D8A49 /* AccountViewModel.swift */; };
+		8AD924B825D66205004D8A49 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924AD25D66205004D8A49 /* Notification.swift */; };
+		8AD924BA25D66205004D8A49 /* MedeeVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924AF25D66205004D8A49 /* MedeeVars.swift */; };
+		8AD924BB25D66205004D8A49 /* FftDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924B025D66205004D8A49 /* FftDataChartView.swift */; };
+		8AD924C625D6621C004D8A49 /* MedeeAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924C225D6621C004D8A49 /* MedeeAlgorithms.swift */; };
+		8AD924C725D6621C004D8A49 /* PulseDetectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924C325D6621C004D8A49 /* PulseDetectorTest.swift */; };
+		8AD924C825D6621C004D8A49 /* Experiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924C425D6621C004D8A49 /* Experiments.swift */; };
+		8AD924C925D6621C004D8A49 /* PulseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924C525D6621C004D8A49 /* PulseTest.swift */; };
+		8AD924D125D662A2004D8A49 /* MedeeFFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924D025D662A2004D8A49 /* MedeeFFT.swift */; };
+		8AD924DD25D662C0004D8A49 /* PeakDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924DC25D662C0004D8A49 /* PeakDetection.swift */; };
+		8AD924E425D662D0004D8A49 /* TemporalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924E325D662D0004D8A49 /* TemporalFilter.swift */; };
+		8AD924F125D662FA004D8A49 /* MedeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924EB25D662FA004D8A49 /* MedeeView.swift */; };
+		8AD924F225D662FA004D8A49 /* MedeeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924ED25D662FA004D8A49 /* MedeeKit.swift */; };
+		8AD924F425D662FA004D8A49 /* MedeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924F025D662FA004D8A49 /* MedeeApp.swift */; };
+		8AD924FB25D66313004D8A49 /* MedeeVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924FA25D66313004D8A49 /* MedeeVisual.swift */; };
+		8AD9251325D66379004D8A49 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250325D66378004D8A49 /* Pulse.swift */; };
+		8AD9251425D66379004D8A49 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250425D66378004D8A49 /* System.swift */; };
+		8AD9251525D66379004D8A49 /* HeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250525D66378004D8A49 /* HeartRate.swift */; };
+		8AD9251625D66379004D8A49 /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250625D66378004D8A49 /* ChatBot.swift */; };
+		8AD9251725D66379004D8A49 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250725D66378004D8A49 /* Server.swift */; };
+		8AD9251825D66379004D8A49 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250825D66378004D8A49 /* Login.swift */; };
+		8AD9251925D66379004D8A49 /* FriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250925D66378004D8A49 /* FriendList.swift */; };
+		8AD9251A25D66379004D8A49 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250A25D66378004D8A49 /* Theme.swift */; };
+		8AD9251B25D66379004D8A49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250B25D66378004D8A49 /* User.swift */; };
+		8AD9251C25D66379004D8A49 /* UsersGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250C25D66378004D8A49 /* UsersGroup.swift */; };
+		8AD9251D25D66379004D8A49 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250D25D66378004D8A49 /* Language.swift */; };
+		8AD9251E25D66379004D8A49 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250E25D66378004D8A49 /* Chat.swift */; };
+		8AD9251F25D66379004D8A49 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9250F25D66378004D8A49 /* Share.swift */; };
+		8AD9252025D66379004D8A49 /* MedeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9251025D66379004D8A49 /* MedeeData.swift */; };
+		8AD9252125D66379004D8A49 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9251125D66379004D8A49 /* Bot.swift */; };
+		8AD9252225D66379004D8A49 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9251225D66379004D8A49 /* Settings.swift */; };
+		8AD9252B25D663BF004D8A49 /* MedeeHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9252825D663BE004D8A49 /* MedeeHeaders.swift */; };
+		8AD9252C25D663BF004D8A49 /* MedeeConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9252925D663BE004D8A49 /* MedeeConfigs.swift */; };
+		8AD9252D25D663BF004D8A49 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9252A25D663BF004D8A49 /* GlobalVars.swift */; };
+		8AD9253825D663CD004D8A49 /* ChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9253325D663CD004D8A49 /* ChatData.swift */; };
+		8AD9253925D663CD004D8A49 /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9253425D663CD004D8A49 /* HealthData.swift */; };
+		8AD9253A25D663CD004D8A49 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9253525D663CD004D8A49 /* AppData.swift */; };
+		8AD9253B25D663CD004D8A49 /* MedeeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9253625D663CD004D8A49 /* MedeeDataModel.swift */; };
+		8AD9253C25D663CD004D8A49 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9253725D663CD004D8A49 /* UserData.swift */; };
+		8AD9254325D663FD004D8A49 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9254225D663FD004D8A49 /* MainViewModel.swift */; };
+		8AD9255825D66418004D8A49 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9254925D66417004D8A49 /* ProfileViewModel.swift */; };
+		8AD9255925D66418004D8A49 /* LiveVitalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9254A25D66417004D8A49 /* LiveVitalView.swift */; };
+		8AD9255A25D66418004D8A49 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9254B25D66417004D8A49 /* UserView.swift */; };
+		8AD9255B25D66418004D8A49 /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9254C25D66417004D8A49 /* FriendListView.swift */; };
+		8AD9255C25D66418004D8A49 /* ShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9254D25D66417004D8A49 /* ShareViewModel.swift */; };
+		8AD9255D25D66418004D8A49 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9254E25D66417004D8A49 /* FriendListViewModel.swift */; };
+		8AD9255E25D66418004D8A49 /* HealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9254F25D66417004D8A49 /* HealthViewModel.swift */; };
+		8AD9255F25D66418004D8A49 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9255025D66417004D8A49 /* AccountView.swift */; };
+		8AD9256025D66418004D8A49 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9255125D66417004D8A49 /* HealthView.swift */; };
+		8AD9256125D66418004D8A49 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9255225D66418004D8A49 /* ProfileView.swift */; };
+		8AD9256225D66418004D8A49 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9255325D66418004D8A49 /* ShareView.swift */; };
+		8AD9256325D66418004D8A49 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9255425D66418004D8A49 /* DashboardViewModel.swift */; };
+		8AD9256425D66418004D8A49 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9255525D66418004D8A49 /* UserViewModel.swift */; };
+		8AD9256525D66418004D8A49 /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9255625D66418004D8A49 /* DashBoardView.swift */; };
+		8AD9256625D66418004D8A49 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9255725D66418004D8A49 /* ProfileEditView.swift */; };
+		8AD9258125D66517004D8A49 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257625D66517004D8A49 /* HomeView.swift */; };
+		8AD9258225D66517004D8A49 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257725D66517004D8A49 /* HomeViewModel.swift */; };
+		8AD9258325D66517004D8A49 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257825D66517004D8A49 /* LoginViewModel.swift */; };
+		8AD9258425D66517004D8A49 /* SocialConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257925D66517004D8A49 /* SocialConnectView.swift */; };
+		8AD9258525D66517004D8A49 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257A25D66517004D8A49 /* TabbarView.swift */; };
+		8AD9258625D66517004D8A49 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257B25D66517004D8A49 /* LaunchView.swift */; };
+		8AD9258725D66517004D8A49 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257C25D66517004D8A49 /* SetupViewModel.swift */; };
+		8AD9258825D66517004D8A49 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257D25D66517004D8A49 /* LoginView.swift */; };
+		8AD9258925D66517004D8A49 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257E25D66517004D8A49 /* WelcomeViewModel.swift */; };
+		8AD9258A25D66517004D8A49 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9257F25D66517004D8A49 /* WelcomeView.swift */; };
+		8AD9258B25D66517004D8A49 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9258025D66517004D8A49 /* SetupView.swift */; };
+		8AD9259925D665E7004D8A49 /* HRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9259825D665E7004D8A49 /* HRV.swift */; };
+		8AD925AA25D66615004D8A49 /* ECG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925A925D66615004D8A49 /* ECG.swift */; };
+		8AD925BB25D6663E004D8A49 /* TCMpulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925BA25D6663E004D8A49 /* TCMpulse.swift */; };
+		8AD925C225D6664E004D8A49 /* Breath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925C125D6664E004D8A49 /* Breath.swift */; };
+		8AD925C925D66675004D8A49 /* Respiratory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925C825D66675004D8A49 /* Respiratory.swift */; };
+		8AD925D525D66699004D8A49 /* BloodPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925D425D66699004D8A49 /* BloodPressure.swift */; };
+		8AD925DC25D666AC004D8A49 /* Eye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925DB25D666AC004D8A49 /* Eye.swift */; };
+		8AD925E325D666B7004D8A49 /* Pupil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925E225D666B7004D8A49 /* Pupil.swift */; };
+		8AD925EA25D666D5004D8A49 /* PPG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925E925D666D5004D8A49 /* PPG.swift */; };
+		8AD925F725D666F0004D8A49 /* MedeePPG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925F625D666F0004D8A49 /* MedeePPG.swift */; };
+		8AD925FE25D66746004D8A49 /* SVD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD925FD25D66746004D8A49 /* SVD.swift */; };
+		8AD9260525D66754004D8A49 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9260425D66754004D8A49 /* Matrix.swift */; };
+		8AD9261725D6682E004D8A49 /* MedeeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9261625D6682E004D8A49 /* MedeeGraph.swift */; };
+		8AD9262325D66854004D8A49 /* GraphHR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9262225D66854004D8A49 /* GraphHR.swift */; };
+		8AD9262A25D6685E004D8A49 /* GraphHRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9262925D6685E004D8A49 /* GraphHRV.swift */; };
+		8AD9263125D6686A004D8A49 /* GraphPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9263025D6686A004D8A49 /* GraphPulse.swift */; };
+		8AD9263825D66874004D8A49 /* GraphPRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9263725D66874004D8A49 /* GraphPRV.swift */; };
+		8AD9263F25D66890004D8A49 /* GraphRespiratory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9263E25D66890004D8A49 /* GraphRespiratory.swift */; };
+		8AD9264625D6689D004D8A49 /* GraphECG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9264525D6689D004D8A49 /* GraphECG.swift */; };
+		8AD9264D25D668C5004D8A49 /* ICA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9264C25D668C5004D8A49 /* ICA.swift */; };
+		8AD9265925D668E1004D8A49 /* GraphBP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9265825D668E1004D8A49 /* GraphBP.swift */; };
+		8AD9268925D66B68004D8A49 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9268825D66B68004D8A49 /* Display.swift */; };
+		8AD9269025D66B71004D8A49 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9268F25D66B71004D8A49 /* Api.swift */; };
+		8AD9269725D66BCB004D8A49 /* MedeeCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9269625D66BCB004D8A49 /* MedeeCall.swift */; };
+		8AD926A325D66BDA004D8A49 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD926A225D66BDA004D8A49 /* WorkoutView.swift */; };
+		8AD926AF25D66BF2004D8A49 /* MedeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD926AE25D66BF2004D8A49 /* MedeeData.swift */; };
+		8AD926BB25D66C09004D8A49 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD926BA25D66C09004D8A49 /* Chat.swift */; };
+		8AD926D325D66C9C004D8A49 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD926D225D66C9C004D8A49 /* Notification.swift */; };
+		8AD926DC25D66CFB004D8A49 /* MedeeWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924EF25D662FA004D8A49 /* MedeeWatch.swift */; };
+		8AD9271825D66E06004D8A49 /* WatchLiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9271125D66E05004D8A49 /* WatchLiveView.swift */; };
+		8AD9271925D66E06004D8A49 /* MedeeWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9271225D66E05004D8A49 /* MedeeWatchView.swift */; };
+		8AD9271A25D66E06004D8A49 /* WatchDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9271325D66E05004D8A49 /* WatchDashboardView.swift */; };
+		8AD9271B25D66E06004D8A49 /* WatchPulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9271425D66E05004D8A49 /* WatchPulseView.swift */; };
+		8AD9271C25D66E06004D8A49 /* WatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9271525D66E05004D8A49 /* WatchViewModel.swift */; };
+		8AD9271D25D66E06004D8A49 /* MedeeWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9271625D66E06004D8A49 /* MedeeWatchViewModel.swift */; };
+		8AD9271E25D66E06004D8A49 /* WatchChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9271725D66E06004D8A49 /* WatchChatView.swift */; };
+		8AEF3B5D25C931740020C6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B5C25C931740020C6CA /* AppDelegate.swift */; };
+		8AEF3B5F25C931740020C6CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B5E25C931740020C6CA /* SceneDelegate.swift */; };
+		8AEF3B6925C931750020C6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3B6725C931750020C6CA /* LaunchScreen.storyboard */; };
+		8AEF3B7425C931750020C6CA /* MedeeCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B7325C931750020C6CA /* MedeeCallTests.swift */; };
+		8AEF3B7F25C931750020C6CA /* MedeeCallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B7E25C931750020C6CA /* MedeeCallUITests.swift */; };
+		8AEF3B8425C931750020C6CA /* MedeeCall WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AEF3B8325C931750020C6CA /* MedeeCall WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8AEF3B8A25C931750020C6CA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3B8825C931750020C6CA /* Interface.storyboard */; };
+		8AEF3B8C25C931760020C6CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3B8B25C931760020C6CA /* Assets.xcassets */; };
+		8AEF3B9325C931760020C6CA /* MedeeCall WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AEF3B9225C931760020C6CA /* MedeeCall WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8AEF3B9825C931760020C6CA /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B9725C931760020C6CA /* HostingController.swift */; };
+		8AEF3B9A25C931760020C6CA /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B9925C931760020C6CA /* WatchMainView.swift */; };
+		8AEF3B9C25C931760020C6CA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B9B25C931760020C6CA /* ExtensionDelegate.swift */; };
+		8AEF3B9E25C931760020C6CA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B9D25C931760020C6CA /* NotificationController.swift */; };
+		8AEF3BA025C931760020C6CA /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3B9F25C931760020C6CA /* NotificationView.swift */; };
+		8AEF3BA225C931760020C6CA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF3BA125C931760020C6CA /* ComplicationController.swift */; };
+		8AEF3BA425C931760020C6CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3BA325C931760020C6CA /* Assets.xcassets */; };
+		8AEF3BA725C931760020C6CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AEF3BA625C931760020C6CA /* Preview Assets.xcassets */; };
+		E4B2DC8F3EEF4595F3FB7867 /* Pods_MedeeCall_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7606E771704F70B454F092 /* Pods_MedeeCall_WatchKit_Extension.framework */; };
+		E7A615C4FE4592240A1F8EBE /* Pods_MedeeCallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFCCD35608F6975C3DACC4F /* Pods_MedeeCallTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A8A973326085D56002D92AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A8A972E26085D56002D92AF /* DSPFilters.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E7DB503140DFBDF009FE107;
+			remoteInfo = DSPFiltersMacOS;
+		};
+		8A8A973526085D56002D92AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A8A972E26085D56002D92AF /* DSPFilters.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E7DB526140DFC22009FE107;
+			remoteInfo = DSPFiltersiOS;
+		};
+		8AEF3B7025C931750020C6CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AEF3B5125C931740020C6CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AEF3B5825C931740020C6CA;
+			remoteInfo = MedeeCall;
+		};
+		8AEF3B7B25C931750020C6CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AEF3B5125C931740020C6CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AEF3B5825C931740020C6CA;
+			remoteInfo = MedeeCall;
+		};
+		8AEF3B8525C931750020C6CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AEF3B5125C931740020C6CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AEF3B8225C931750020C6CA;
+			remoteInfo = "MedeeCall WatchKit App";
+		};
+		8AEF3B9425C931760020C6CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AEF3B5125C931740020C6CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AEF3B9125C931760020C6CA;
+			remoteInfo = "MedeeCall WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A8A96A526085719002D92AF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3BAF25C931760020C6CA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8AEF3B9325C931760020C6CA /* MedeeCall WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3BB325C931760020C6CA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8AEF3B8425C931750020C6CA /* MedeeCall WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		298F7B00959AF0FEDB779017 /* Pods-MedeeCallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCallTests.release.xcconfig"; path = "Target Support Files/Pods-MedeeCallTests/Pods-MedeeCallTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D16EF2C1E1E30197EB08B82 /* Pods-MedeeCall-MedeeCallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCall-MedeeCallUITests.release.xcconfig"; path = "Target Support Files/Pods-MedeeCall-MedeeCallUITests/Pods-MedeeCall-MedeeCallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5D56F5474D93BE7D32ACA076 /* Pods-MedeeCall WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCall WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-MedeeCall WatchKit Extension/Pods-MedeeCall WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		893E4FAF0405B0672B7D256F /* Pods_MedeeCall_MedeeCallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedeeCall_MedeeCallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A2A846825F605EC001FA5EC /* MedeePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MedeePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8A2A847325F64A38001FA5EC /* MedeeCall WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MedeeCall WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		8A2A847425F64A38001FA5EC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A6A7E4E25D641B500CE29A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A8A972426085C5E002D92AF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		8A8A972626085C6A002D92AF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		8A8A972826085D04002D92AF /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "3rd-Party_Frameworks/opencv2.framework"; sourceTree = SOURCE_ROOT; };
+		8A8A972E26085D56002D92AF /* DSPFilters.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DSPFilters.xcodeproj; path = "3rd-Party_Frameworks/DSPFilters/DSPFilters.xcodeproj"; sourceTree = "<group>"; };
+		8A8A979126085FC4002D92AF /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		8A8A97A326087100002D92AF /* MedeeCall-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedeeCall-Bridging-Header.h"; sourceTree = "<group>"; };
+		8A8A97AB26087141002D92AF /* OpenCVImageProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVImageProcessor.mm; sourceTree = "<group>"; };
+		8A8A97B5260871E7002D92AF /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		8A8A97BA2608721F002D92AF /* OpenCVImageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVImageProcessor.h; sourceTree = "<group>"; };
+		8A8A97BB2608723D002D92AF /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		8A8A97CD2608731E002D92AF /* DSPFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSPFilter.h; sourceTree = "<group>"; };
+		8A8A97CE26087337002D92AF /* DSPFilter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPFilter.mm; sourceTree = "<group>"; };
+		8AA5017925C9ACBE001CDC17 /* MedeeCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MedeeCall.entitlements; sourceTree = "<group>"; };
+		8AA5017B25C9ACBE001CDC17 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		8AD923AF25D649F8004D8A49 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
+		8AD923B025D649F8004D8A49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AD923D025D65E86004D8A49 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8AD923D825D65FBA004D8A49 /* LabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabView.swift; sourceTree = "<group>"; };
+		8AD923DF25D65FCB004D8A49 /* MedeeLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeeLab.swift; sourceTree = "<group>"; };
+		8AD9240425D660D4004D8A49 /* FilteredDataChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredDataChartView.swift; sourceTree = "<group>"; };
+		8AD9240525D660D4004D8A49 /* BarCharts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCharts.swift; sourceTree = "<group>"; };
+		8AD9240625D660D4004D8A49 /* LineCharts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineCharts.swift; sourceTree = "<group>"; };
+		8AD9240725D660D4004D8A49 /* RawDataChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawDataChartView.swift; sourceTree = "<group>"; };
+		8AD9241125D660E3004D8A49 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		8AD9241225D660E3004D8A49 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		8AD9241325D660E3004D8A49 /* NotificationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		8AD9241425D660E3004D8A49 /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		8AD9241525D660E3004D8A49 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		8AD9241625D660E3004D8A49 /* ContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		8AD9241725D660E3004D8A49 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8AD9241825D660E4004D8A49 /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		8AD9242625D660EE004D8A49 /* VideoSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSettings.swift; sourceTree = "<group>"; };
+		8AD9242725D660EE004D8A49 /* MedeeCallViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeCallViewModel.swift; sourceTree = "<group>"; };
+		8AD9242825D660EE004D8A49 /* CallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
+		8AD9242925D660EE004D8A49 /* ChartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		8AD9242A25D660EE004D8A49 /* FftICADataChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FftICADataChartView.swift; sourceTree = "<group>"; };
+		8AD9242B25D660EE004D8A49 /* MedeeCallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeCallView.swift; sourceTree = "<group>"; };
+		8AD9242C25D660EE004D8A49 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		8AD9242D25D660EE004D8A49 /* FilteredICADataChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredICADataChartView.swift; sourceTree = "<group>"; };
+		8AD9243B25D6617B004D8A49 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		8AD9243C25D6617B004D8A49 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8AD9243D25D6617C004D8A49 /* MedeeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeExtensions.swift; sourceTree = "<group>"; };
+		8AD9244725D661AD004D8A49 /* FaceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
+		8AD9244825D661AD004D8A49 /* FaceRoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRoi.swift; sourceTree = "<group>"; };
+		8AD9244A25D661AD004D8A49 /* PulseDectector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseDectector.swift; sourceTree = "<group>"; };
+		8AD9244B25D661AD004D8A49 /* MedeePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeePulse.swift; sourceTree = "<group>"; };
+		8AD9244D25D661AD004D8A49 /* MedeeRealTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeRealTime.swift; sourceTree = "<group>"; };
+		8AD9244F25D661AD004D8A49 /* EyeDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeDetector.swift; sourceTree = "<group>"; };
+		8AD9245025D661AD004D8A49 /* EyeRoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeRoi.swift; sourceTree = "<group>"; };
+		8AD9245225D661AD004D8A49 /* MedeeDiagnosis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeDiagnosis.swift; sourceTree = "<group>"; };
+		8AD9245425D661AD004D8A49 /* PeakCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeakCalculation.swift; sourceTree = "<group>"; };
+		8AD9245525D661AD004D8A49 /* TestAccelerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAccelerate.swift; sourceTree = "<group>"; };
+		8AD9245625D661AD004D8A49 /* RGBSampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBSampleData.swift; sourceTree = "<group>"; };
+		8AD9245725D661AD004D8A49 /* PulseCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseCalculation.swift; sourceTree = "<group>"; };
+		8AD9245825D661AD004D8A49 /* MedeeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeCalculator.swift; sourceTree = "<group>"; };
+		8AD9245925D661AD004D8A49 /* PRVCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRVCalculation.swift; sourceTree = "<group>"; };
+		8AD9245B25D661AD004D8A49 /* MedeeBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeBot.swift; sourceTree = "<group>"; };
+		8AD9245C25D661AD004D8A49 /* MedeeTrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeTrain.swift; sourceTree = "<group>"; };
+		8AD9245D25D661AD004D8A49 /* VirtualDoctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualDoctor.swift; sourceTree = "<group>"; };
+		8AD9245F25D661AD004D8A49 /* VideoProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessor.swift; sourceTree = "<group>"; };
+		8AD9247925D661CB004D8A49 /* MedeeAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeAuth.swift; sourceTree = "<group>"; };
+		8AD9247B25D661CB004D8A49 /* MedeeConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeConnect.swift; sourceTree = "<group>"; };
+		8AD9247C25D661CB004D8A49 /* MedeeFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeFirebase.swift; sourceTree = "<group>"; };
+		8AD9247E25D661CB004D8A49 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		8AD9247F25D661CB004D8A49 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		8AD9248025D661CB004D8A49 /* WatchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		8AD9248125D661CB004D8A49 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		8AD9248225D661CB004D8A49 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		8AD9248325D661CB004D8A49 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		8AD9248525D661CB004D8A49 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		8AD9248625D661CB004D8A49 /* MedeeApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeApi.swift; sourceTree = "<group>"; };
+		8AD9248825D661CB004D8A49 /* SocialConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialConnect.swift; sourceTree = "<group>"; };
+		8AD9248925D661CB004D8A49 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8AD9248A25D661CB004D8A49 /* WatchConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnect.swift; sourceTree = "<group>"; };
+		8AD9248B25D661CB004D8A49 /* Deeplinking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deeplinking.swift; sourceTree = "<group>"; };
+		8AD924A625D66205004D8A49 /* WatchConnectPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectPreview.swift; sourceTree = "<group>"; };
+		8AD924A725D66205004D8A49 /* LiveHealthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveHealthViewModel.swift; sourceTree = "<group>"; };
+		8AD924A825D66205004D8A49 /* AuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
+		8AD924A925D66205004D8A49 /* Deeplink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
+		8AD924AA25D66205004D8A49 /* PhoneToWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneToWatch.swift; sourceTree = "<group>"; };
+		8AD924AB25D66205004D8A49 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		8AD924AC25D66205004D8A49 /* WatchToPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchToPhone.swift; sourceTree = "<group>"; };
+		8AD924AD25D66205004D8A49 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8AD924AE25D66205004D8A49 /* HeartRateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
+		8AD924AF25D66205004D8A49 /* MedeeVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeVars.swift; sourceTree = "<group>"; };
+		8AD924B025D66205004D8A49 /* FftDataChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FftDataChartView.swift; sourceTree = "<group>"; };
+		8AD924C225D6621C004D8A49 /* MedeeAlgorithms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeAlgorithms.swift; sourceTree = "<group>"; };
+		8AD924C325D6621C004D8A49 /* PulseDetectorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseDetectorTest.swift; sourceTree = "<group>"; };
+		8AD924C425D6621C004D8A49 /* Experiments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiments.swift; sourceTree = "<group>"; };
+		8AD924C525D6621C004D8A49 /* PulseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseTest.swift; sourceTree = "<group>"; };
+		8AD924D025D662A2004D8A49 /* MedeeFFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeeFFT.swift; sourceTree = "<group>"; };
+		8AD924DC25D662C0004D8A49 /* PeakDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakDetection.swift; sourceTree = "<group>"; };
+		8AD924E325D662D0004D8A49 /* TemporalFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporalFilter.swift; sourceTree = "<group>"; };
+		8AD924EB25D662FA004D8A49 /* MedeeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeView.swift; sourceTree = "<group>"; };
+		8AD924ED25D662FA004D8A49 /* MedeeKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeKit.swift; sourceTree = "<group>"; };
+		8AD924EF25D662FA004D8A49 /* MedeeWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeWatch.swift; sourceTree = "<group>"; };
+		8AD924F025D662FA004D8A49 /* MedeeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeApp.swift; sourceTree = "<group>"; };
+		8AD924FA25D66313004D8A49 /* MedeeVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeeVisual.swift; sourceTree = "<group>"; };
+		8AD9250325D66378004D8A49 /* Pulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
+		8AD9250425D66378004D8A49 /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		8AD9250525D66378004D8A49 /* HeartRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRate.swift; sourceTree = "<group>"; };
+		8AD9250625D66378004D8A49 /* ChatBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
+		8AD9250725D66378004D8A49 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		8AD9250825D66378004D8A49 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8AD9250925D66378004D8A49 /* FriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendList.swift; sourceTree = "<group>"; };
+		8AD9250A25D66378004D8A49 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8AD9250B25D66378004D8A49 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8AD9250C25D66378004D8A49 /* UsersGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersGroup.swift; sourceTree = "<group>"; };
+		8AD9250D25D66378004D8A49 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		8AD9250E25D66378004D8A49 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		8AD9250F25D66378004D8A49 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		8AD9251025D66379004D8A49 /* MedeeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeData.swift; sourceTree = "<group>"; };
+		8AD9251125D66379004D8A49 /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
+		8AD9251225D66379004D8A49 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		8AD9252825D663BE004D8A49 /* MedeeHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeHeaders.swift; sourceTree = "<group>"; };
+		8AD9252925D663BE004D8A49 /* MedeeConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeConfigs.swift; sourceTree = "<group>"; };
+		8AD9252A25D663BF004D8A49 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
+		8AD9253325D663CD004D8A49 /* ChatData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatData.swift; sourceTree = "<group>"; };
+		8AD9253425D663CD004D8A49 /* HealthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
+		8AD9253525D663CD004D8A49 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		8AD9253625D663CD004D8A49 /* MedeeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeDataModel.swift; sourceTree = "<group>"; };
+		8AD9253725D663CD004D8A49 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		8AD9254225D663FD004D8A49 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8AD9254925D66417004D8A49 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		8AD9254A25D66417004D8A49 /* LiveVitalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveVitalView.swift; sourceTree = "<group>"; };
+		8AD9254B25D66417004D8A49 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		8AD9254C25D66417004D8A49 /* FriendListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
+		8AD9254D25D66417004D8A49 /* ShareViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewModel.swift; sourceTree = "<group>"; };
+		8AD9254E25D66417004D8A49 /* FriendListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		8AD9254F25D66417004D8A49 /* HealthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthViewModel.swift; sourceTree = "<group>"; };
+		8AD9255025D66417004D8A49 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		8AD9255125D66417004D8A49 /* HealthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		8AD9255225D66418004D8A49 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8AD9255325D66418004D8A49 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		8AD9255425D66418004D8A49 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		8AD9255525D66418004D8A49 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		8AD9255625D66418004D8A49 /* DashBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		8AD9255725D66418004D8A49 /* ProfileEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		8AD9257625D66517004D8A49 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8AD9257725D66517004D8A49 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8AD9257825D66517004D8A49 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8AD9257925D66517004D8A49 /* SocialConnectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialConnectView.swift; sourceTree = "<group>"; };
+		8AD9257A25D66517004D8A49 /* TabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		8AD9257B25D66517004D8A49 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		8AD9257C25D66517004D8A49 /* SetupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
+		8AD9257D25D66517004D8A49 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8AD9257E25D66517004D8A49 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		8AD9257F25D66517004D8A49 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8AD9258025D66517004D8A49 /* SetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		8AD9259825D665E7004D8A49 /* HRV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRV.swift; sourceTree = "<group>"; };
+		8AD925A925D66615004D8A49 /* ECG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECG.swift; sourceTree = "<group>"; };
+		8AD925BA25D6663E004D8A49 /* TCMpulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMpulse.swift; sourceTree = "<group>"; };
+		8AD925C125D6664E004D8A49 /* Breath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breath.swift; sourceTree = "<group>"; };
+		8AD925C825D66675004D8A49 /* Respiratory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respiratory.swift; sourceTree = "<group>"; };
+		8AD925D425D66699004D8A49 /* BloodPressure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressure.swift; sourceTree = "<group>"; };
+		8AD925DB25D666AC004D8A49 /* Eye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eye.swift; sourceTree = "<group>"; };
+		8AD925E225D666B7004D8A49 /* Pupil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pupil.swift; sourceTree = "<group>"; };
+		8AD925E925D666D5004D8A49 /* PPG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPG.swift; sourceTree = "<group>"; };
+		8AD925F625D666F0004D8A49 /* MedeePPG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeePPG.swift; sourceTree = "<group>"; };
+		8AD925FD25D66746004D8A49 /* SVD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVD.swift; sourceTree = "<group>"; };
+		8AD9260425D66754004D8A49 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		8AD9261625D6682E004D8A49 /* MedeeGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeeGraph.swift; sourceTree = "<group>"; };
+		8AD9262225D66854004D8A49 /* GraphHR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphHR.swift; sourceTree = "<group>"; };
+		8AD9262925D6685E004D8A49 /* GraphHRV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphHRV.swift; sourceTree = "<group>"; };
+		8AD9263025D6686A004D8A49 /* GraphPulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPulse.swift; sourceTree = "<group>"; };
+		8AD9263725D66874004D8A49 /* GraphPRV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPRV.swift; sourceTree = "<group>"; };
+		8AD9263E25D66890004D8A49 /* GraphRespiratory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphRespiratory.swift; sourceTree = "<group>"; };
+		8AD9264525D6689D004D8A49 /* GraphECG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphECG.swift; sourceTree = "<group>"; };
+		8AD9264C25D668C5004D8A49 /* ICA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICA.swift; sourceTree = "<group>"; };
+		8AD9265825D668E1004D8A49 /* GraphBP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphBP.swift; sourceTree = "<group>"; };
+		8AD9268825D66B68004D8A49 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		8AD9268F25D66B71004D8A49 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		8AD9269625D66BCB004D8A49 /* MedeeCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeeCall.swift; sourceTree = "<group>"; };
+		8AD926A225D66BDA004D8A49 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		8AD926AE25D66BF2004D8A49 /* MedeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeeData.swift; sourceTree = "<group>"; };
+		8AD926BA25D66C09004D8A49 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		8AD926D225D66C9C004D8A49 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8AD9271125D66E05004D8A49 /* WatchLiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchLiveView.swift; sourceTree = "<group>"; };
+		8AD9271225D66E05004D8A49 /* MedeeWatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeWatchView.swift; sourceTree = "<group>"; };
+		8AD9271325D66E05004D8A49 /* WatchDashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchDashboardView.swift; sourceTree = "<group>"; };
+		8AD9271425D66E05004D8A49 /* WatchPulseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchPulseView.swift; sourceTree = "<group>"; };
+		8AD9271525D66E05004D8A49 /* WatchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchViewModel.swift; sourceTree = "<group>"; };
+		8AD9271625D66E06004D8A49 /* MedeeWatchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedeeWatchViewModel.swift; sourceTree = "<group>"; };
+		8AD9271725D66E06004D8A49 /* WatchChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchChatView.swift; sourceTree = "<group>"; };
+		8AEF3B5925C931740020C6CA /* MedeeCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedeeCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AEF3B5C25C931740020C6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8AEF3B5E25C931740020C6CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8AEF3B6825C931750020C6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8AEF3B6A25C931750020C6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEF3B6F25C931750020C6CA /* MedeeCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedeeCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AEF3B7325C931750020C6CA /* MedeeCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeeCallTests.swift; sourceTree = "<group>"; };
+		8AEF3B7525C931750020C6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEF3B7A25C931750020C6CA /* MedeeCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedeeCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AEF3B7E25C931750020C6CA /* MedeeCallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedeeCallUITests.swift; sourceTree = "<group>"; };
+		8AEF3B8025C931750020C6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEF3B8325C931750020C6CA /* MedeeCall WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MedeeCall WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AEF3B8925C931750020C6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8AEF3B8B25C931760020C6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AEF3B8D25C931760020C6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEF3B9225C931760020C6CA /* MedeeCall WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MedeeCall WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AEF3B9725C931760020C6CA /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		8AEF3B9925C931760020C6CA /* WatchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMainView.swift; sourceTree = "<group>"; };
+		8AEF3B9B25C931760020C6CA /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		8AEF3B9D25C931760020C6CA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		8AEF3B9F25C931760020C6CA /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		8AEF3BA125C931760020C6CA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		8AEF3BA325C931760020C6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AEF3BA625C931760020C6CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8AEF3BA825C931760020C6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEF3BA925C931760020C6CA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8AFC6BC025CA0D4B00E7A27B /* MedeeCall WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedeeCall WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		90617D7550EA2CF8E48B8E29 /* Pods-MedeeCall WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCall WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-MedeeCall WatchKit Extension/Pods-MedeeCall WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		BAFCCD35608F6975C3DACC4F /* Pods_MedeeCallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedeeCallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB74F1446AB496664E0CBBAB /* Pods-MedeeCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCall.debug.xcconfig"; path = "Target Support Files/Pods-MedeeCall/Pods-MedeeCall.debug.xcconfig"; sourceTree = "<group>"; };
+		D01DBA9B38E033DF8E637F61 /* Pods-MedeeCall-MedeeCallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCall-MedeeCallUITests.debug.xcconfig"; path = "Target Support Files/Pods-MedeeCall-MedeeCallUITests/Pods-MedeeCall-MedeeCallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2658BDC7D442B13EDF33FA2 /* Pods_MedeeCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedeeCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49A0007D93546C77E971E10 /* Pods_MedeeCall_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedeeCall_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7606E771704F70B454F092 /* Pods_MedeeCall_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedeeCall_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E768406BDD73FE93EBC6684C /* Pods-MedeeCall WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCall WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-MedeeCall WatchKit App/Pods-MedeeCall WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F2D1BC3F013AEE17C3DF186B /* Pods-MedeeCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCall.release.xcconfig"; path = "Target Support Files/Pods-MedeeCall/Pods-MedeeCall.release.xcconfig"; sourceTree = "<group>"; };
+		F41EF77B07786AF8E420AA93 /* Pods-MedeeCall WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCall WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-MedeeCall WatchKit App/Pods-MedeeCall WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		FA800628C5C4CB64781F0372 /* Pods-MedeeCallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedeeCallTests.debug.xcconfig"; path = "Target Support Files/Pods-MedeeCallTests/Pods-MedeeCallTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AEF3B5625C931740020C6CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8A972726085C6A002D92AF /* CoreMedia.framework in Frameworks */,
+				8AA5017C25C9ACBE001CDC17 /* HealthKit.framework in Frameworks */,
+				8A85E57C260AE90D000A696B /* Charts in Frameworks */,
+				8A8A973D26085D81002D92AF /* libDSPFiltersiOS.a in Frameworks */,
+				8A8A972926085D04002D92AF /* opencv2.framework in Frameworks */,
+				8A8A972526085C5E002D92AF /* AVFoundation.framework in Frameworks */,
+				3E51166FA9FA5F54F80BE3F2 /* Pods_MedeeCall.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B6C25C931750020C6CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A615C4FE4592240A1F8EBE /* Pods_MedeeCallTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B7725C931750020C6CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				061735257575794EFF8503CA /* Pods_MedeeCall_MedeeCallUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B8F25C931760020C6CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2A847525F64A38001FA5EC /* HealthKit.framework in Frameworks */,
+				E4B2DC8F3EEF4595F3FB7867 /* Pods_MedeeCall_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B250EEAD375406EAC54F40B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630D8A124ED585C3E4948D5E /* Pods_MedeeCall_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53AE068F97F2D084190B54D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB74F1446AB496664E0CBBAB /* Pods-MedeeCall.debug.xcconfig */,
+				F2D1BC3F013AEE17C3DF186B /* Pods-MedeeCall.release.xcconfig */,
+				F41EF77B07786AF8E420AA93 /* Pods-MedeeCall WatchKit App.debug.xcconfig */,
+				E768406BDD73FE93EBC6684C /* Pods-MedeeCall WatchKit App.release.xcconfig */,
+				90617D7550EA2CF8E48B8E29 /* Pods-MedeeCall WatchKit Extension.debug.xcconfig */,
+				5D56F5474D93BE7D32ACA076 /* Pods-MedeeCall WatchKit Extension.release.xcconfig */,
+				D01DBA9B38E033DF8E637F61 /* Pods-MedeeCall-MedeeCallUITests.debug.xcconfig */,
+				4D16EF2C1E1E30197EB08B82 /* Pods-MedeeCall-MedeeCallUITests.release.xcconfig */,
+				FA800628C5C4CB64781F0372 /* Pods-MedeeCallTests.debug.xcconfig */,
+				298F7B00959AF0FEDB779017 /* Pods-MedeeCallTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A2A848F25F742EA001FA5EC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8AD924AC25D66205004D8A49 /* WatchToPhone.swift */,
+				8AD924A825D66205004D8A49 /* AuthorizationManager.swift */,
+				8AD924AE25D66205004D8A49 /* HeartRateManager.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8A6A7E3B25D640D900CE29A2 /* iWatch-Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				8AFC6BC025CA0D4B00E7A27B /* MedeeCall WatchKit App-Bridging-Header.h */,
+				8AD924AA25D66205004D8A49 /* PhoneToWatch.swift */,
+				8AD924A625D66205004D8A49 /* WatchConnectPreview.swift */,
+			);
+			path = "iWatch-Connectivity";
+			sourceTree = "<group>";
+		};
+		8A6A7E3C25D6412600CE29A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AD923BB25D6582D004D8A49 /* Main */,
+				8AD923BC25D65857004D8A49 /* User */,
+				8AD923C025D658BF004D8A49 /* Dashboard */,
+				8AD923BF25D6588F004D8A49 /* Chat */,
+				8AD923BD25D65878004D8A49 /* Settings */,
+				8AD7D2E1260A380D00E49D9B /* DataCharts */,
+				8AD923C125D658D7004D8A49 /* View-Components */,
+				8AD923CE25D65A9F004D8A49 /* View-Controller */,
+				8A6A7E3D25D6413C00CE29A2 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A6A7E3D25D6413C00CE29A2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B6725C931750020C6CA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8A6A7E4D25D641B500CE29A2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8A6A7E4E25D641B500CE29A2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8A8A972F26085D56002D92AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A8A973426085D56002D92AF /* libDSPFiltersMacOS.a */,
+				8A8A973626085D56002D92AF /* libDSPFiltersiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A8A979026085F9B002D92AF /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				8A8A97A326087100002D92AF /* MedeeCall-Bridging-Header.h */,
+				8A8A97B5260871E7002D92AF /* OpenCVWrapper.h */,
+				8A8A97BB2608723D002D92AF /* OpenCVWrapper.mm */,
+				8A8A97BA2608721F002D92AF /* OpenCVImageProcessor.h */,
+				8A8A97AB26087141002D92AF /* OpenCVImageProcessor.mm */,
+				8A8A979126085FC4002D92AF /* haarcascade_frontalface_default.xml */,
+			);
+			path = OpenCV;
+			sourceTree = "<group>";
+		};
+		8A8A980026087561002D92AF /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9240625D660D4004D8A49 /* LineCharts.swift */,
+				8AD9240525D660D4004D8A49 /* BarCharts.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		8A8A982526088C3E002D92AF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9242925D660EE004D8A49 /* ChartViewModel.swift */,
+				8AD9241125D660E3004D8A49 /* UserSettings.swift */,
+				8AD9242625D660EE004D8A49 /* VideoSettings.swift */,
+				8A8A983226088EA8002D92AF /* +Later */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8A8A983226088EA8002D92AF /* +Later */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9254225D663FD004D8A49 /* MainViewModel.swift */,
+				8AD9257725D66517004D8A49 /* HomeViewModel.swift */,
+				8AD9257825D66517004D8A49 /* LoginViewModel.swift */,
+				8AD9257C25D66517004D8A49 /* SetupViewModel.swift */,
+				8AD9257E25D66517004D8A49 /* WelcomeViewModel.swift */,
+				8AD9254925D66417004D8A49 /* ProfileViewModel.swift */,
+				8AD9254E25D66417004D8A49 /* FriendListViewModel.swift */,
+				8AD924A725D66205004D8A49 /* LiveHealthViewModel.swift */,
+				8AD9254D25D66417004D8A49 /* ShareViewModel.swift */,
+				8AD9255525D66418004D8A49 /* UserViewModel.swift */,
+				8AD924AB25D66205004D8A49 /* AccountViewModel.swift */,
+				8AD9255425D66418004D8A49 /* DashboardViewModel.swift */,
+				8AD9254F25D66417004D8A49 /* HealthViewModel.swift */,
+				8AD9242725D660EE004D8A49 /* MedeeCallViewModel.swift */,
+				8AD9241825D660E4004D8A49 /* AppViewModel.swift */,
+				8AD9241425D660E3004D8A49 /* ContactViewModel.swift */,
+				8AD9241325D660E3004D8A49 /* NotificationViewModel.swift */,
+			);
+			path = "+Later";
+			sourceTree = "<group>";
+		};
+		8AA5017A25C9ACBE001CDC17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A8A972E26085D56002D92AF /* DSPFilters.xcodeproj */,
+				8A8A972626085C6A002D92AF /* CoreMedia.framework */,
+				8A8A972426085C5E002D92AF /* AVFoundation.framework */,
+				8A2A847425F64A38001FA5EC /* HealthKit.framework */,
+				8AA5017B25C9ACBE001CDC17 /* HealthKit.framework */,
+				D2658BDC7D442B13EDF33FA2 /* Pods_MedeeCall.framework */,
+				D49A0007D93546C77E971E10 /* Pods_MedeeCall_WatchKit_App.framework */,
+				DE7606E771704F70B454F092 /* Pods_MedeeCall_WatchKit_Extension.framework */,
+				893E4FAF0405B0672B7D256F /* Pods_MedeeCall_MedeeCallUITests.framework */,
+				BAFCCD35608F6975C3DACC4F /* Pods_MedeeCallTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AB4C2C725D6407500DFCDAD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B5C25C931740020C6CA /* AppDelegate.swift */,
+				8AEF3B5E25C931740020C6CA /* SceneDelegate.swift */,
+				8AA5017925C9ACBE001CDC17 /* MedeeCall.entitlements */,
+				8AEF3B6A25C931750020C6CA /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8AB4C2C825D6408800DFCDAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AD923AF25D649F8004D8A49 /* appstore.png */,
+				8AD923B025D649F8004D8A49 /* Assets.xcassets */,
+				8AD923CF25D65B14004D8A49 /* 3rdPartyFrameworks */,
+				8A6A7E4D25D641B500CE29A2 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8AD7D2E1260A380D00E49D9B /* DataCharts */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9240725D660D4004D8A49 /* RawDataChartView.swift */,
+				8AD9240425D660D4004D8A49 /* FilteredDataChartView.swift */,
+				8AD924B025D66205004D8A49 /* FftDataChartView.swift */,
+				8AD9242A25D660EE004D8A49 /* FftICADataChartView.swift */,
+				8AD9242D25D660EE004D8A49 /* FilteredICADataChartView.swift */,
+			);
+			path = DataCharts;
+			sourceTree = "<group>";
+		};
+		8AD923BB25D6582D004D8A49 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8AD923D025D65E86004D8A49 /* MainView.swift */,
+				8AD9257625D66517004D8A49 /* HomeView.swift */,
+				8AD9257D25D66517004D8A49 /* LoginView.swift */,
+				8AD9258025D66517004D8A49 /* SetupView.swift */,
+				8AD9257925D66517004D8A49 /* SocialConnectView.swift */,
+				8AD9257F25D66517004D8A49 /* WelcomeView.swift */,
+				8AD9257B25D66517004D8A49 /* LaunchView.swift */,
+				8AD9257A25D66517004D8A49 /* TabbarView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8AD923BC25D65857004D8A49 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9254A25D66417004D8A49 /* LiveVitalView.swift */,
+				8AD9254B25D66417004D8A49 /* UserView.swift */,
+				8AD9255225D66418004D8A49 /* ProfileView.swift */,
+				8AD9255725D66418004D8A49 /* ProfileEditView.swift */,
+				8AD9254C25D66417004D8A49 /* FriendListView.swift */,
+				8AD9255325D66418004D8A49 /* ShareView.swift */,
+				8AD9255025D66417004D8A49 /* AccountView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		8AD923BD25D65878004D8A49 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9241725D660E3004D8A49 /* SettingsView.swift */,
+				8AD9241525D660E3004D8A49 /* AppView.swift */,
+				8AD9241625D660E3004D8A49 /* ContactView.swift */,
+				8AD9241225D660E3004D8A49 /* NotificationView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		8AD923BF25D6588F004D8A49 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9242825D660EE004D8A49 /* CallView.swift */,
+				8AD9242B25D660EE004D8A49 /* MedeeCallView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		8AD923C025D658BF004D8A49 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9255625D66418004D8A49 /* DashBoardView.swift */,
+				8AD9255125D66417004D8A49 /* HealthView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		8AD923C125D658D7004D8A49 /* View-Components */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9242C25D660EE004D8A49 /* VideoView.swift */,
+				8A8A980026087561002D92AF /* Charts */,
+			);
+			path = "View-Components";
+			sourceTree = "<group>";
+		};
+		8AD923C225D65903004D8A49 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9252A25D663BF004D8A49 /* GlobalVars.swift */,
+				8AD924AF25D66205004D8A49 /* MedeeVars.swift */,
+				8AD9252925D663BE004D8A49 /* MedeeConfigs.swift */,
+				8AD9252825D663BE004D8A49 /* MedeeHeaders.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		8AD923C325D65912004D8A49 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9253625D663CD004D8A49 /* MedeeDataModel.swift */,
+				8AD9253525D663CD004D8A49 /* AppData.swift */,
+				8AD9253325D663CD004D8A49 /* ChatData.swift */,
+				8AD9253425D663CD004D8A49 /* HealthData.swift */,
+				8AD9253725D663CD004D8A49 /* UserData.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		8AD923C425D65920004D8A49 /* TrainedData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TrainedData;
+			sourceTree = "<group>";
+		};
+		8AD923C525D6593D004D8A49 /* ML-Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AD923C625D65958004D8A49 /* Datasets */,
+				8AD923C425D65920004D8A49 /* TrainedData */,
+			);
+			path = "ML-Models";
+			sourceTree = "<group>";
+		};
+		8AD923C625D65958004D8A49 /* Datasets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Datasets;
+			sourceTree = "<group>";
+		};
+		8AD923C725D65966004D8A49 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8AD925F525D666E0004D8A49 /* rPPG */,
+				8AD9245A25D661AD004D8A49 /* AI+ML */,
+				8AD9245125D661AD004D8A49 /* Diagnosis */,
+				8AD9244E25D661AD004D8A49 /* EyeRoi */,
+				8AD9244925D661AD004D8A49 /* PulseDetector */,
+				8AD9261525D66804004D8A49 /* DataVisualization */,
+				8AD9244C25D661AD004D8A49 /* RealTimeGenerator */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8AD923C825D659C0004D8A49 /* MedeeFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AD924F025D662FA004D8A49 /* MedeeApp.swift */,
+				8AD924EC25D662FA004D8A49 /* MedeeKit */,
+				8AD924EA25D662FA004D8A49 /* MedeeView */,
+			);
+			path = MedeeFrameworks;
+			sourceTree = "<group>";
+		};
+		8AD923C925D65A1D004D8A49 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		8AD923CA25D65A30004D8A49 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8AD923C325D65912004D8A49 /* DataModels */,
+				8AD923C525D6593D004D8A49 /* ML-Models */,
+				8AD923C925D65A1D004D8A49 /* Languages */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8AD923CB25D65A65004D8A49 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9243C25D6617B004D8A49 /* Extensions.swift */,
+				8AD9243D25D6617C004D8A49 /* MedeeExtensions.swift */,
+				8AD9243B25D6617B004D8A49 /* ViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8AD923CC25D65A79004D8A49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9259625D665A6004D8A49 /* MedeeModels */,
+				8AD9250125D6634D004D8A49 /* App-Models */,
+				8AD9250225D6635C004D8A49 /* System-Model */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AD923CE25D65A9F004D8A49 /* View-Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View-Controller";
+			sourceTree = "<group>";
+		};
+		8AD923CF25D65B14004D8A49 /* 3rdPartyFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A8A972826085D04002D92AF /* opencv2.framework */,
+			);
+			path = 3rdPartyFrameworks;
+			sourceTree = "<group>";
+		};
+		8AD923D725D65F94004D8A49 /* MedeeLab */ = {
+			isa = PBXGroup;
+			children = (
+				8AD924C125D6621C004D8A49 /* Testers */,
+				8AD924A525D66205004D8A49 /* TempFiles */,
+				8AD923D825D65FBA004D8A49 /* LabView.swift */,
+				8AD923DF25D65FCB004D8A49 /* MedeeLab.swift */,
+				8A2A846825F605EC001FA5EC /* MedeePlayground.playground */,
+			);
+			path = MedeeLab;
+			sourceTree = "<group>";
+		};
+		8AD9244625D661AD004D8A49 /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				8A8A979026085F9B002D92AF /* OpenCV */,
+				8AD9244725D661AD004D8A49 /* FaceDetector.swift */,
+				8AD9244825D661AD004D8A49 /* FaceRoi.swift */,
+			);
+			path = ImageProcessing;
+			sourceTree = "<group>";
+		};
+		8AD9244925D661AD004D8A49 /* PulseDetector */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9244A25D661AD004D8A49 /* PulseDectector.swift */,
+				8AD9244B25D661AD004D8A49 /* MedeePulse.swift */,
+			);
+			path = PulseDetector;
+			sourceTree = "<group>";
+		};
+		8AD9244C25D661AD004D8A49 /* RealTimeGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9244D25D661AD004D8A49 /* MedeeRealTime.swift */,
+			);
+			path = RealTimeGenerator;
+			sourceTree = "<group>";
+		};
+		8AD9244E25D661AD004D8A49 /* EyeRoi */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9244F25D661AD004D8A49 /* EyeDetector.swift */,
+				8AD9245025D661AD004D8A49 /* EyeRoi.swift */,
+			);
+			path = EyeRoi;
+			sourceTree = "<group>";
+		};
+		8AD9245125D661AD004D8A49 /* Diagnosis */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9245225D661AD004D8A49 /* MedeeDiagnosis.swift */,
+			);
+			path = Diagnosis;
+			sourceTree = "<group>";
+		};
+		8AD9245325D661AD004D8A49 /* Calculations */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9245825D661AD004D8A49 /* MedeeCalculator.swift */,
+				8AD924DC25D662C0004D8A49 /* PeakDetection.swift */,
+				8AD9245425D661AD004D8A49 /* PeakCalculation.swift */,
+				8AD9245725D661AD004D8A49 /* PulseCalculation.swift */,
+				8AD9245925D661AD004D8A49 /* PRVCalculation.swift */,
+			);
+			path = Calculations;
+			sourceTree = "<group>";
+		};
+		8AD9245A25D661AD004D8A49 /* AI+ML */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9245B25D661AD004D8A49 /* MedeeBot.swift */,
+				8AD9245C25D661AD004D8A49 /* MedeeTrain.swift */,
+				8AD9245D25D661AD004D8A49 /* VirtualDoctor.swift */,
+			);
+			path = "AI+ML";
+			sourceTree = "<group>";
+		};
+		8AD9245E25D661AD004D8A49 /* VideoAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9245F25D661AD004D8A49 /* VideoProcessor.swift */,
+				8AD9245625D661AD004D8A49 /* RGBSampleData.swift */,
+				8AD9245525D661AD004D8A49 /* TestAccelerate.swift */,
+				8AD924D025D662A2004D8A49 /* MedeeFFT.swift */,
+				8AD9260425D66754004D8A49 /* Matrix.swift */,
+				8AD9264C25D668C5004D8A49 /* ICA.swift */,
+				8AD925FD25D66746004D8A49 /* SVD.swift */,
+				8AD924E325D662D0004D8A49 /* TemporalFilter.swift */,
+				8A8A97CD2608731E002D92AF /* DSPFilter.h */,
+				8A8A97CE26087337002D92AF /* DSPFilter.mm */,
+			);
+			path = VideoAnalysis;
+			sourceTree = "<group>";
+		};
+		8AD9247725D661CB004D8A49 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9247825D661CB004D8A49 /* Auth */,
+				8AD9247A25D661CB004D8A49 /* Networking */,
+				8AD9247D25D661CB004D8A49 /* Managers */,
+				8AD9248425D661CB004D8A49 /* API */,
+				8AD9248725D661CB004D8A49 /* Helpers */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8AD9247825D661CB004D8A49 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9247925D661CB004D8A49 /* MedeeAuth.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		8AD9247A25D661CB004D8A49 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9247B25D661CB004D8A49 /* MedeeConnect.swift */,
+				8AD9247C25D661CB004D8A49 /* MedeeFirebase.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8AD9247D25D661CB004D8A49 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9247E25D661CB004D8A49 /* AppManager.swift */,
+				8AD9247F25D661CB004D8A49 /* ApiManager.swift */,
+				8AD9248025D661CB004D8A49 /* WatchManager.swift */,
+				8AD9248125D661CB004D8A49 /* AuthManager.swift */,
+				8AD9248225D661CB004D8A49 /* DatabaseManager.swift */,
+				8AD9248325D661CB004D8A49 /* FirebaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8AD9248425D661CB004D8A49 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9248525D661CB004D8A49 /* Api.swift */,
+				8AD9248625D661CB004D8A49 /* MedeeApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8AD9248725D661CB004D8A49 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9248825D661CB004D8A49 /* SocialConnect.swift */,
+				8AD9248925D661CB004D8A49 /* Helpers.swift */,
+				8AD9248A25D661CB004D8A49 /* WatchConnect.swift */,
+				8AD9248B25D661CB004D8A49 /* Deeplinking.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8AD924A525D66205004D8A49 /* TempFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TempFiles;
+			sourceTree = "<group>";
+		};
+		8AD924C125D6621C004D8A49 /* Testers */ = {
+			isa = PBXGroup;
+			children = (
+				8AD924C225D6621C004D8A49 /* MedeeAlgorithms.swift */,
+				8AD924C325D6621C004D8A49 /* PulseDetectorTest.swift */,
+				8AD924C425D6621C004D8A49 /* Experiments.swift */,
+				8AD924C525D6621C004D8A49 /* PulseTest.swift */,
+			);
+			path = Testers;
+			sourceTree = "<group>";
+		};
+		8AD924EA25D662FA004D8A49 /* MedeeView */ = {
+			isa = PBXGroup;
+			children = (
+				8AD924EB25D662FA004D8A49 /* MedeeView.swift */,
+				8AD924FA25D66313004D8A49 /* MedeeVisual.swift */,
+			);
+			path = MedeeView;
+			sourceTree = "<group>";
+		};
+		8AD924EC25D662FA004D8A49 /* MedeeKit */ = {
+			isa = PBXGroup;
+			children = (
+				8AD924ED25D662FA004D8A49 /* MedeeKit.swift */,
+			);
+			path = MedeeKit;
+			sourceTree = "<group>";
+		};
+		8AD924EE25D662FA004D8A49 /* MedeeWatch */ = {
+			isa = PBXGroup;
+			children = (
+				8AD924EF25D662FA004D8A49 /* MedeeWatch.swift */,
+			);
+			path = MedeeWatch;
+			sourceTree = "<group>";
+		};
+		8AD9250125D6634D004D8A49 /* App-Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9250B25D66378004D8A49 /* User.swift */,
+				8AD9250C25D66378004D8A49 /* UsersGroup.swift */,
+				8AD9251125D66379004D8A49 /* Bot.swift */,
+				8AD9250E25D66378004D8A49 /* Chat.swift */,
+				8AD9250625D66378004D8A49 /* ChatBot.swift */,
+				8AD9250925D66378004D8A49 /* FriendList.swift */,
+				8AD9250825D66378004D8A49 /* Login.swift */,
+				8AD9250F25D66378004D8A49 /* Share.swift */,
+				8AD9251225D66379004D8A49 /* Settings.swift */,
+			);
+			path = "App-Models";
+			sourceTree = "<group>";
+		};
+		8AD9250225D6635C004D8A49 /* System-Model */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9250425D66378004D8A49 /* System.swift */,
+				8AD9250725D66378004D8A49 /* Server.swift */,
+				8AD9250D25D66378004D8A49 /* Language.swift */,
+				8AD9250A25D66378004D8A49 /* Theme.swift */,
+				8AD924AD25D66205004D8A49 /* Notification.swift */,
+				8AD924A925D66205004D8A49 /* Deeplink.swift */,
+			);
+			path = "System-Model";
+			sourceTree = "<group>";
+		};
+		8AD9259625D665A6004D8A49 /* MedeeModels */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9251025D66379004D8A49 /* MedeeData.swift */,
+				8AD9250325D66378004D8A49 /* Pulse.swift */,
+				8AD9250525D66378004D8A49 /* HeartRate.swift */,
+				8AD9259825D665E7004D8A49 /* HRV.swift */,
+				8AD925A925D66615004D8A49 /* ECG.swift */,
+				8AD925C125D6664E004D8A49 /* Breath.swift */,
+				8AD925C825D66675004D8A49 /* Respiratory.swift */,
+				8AD925D425D66699004D8A49 /* BloodPressure.swift */,
+				8AD925E925D666D5004D8A49 /* PPG.swift */,
+				8AD925DB25D666AC004D8A49 /* Eye.swift */,
+				8AD925E225D666B7004D8A49 /* Pupil.swift */,
+				8AD925BA25D6663E004D8A49 /* TCMpulse.swift */,
+			);
+			path = MedeeModels;
+			sourceTree = "<group>";
+		};
+		8AD925F525D666E0004D8A49 /* rPPG */ = {
+			isa = PBXGroup;
+			children = (
+				8AD925F625D666F0004D8A49 /* MedeePPG.swift */,
+				8AD9245325D661AD004D8A49 /* Calculations */,
+				8AD9245E25D661AD004D8A49 /* VideoAnalysis */,
+				8AD9244625D661AD004D8A49 /* ImageProcessing */,
+			);
+			path = rPPG;
+			sourceTree = "<group>";
+		};
+		8AD9261525D66804004D8A49 /* DataVisualization */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9261625D6682E004D8A49 /* MedeeGraph.swift */,
+				8AD9264525D6689D004D8A49 /* GraphECG.swift */,
+				8AD9262225D66854004D8A49 /* GraphHR.swift */,
+				8AD9262925D6685E004D8A49 /* GraphHRV.swift */,
+				8AD9263025D6686A004D8A49 /* GraphPulse.swift */,
+				8AD9263725D66874004D8A49 /* GraphPRV.swift */,
+				8AD9263E25D66890004D8A49 /* GraphRespiratory.swift */,
+				8AD9265825D668E1004D8A49 /* GraphBP.swift */,
+			);
+			path = DataVisualization;
+			sourceTree = "<group>";
+		};
+		8AD9267325D66A50004D8A49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B9925C931760020C6CA /* WatchMainView.swift */,
+				8AD9271225D66E05004D8A49 /* MedeeWatchView.swift */,
+				8AD926A225D66BDA004D8A49 /* WorkoutView.swift */,
+				8AEF3B9F25C931760020C6CA /* NotificationView.swift */,
+				8AD9271625D66E06004D8A49 /* MedeeWatchViewModel.swift */,
+				8AD9271725D66E06004D8A49 /* WatchChatView.swift */,
+				8AD9271325D66E05004D8A49 /* WatchDashboardView.swift */,
+				8AD9271125D66E05004D8A49 /* WatchLiveView.swift */,
+				8AD9271425D66E05004D8A49 /* WatchPulseView.swift */,
+				8AD9271525D66E05004D8A49 /* WatchViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8AD9267425D66A5B004D8A49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B9725C931760020C6CA /* HostingController.swift */,
+				8AEF3B9D25C931760020C6CA /* NotificationController.swift */,
+				8AEF3BA125C931760020C6CA /* ComplicationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8AD9267A25D66B2C004D8A49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AD926C725D66C15004D8A49 /* App-Models */,
+				8AD926C625D66C0D004D8A49 /* System-Models */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AD926C625D66C0D004D8A49 /* System-Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AD926D225D66C9C004D8A49 /* Notification.swift */,
+			);
+			path = "System-Models";
+			sourceTree = "<group>";
+		};
+		8AD926C725D66C15004D8A49 /* App-Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AD9269625D66BCB004D8A49 /* MedeeCall.swift */,
+				8AD926AE25D66BF2004D8A49 /* MedeeData.swift */,
+				8AD9268F25D66B71004D8A49 /* Api.swift */,
+				8AD9268825D66B68004D8A49 /* Display.swift */,
+				8AD926BA25D66C09004D8A49 /* Chat.swift */,
+			);
+			path = "App-Models";
+			sourceTree = "<group>";
+		};
+		8AD926D925D66CB1004D8A49 /* MedeeLab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MedeeLab;
+			sourceTree = "<group>";
+		};
+		8AD926DA25D66CC2004D8A49 /* Extionsions */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B9B25C931760020C6CA /* ExtensionDelegate.swift */,
+			);
+			path = Extionsions;
+			sourceTree = "<group>";
+		};
+		8AD926DB25D66CD5004D8A49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AD924EE25D662FA004D8A49 /* MedeeWatch */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AEF3B5025C931740020C6CA = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B5B25C931740020C6CA /* MedeeCall */,
+				8AEF3B7225C931750020C6CA /* MedeeCallTests */,
+				8AEF3B7D25C931750020C6CA /* MedeeCallUITests */,
+				8AEF3B8725C931750020C6CA /* MedeeCall WatchKit App */,
+				8AEF3B9625C931760020C6CA /* MedeeCall WatchKit Extension */,
+				8AEF3B5A25C931740020C6CA /* Products */,
+				8AA5017A25C9ACBE001CDC17 /* Frameworks */,
+				53AE068F97F2D084190B54D0 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		8AEF3B5A25C931740020C6CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B5925C931740020C6CA /* MedeeCall.app */,
+				8AEF3B6F25C931750020C6CA /* MedeeCallTests.xctest */,
+				8AEF3B7A25C931750020C6CA /* MedeeCallUITests.xctest */,
+				8AEF3B8325C931750020C6CA /* MedeeCall WatchKit App.app */,
+				8AEF3B9225C931760020C6CA /* MedeeCall WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AEF3B5B25C931740020C6CA /* MedeeCall */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4C2C725D6407500DFCDAD /* App */,
+				8AD923C225D65903004D8A49 /* Configs */,
+				8AD923CA25D65A30004D8A49 /* Data */,
+				8AD9247725D661CB004D8A49 /* Services */,
+				8AD923C725D65966004D8A49 /* Modules */,
+				8AD923CC25D65A79004D8A49 /* Models */,
+				8A6A7E3C25D6412600CE29A2 /* Views */,
+				8A8A982526088C3E002D92AF /* ViewModels */,
+				8AD923CB25D65A65004D8A49 /* Extensions */,
+				8AD923C825D659C0004D8A49 /* MedeeFrameworks */,
+				8AB4C2C825D6408800DFCDAD /* Resources */,
+				8A6A7E3B25D640D900CE29A2 /* iWatch-Connectivity */,
+				8AD923D725D65F94004D8A49 /* MedeeLab */,
+			);
+			path = MedeeCall;
+			sourceTree = "<group>";
+		};
+		8AEF3B7225C931750020C6CA /* MedeeCallTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B7325C931750020C6CA /* MedeeCallTests.swift */,
+				8AEF3B7525C931750020C6CA /* Info.plist */,
+			);
+			path = MedeeCallTests;
+			sourceTree = "<group>";
+		};
+		8AEF3B7D25C931750020C6CA /* MedeeCallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B7E25C931750020C6CA /* MedeeCallUITests.swift */,
+				8AEF3B8025C931750020C6CA /* Info.plist */,
+			);
+			path = MedeeCallUITests;
+			sourceTree = "<group>";
+		};
+		8AEF3B8725C931750020C6CA /* MedeeCall WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3B8825C931750020C6CA /* Interface.storyboard */,
+				8AEF3B8B25C931760020C6CA /* Assets.xcassets */,
+				8AEF3B8D25C931760020C6CA /* Info.plist */,
+			);
+			path = "MedeeCall WatchKit App";
+			sourceTree = "<group>";
+		};
+		8AEF3B9625C931760020C6CA /* MedeeCall WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8A2A847325F64A38001FA5EC /* MedeeCall WatchKit Extension.entitlements */,
+				8A2A848F25F742EA001FA5EC /* Modules */,
+				8AD9267A25D66B2C004D8A49 /* Models */,
+				8AD9267325D66A50004D8A49 /* Views */,
+				8AD9267425D66A5B004D8A49 /* ViewControllers */,
+				8AD926DB25D66CD5004D8A49 /* Frameworks */,
+				8AD926DA25D66CC2004D8A49 /* Extionsions */,
+				8AD926D925D66CB1004D8A49 /* MedeeLab */,
+				8AEF3BA325C931760020C6CA /* Assets.xcassets */,
+				8AEF3BA825C931760020C6CA /* Info.plist */,
+				8AEF3BA925C931760020C6CA /* PushNotificationPayload.apns */,
+				8AEF3BA525C931760020C6CA /* Preview Content */,
+			);
+			path = "MedeeCall WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8AEF3BA525C931760020C6CA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF3BA625C931760020C6CA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AEF3B5825C931740020C6CA /* MedeeCall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AEF3BB425C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCall" */;
+			buildPhases = (
+				51633781F371C38CA265F0EE /* [CP] Check Pods Manifest.lock */,
+				8AEF3B5525C931740020C6CA /* Sources */,
+				8AEF3B5625C931740020C6CA /* Frameworks */,
+				8AEF3B5725C931740020C6CA /* Resources */,
+				8AEF3BB325C931760020C6CA /* Embed Watch Content */,
+				8A8A96A526085719002D92AF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AEF3B8625C931750020C6CA /* PBXTargetDependency */,
+			);
+			name = MedeeCall;
+			packageProductDependencies = (
+				8A85E57B260AE90D000A696B /* Charts */,
+			);
+			productName = MedeeCall;
+			productReference = 8AEF3B5925C931740020C6CA /* MedeeCall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AEF3B6E25C931750020C6CA /* MedeeCallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AEF3BB725C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCallTests" */;
+			buildPhases = (
+				EAFFEAA90380E791216D4695 /* [CP] Check Pods Manifest.lock */,
+				8AEF3B6B25C931750020C6CA /* Sources */,
+				8AEF3B6C25C931750020C6CA /* Frameworks */,
+				8AEF3B6D25C931750020C6CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AEF3B7125C931750020C6CA /* PBXTargetDependency */,
+			);
+			name = MedeeCallTests;
+			productName = MedeeCallTests;
+			productReference = 8AEF3B6F25C931750020C6CA /* MedeeCallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8AEF3B7925C931750020C6CA /* MedeeCallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AEF3BBA25C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCallUITests" */;
+			buildPhases = (
+				3FED7697CE92338B8B31A85A /* [CP] Check Pods Manifest.lock */,
+				8AEF3B7625C931750020C6CA /* Sources */,
+				8AEF3B7725C931750020C6CA /* Frameworks */,
+				8AEF3B7825C931750020C6CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AEF3B7C25C931750020C6CA /* PBXTargetDependency */,
+			);
+			name = MedeeCallUITests;
+			productName = MedeeCallUITests;
+			productReference = 8AEF3B7A25C931750020C6CA /* MedeeCallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8AEF3B8225C931750020C6CA /* MedeeCall WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AEF3BB025C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCall WatchKit App" */;
+			buildPhases = (
+				343A0D9ACF58F18FC062B21D /* [CP] Check Pods Manifest.lock */,
+				8AEF3B8125C931750020C6CA /* Resources */,
+				8AEF3BAF25C931760020C6CA /* Embed App Extensions */,
+				B250EEAD375406EAC54F40B3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AEF3B9525C931760020C6CA /* PBXTargetDependency */,
+			);
+			name = "MedeeCall WatchKit App";
+			productName = "MedeeCall WatchKit App";
+			productReference = 8AEF3B8325C931750020C6CA /* MedeeCall WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8AEF3B9125C931760020C6CA /* MedeeCall WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AEF3BAC25C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCall WatchKit Extension" */;
+			buildPhases = (
+				413CF61254BEE02BDF12CA27 /* [CP] Check Pods Manifest.lock */,
+				8AEF3B8E25C931760020C6CA /* Sources */,
+				8AEF3B8F25C931760020C6CA /* Frameworks */,
+				8AEF3B9025C931760020C6CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MedeeCall WatchKit Extension";
+			productName = "MedeeCall WatchKit Extension";
+			productReference = 8AEF3B9225C931760020C6CA /* MedeeCall WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AEF3B5125C931740020C6CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					8AEF3B5825C931740020C6CA = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					8AEF3B6E25C931750020C6CA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 8AEF3B5825C931740020C6CA;
+					};
+					8AEF3B7925C931750020C6CA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 8AEF3B5825C931740020C6CA;
+					};
+					8AEF3B8225C931750020C6CA = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					8AEF3B9125C931760020C6CA = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 8AEF3B5425C931740020C6CA /* Build configuration list for PBXProject "MedeeCall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AEF3B5025C931740020C6CA;
+			packageReferences = (
+				8A85E57A260AE90D000A696B /* XCRemoteSwiftPackageReference "Charts" */,
+			);
+			productRefGroup = 8AEF3B5A25C931740020C6CA /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8A8A972F26085D56002D92AF /* Products */;
+					ProjectRef = 8A8A972E26085D56002D92AF /* DSPFilters.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8AEF3B5825C931740020C6CA /* MedeeCall */,
+				8AEF3B6E25C931750020C6CA /* MedeeCallTests */,
+				8AEF3B7925C931750020C6CA /* MedeeCallUITests */,
+				8AEF3B8225C931750020C6CA /* MedeeCall WatchKit App */,
+				8AEF3B9125C931760020C6CA /* MedeeCall WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8A8A973426085D56002D92AF /* libDSPFiltersMacOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDSPFiltersMacOS.a;
+			remoteRef = 8A8A973326085D56002D92AF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A8A973626085D56002D92AF /* libDSPFiltersiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDSPFiltersiOS.a;
+			remoteRef = 8A8A973526085D56002D92AF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AEF3B5725C931740020C6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEF3B6925C931750020C6CA /* LaunchScreen.storyboard in Resources */,
+				8AD923B125D649F8004D8A49 /* appstore.png in Resources */,
+				8AD923B325D649F8004D8A49 /* Assets.xcassets in Resources */,
+				8A8A979226085FC4002D92AF /* haarcascade_frontalface_default.xml in Resources */,
+				8A6A7E4F25D641B500CE29A2 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B6D25C931750020C6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B7825C931750020C6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B8125C931750020C6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEF3B8C25C931760020C6CA /* Assets.xcassets in Resources */,
+				8AD923B225D649F8004D8A49 /* appstore.png in Resources */,
+				8AD923B425D649F8004D8A49 /* Assets.xcassets in Resources */,
+				8AEF3B8A25C931750020C6CA /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B9025C931760020C6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEF3BA725C931760020C6CA /* Preview Assets.xcassets in Resources */,
+				8AEF3BA425C931760020C6CA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		343A0D9ACF58F18FC062B21D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedeeCall WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FED7697CE92338B8B31A85A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedeeCall-MedeeCallUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		413CF61254BEE02BDF12CA27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedeeCall WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51633781F371C38CA265F0EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedeeCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAFFEAA90380E791216D4695 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedeeCallTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AEF3B5525C931740020C6CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD9253A25D663CD004D8A49 /* AppData.swift in Sources */,
+				8AD9246625D661AD004D8A49 /* EyeRoi.swift in Sources */,
+				8AD9240B25D660D4004D8A49 /* RawDataChartView.swift in Sources */,
+				8A8A97AC26087141002D92AF /* OpenCVImageProcessor.mm in Sources */,
+				8AD9241F25D660E4004D8A49 /* SettingsView.swift in Sources */,
+				8AD9242025D660E4004D8A49 /* AppViewModel.swift in Sources */,
+				8AD924BB25D66205004D8A49 /* FftDataChartView.swift in Sources */,
+				8AD9259925D665E7004D8A49 /* HRV.swift in Sources */,
+				8AD9256325D66418004D8A49 /* DashboardViewModel.swift in Sources */,
+				8AD9264D25D668C5004D8A49 /* ICA.swift in Sources */,
+				8AD9246225D661AD004D8A49 /* PulseDectector.swift in Sources */,
+				8AD9244025D6617C004D8A49 /* MedeeExtensions.swift in Sources */,
+				8AD9251525D66379004D8A49 /* HeartRate.swift in Sources */,
+				8AD9255925D66418004D8A49 /* LiveVitalView.swift in Sources */,
+				8AD924BA25D66205004D8A49 /* MedeeVars.swift in Sources */,
+				8AD9246125D661AD004D8A49 /* FaceRoi.swift in Sources */,
+				8AD9255A25D66418004D8A49 /* UserView.swift in Sources */,
+				8AD925F725D666F0004D8A49 /* MedeePPG.swift in Sources */,
+				8AD9255B25D66418004D8A49 /* FriendListView.swift in Sources */,
+				8AD9248E25D661CB004D8A49 /* MedeeFirebase.swift in Sources */,
+				8AD9246725D661AD004D8A49 /* MedeeDiagnosis.swift in Sources */,
+				8AD925AA25D66615004D8A49 /* ECG.swift in Sources */,
+				8AD924B825D66205004D8A49 /* Notification.swift in Sources */,
+				8AD924D125D662A2004D8A49 /* MedeeFFT.swift in Sources */,
+				8AD9247125D661AD004D8A49 /* VideoProcessor.swift in Sources */,
+				8AD9249A25D661CB004D8A49 /* Deeplinking.swift in Sources */,
+				8AD9241E25D660E4004D8A49 /* ContactView.swift in Sources */,
+				8AD9263825D66874004D8A49 /* GraphPRV.swift in Sources */,
+				8AD9243525D660EE004D8A49 /* FilteredICADataChartView.swift in Sources */,
+				8AD9246C25D661AD004D8A49 /* MedeeCalculator.swift in Sources */,
+				8A8A97BC2608723D002D92AF /* OpenCVWrapper.mm in Sources */,
+				8AD924E425D662D0004D8A49 /* TemporalFilter.swift in Sources */,
+				8AD9253B25D663CD004D8A49 /* MedeeDataModel.swift in Sources */,
+				8AD9255D25D66418004D8A49 /* FriendListViewModel.swift in Sources */,
+				8AD9262325D66854004D8A49 /* GraphHR.swift in Sources */,
+				8AD9249325D661CB004D8A49 /* DatabaseManager.swift in Sources */,
+				8AD9252225D66379004D8A49 /* Settings.swift in Sources */,
+				8AD9261725D6682E004D8A49 /* MedeeGraph.swift in Sources */,
+				8AD924F425D662FA004D8A49 /* MedeeApp.swift in Sources */,
+				8AEF3B5D25C931740020C6CA /* AppDelegate.swift in Sources */,
+				8A8A97CF26087337002D92AF /* DSPFilter.mm in Sources */,
+				8AD9251B25D66379004D8A49 /* User.swift in Sources */,
+				8AD924F125D662FA004D8A49 /* MedeeView.swift in Sources */,
+				8AD9258B25D66517004D8A49 /* SetupView.swift in Sources */,
+				8AD9249925D661CB004D8A49 /* WatchConnect.swift in Sources */,
+				8AD9256025D66418004D8A49 /* HealthView.swift in Sources */,
+				8AD923D125D65E86004D8A49 /* MainView.swift in Sources */,
+				8AD9258425D66517004D8A49 /* SocialConnectView.swift in Sources */,
+				8AD9242F25D660EE004D8A49 /* MedeeCallViewModel.swift in Sources */,
+				8AD9241925D660E4004D8A49 /* UserSettings.swift in Sources */,
+				8AD9246425D661AD004D8A49 /* MedeeRealTime.swift in Sources */,
+				8AD9258A25D66517004D8A49 /* WelcomeView.swift in Sources */,
+				8AD9258725D66517004D8A49 /* SetupViewModel.swift in Sources */,
+				8AD9252B25D663BF004D8A49 /* MedeeHeaders.swift in Sources */,
+				8AD9240A25D660D4004D8A49 /* LineCharts.swift in Sources */,
+				8AD924B425D66205004D8A49 /* Deeplink.swift in Sources */,
+				8AD9248C25D661CB004D8A49 /* MedeeAuth.swift in Sources */,
+				8AD924C825D6621C004D8A49 /* Experiments.swift in Sources */,
+				8AD9253925D663CD004D8A49 /* HealthData.swift in Sources */,
+				8AD924FB25D66313004D8A49 /* MedeeVisual.swift in Sources */,
+				8AD925EA25D666D5004D8A49 /* PPG.swift in Sources */,
+				8AD9246A25D661AD004D8A49 /* RGBSampleData.swift in Sources */,
+				8AD924B225D66205004D8A49 /* LiveHealthViewModel.swift in Sources */,
+				8AEF3B5F25C931740020C6CA /* SceneDelegate.swift in Sources */,
+				8AD924B525D66205004D8A49 /* PhoneToWatch.swift in Sources */,
+				8AD9251925D66379004D8A49 /* FriendList.swift in Sources */,
+				8AD9251625D66379004D8A49 /* ChatBot.swift in Sources */,
+				8AD9264625D6689D004D8A49 /* GraphECG.swift in Sources */,
+				8AD923E025D65FCB004D8A49 /* MedeeLab.swift in Sources */,
+				8AD923D925D65FBA004D8A49 /* LabView.swift in Sources */,
+				8AD9251C25D66379004D8A49 /* UsersGroup.swift in Sources */,
+				8AD9255F25D66418004D8A49 /* AccountView.swift in Sources */,
+				8AD9243225D660EE004D8A49 /* FftICADataChartView.swift in Sources */,
+				8AD924B125D66205004D8A49 /* WatchConnectPreview.swift in Sources */,
+				8AD9253C25D663CD004D8A49 /* UserData.swift in Sources */,
+				8AD9246B25D661AD004D8A49 /* PulseCalculation.swift in Sources */,
+				8AD9251E25D66379004D8A49 /* Chat.swift in Sources */,
+				8AD9263125D6686A004D8A49 /* GraphPulse.swift in Sources */,
+				8AD9260525D66754004D8A49 /* Matrix.swift in Sources */,
+				8AD9258625D66517004D8A49 /* LaunchView.swift in Sources */,
+				8AD925C225D6664E004D8A49 /* Breath.swift in Sources */,
+				8AD9240825D660D4004D8A49 /* FilteredDataChartView.swift in Sources */,
+				8AD9248F25D661CB004D8A49 /* AppManager.swift in Sources */,
+				8AD925DC25D666AC004D8A49 /* Eye.swift in Sources */,
+				8AD9252D25D663BF004D8A49 /* GlobalVars.swift in Sources */,
+				8AD9249625D661CB004D8A49 /* MedeeApi.swift in Sources */,
+				8AD9246D25D661AD004D8A49 /* PRVCalculation.swift in Sources */,
+				8AD9249825D661CB004D8A49 /* Helpers.swift in Sources */,
+				8AD9256225D66418004D8A49 /* ShareView.swift in Sources */,
+				8AD9242E25D660EE004D8A49 /* VideoSettings.swift in Sources */,
+				8AD924B625D66205004D8A49 /* AccountViewModel.swift in Sources */,
+				8AD9243E25D6617C004D8A49 /* ViewExtensions.swift in Sources */,
+				8AD9258825D66517004D8A49 /* LoginView.swift in Sources */,
+				8AD9265925D668E1004D8A49 /* GraphBP.swift in Sources */,
+				8AD924C725D6621C004D8A49 /* PulseDetectorTest.swift in Sources */,
+				8AD924F225D662FA004D8A49 /* MedeeKit.swift in Sources */,
+				8AD9243425D660EE004D8A49 /* VideoView.swift in Sources */,
+				8AD9255825D66418004D8A49 /* ProfileViewModel.swift in Sources */,
+				8AD9256125D66418004D8A49 /* ProfileView.swift in Sources */,
+				8AD9246325D661AD004D8A49 /* MedeePulse.swift in Sources */,
+				8AD924C925D6621C004D8A49 /* PulseTest.swift in Sources */,
+				8AD9249425D661CB004D8A49 /* FirebaseManager.swift in Sources */,
+				8AD9243025D660EE004D8A49 /* CallView.swift in Sources */,
+				8AD9252025D66379004D8A49 /* MedeeData.swift in Sources */,
+				8AD9256425D66418004D8A49 /* UserViewModel.swift in Sources */,
+				8AD9246F25D661AD004D8A49 /* MedeeTrain.swift in Sources */,
+				8AD9258125D66517004D8A49 /* HomeView.swift in Sources */,
+				8AD9253825D663CD004D8A49 /* ChatData.swift in Sources */,
+				8AD9252125D66379004D8A49 /* Bot.swift in Sources */,
+				8AD924C625D6621C004D8A49 /* MedeeAlgorithms.swift in Sources */,
+				8AD9258925D66517004D8A49 /* WelcomeViewModel.swift in Sources */,
+				8AD9249025D661CB004D8A49 /* ApiManager.swift in Sources */,
+				8AD9243125D660EE004D8A49 /* ChartViewModel.swift in Sources */,
+				8AD9240925D660D4004D8A49 /* BarCharts.swift in Sources */,
+				8AD925C925D66675004D8A49 /* Respiratory.swift in Sources */,
+				8AD9248D25D661CB004D8A49 /* MedeeConnect.swift in Sources */,
+				8AD9258325D66517004D8A49 /* LoginViewModel.swift in Sources */,
+				8AD9256525D66418004D8A49 /* DashBoardView.swift in Sources */,
+				8AD9247025D661AD004D8A49 /* VirtualDoctor.swift in Sources */,
+				8AD9243325D660EE004D8A49 /* MedeeCallView.swift in Sources */,
+				8AD9241D25D660E4004D8A49 /* AppView.swift in Sources */,
+				8AD9249225D661CB004D8A49 /* AuthManager.swift in Sources */,
+				8AD925FE25D66746004D8A49 /* SVD.swift in Sources */,
+				8AD9251A25D66379004D8A49 /* Theme.swift in Sources */,
+				8AD9254325D663FD004D8A49 /* MainViewModel.swift in Sources */,
+				8AD924DD25D662C0004D8A49 /* PeakDetection.swift in Sources */,
+				8AD9246825D661AD004D8A49 /* PeakCalculation.swift in Sources */,
+				8AD9255E25D66418004D8A49 /* HealthViewModel.swift in Sources */,
+				8AD9246925D661AD004D8A49 /* TestAccelerate.swift in Sources */,
+				8AD9262A25D6685E004D8A49 /* GraphHRV.swift in Sources */,
+				8AD9263F25D66890004D8A49 /* GraphRespiratory.swift in Sources */,
+				8AD9249525D661CB004D8A49 /* Api.swift in Sources */,
+				8AD9258225D66517004D8A49 /* HomeViewModel.swift in Sources */,
+				8AD9251F25D66379004D8A49 /* Share.swift in Sources */,
+				8AD9251425D66379004D8A49 /* System.swift in Sources */,
+				8AD9251825D66379004D8A49 /* Login.swift in Sources */,
+				8AD9241C25D660E4004D8A49 /* ContactViewModel.swift in Sources */,
+				8AD9246E25D661AD004D8A49 /* MedeeBot.swift in Sources */,
+				8AD9243F25D6617C004D8A49 /* Extensions.swift in Sources */,
+				8AD9251D25D66379004D8A49 /* Language.swift in Sources */,
+				8AD9249725D661CB004D8A49 /* SocialConnect.swift in Sources */,
+				8AD9241A25D660E4004D8A49 /* NotificationView.swift in Sources */,
+				8AD9256625D66418004D8A49 /* ProfileEditView.swift in Sources */,
+				8AD925BB25D6663E004D8A49 /* TCMpulse.swift in Sources */,
+				8AD9249125D661CB004D8A49 /* WatchManager.swift in Sources */,
+				8AD925D525D66699004D8A49 /* BloodPressure.swift in Sources */,
+				8AD9246025D661AD004D8A49 /* FaceDetector.swift in Sources */,
+				8AD9246525D661AD004D8A49 /* EyeDetector.swift in Sources */,
+				8AD9258525D66517004D8A49 /* TabbarView.swift in Sources */,
+				8AD9241B25D660E4004D8A49 /* NotificationViewModel.swift in Sources */,
+				8AD9251725D66379004D8A49 /* Server.swift in Sources */,
+				8AD925E325D666B7004D8A49 /* Pupil.swift in Sources */,
+				8AD9252C25D663BF004D8A49 /* MedeeConfigs.swift in Sources */,
+				8AD9255C25D66418004D8A49 /* ShareViewModel.swift in Sources */,
+				8AD9251325D66379004D8A49 /* Pulse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B6B25C931750020C6CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEF3B7425C931750020C6CA /* MedeeCallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B7625C931750020C6CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEF3B7F25C931750020C6CA /* MedeeCallUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AEF3B8E25C931760020C6CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD926BB25D66C09004D8A49 /* Chat.swift in Sources */,
+				8A2A849225F74328001FA5EC /* WatchToPhone.swift in Sources */,
+				8AD9271925D66E06004D8A49 /* MedeeWatchView.swift in Sources */,
+				8AD9271B25D66E06004D8A49 /* WatchPulseView.swift in Sources */,
+				8AD9269025D66B71004D8A49 /* Api.swift in Sources */,
+				8AEF3B9A25C931760020C6CA /* WatchMainView.swift in Sources */,
+				8AD926DC25D66CFB004D8A49 /* MedeeWatch.swift in Sources */,
+				8AEF3B9825C931760020C6CA /* HostingController.swift in Sources */,
+				8AD9271A25D66E06004D8A49 /* WatchDashboardView.swift in Sources */,
+				8AD9271825D66E06004D8A49 /* WatchLiveView.swift in Sources */,
+				8AD9271E25D66E06004D8A49 /* WatchChatView.swift in Sources */,
+				8AEF3B9E25C931760020C6CA /* NotificationController.swift in Sources */,
+				8AD926AF25D66BF2004D8A49 /* MedeeData.swift in Sources */,
+				8AEF3B9C25C931760020C6CA /* ExtensionDelegate.swift in Sources */,
+				8AD926A325D66BDA004D8A49 /* WorkoutView.swift in Sources */,
+				8AEF3BA025C931760020C6CA /* NotificationView.swift in Sources */,
+				8A2A849025F74328001FA5EC /* HeartRateManager.swift in Sources */,
+				8AD9269725D66BCB004D8A49 /* MedeeCall.swift in Sources */,
+				8AD926D325D66C9C004D8A49 /* Notification.swift in Sources */,
+				8AD9271C25D66E06004D8A49 /* WatchViewModel.swift in Sources */,
+				8A2A849125F74328001FA5EC /* AuthorizationManager.swift in Sources */,
+				8AEF3BA225C931760020C6CA /* ComplicationController.swift in Sources */,
+				8AD9268925D66B68004D8A49 /* Display.swift in Sources */,
+				8AD9271D25D66E06004D8A49 /* MedeeWatchViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AEF3B7125C931750020C6CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AEF3B5825C931740020C6CA /* MedeeCall */;
+			targetProxy = 8AEF3B7025C931750020C6CA /* PBXContainerItemProxy */;
+		};
+		8AEF3B7C25C931750020C6CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AEF3B5825C931740020C6CA /* MedeeCall */;
+			targetProxy = 8AEF3B7B25C931750020C6CA /* PBXContainerItemProxy */;
+		};
+		8AEF3B8625C931750020C6CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AEF3B8225C931750020C6CA /* MedeeCall WatchKit App */;
+			targetProxy = 8AEF3B8525C931750020C6CA /* PBXContainerItemProxy */;
+		};
+		8AEF3B9525C931760020C6CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AEF3B9125C931760020C6CA /* MedeeCall WatchKit Extension */;
+			targetProxy = 8AEF3B9425C931760020C6CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AEF3B6725C931750020C6CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AEF3B6825C931750020C6CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8AEF3B8825C931750020C6CA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AEF3B8925C931750020C6CA /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AEF3BAA25C931760020C6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/3rd-Party_Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"3rd-Party_Frameworks/DSPFilters/include",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8AEF3BAB25C931760020C6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/3rd-Party_Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"3rd-Party_Frameworks/DSPFilters/include",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8AEF3BAD25C931760020C6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90617D7550EA2CF8E48B8E29 /* Pods-MedeeCall WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MedeeCall WatchKit Extension/MedeeCall WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MedeeCall WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MedeeCall WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCall.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		8AEF3BAE25C931760020C6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D56F5474D93BE7D32ACA076 /* Pods-MedeeCall WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MedeeCall WatchKit Extension/MedeeCall WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MedeeCall WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MedeeCall WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCall.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		8AEF3BB125C931760020C6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F41EF77B07786AF8E420AA93 /* Pods-MedeeCall WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				IBSC_MODULE = MedeeCall_WatchKit_Extension;
+				INFOPLIST_FILE = "MedeeCall WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCall.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MedeeCall/MedeeCall WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		8AEF3BB225C931760020C6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E768406BDD73FE93EBC6684C /* Pods-MedeeCall WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				IBSC_MODULE = MedeeCall_WatchKit_Extension;
+				INFOPLIST_FILE = "MedeeCall WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCall.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MedeeCall/MedeeCall WatchKit App-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		8AEF3BB525C931760020C6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB74F1446AB496664E0CBBAB /* Pods-MedeeCall.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MedeeCall/App/MedeeCall.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MedeeCall/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rd-Party_Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MedeeCall/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MedeeCall/Modules/rPPG/ImageProcessing/OpenCV/MedeeCall-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8AEF3BB625C931760020C6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D1BC3F013AEE17C3DF186B /* Pods-MedeeCall.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MedeeCall/App/MedeeCall.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MedeeCall/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rd-Party_Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MedeeCall/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MedeeCall/Modules/rPPG/ImageProcessing/OpenCV/MedeeCall-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AEF3BB825C931760020C6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA800628C5C4CB64781F0372 /* Pods-MedeeCallTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				INFOPLIST_FILE = MedeeCallTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedeeCall.app/MedeeCall";
+			};
+			name = Debug;
+		};
+		8AEF3BB925C931760020C6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 298F7B00959AF0FEDB779017 /* Pods-MedeeCallTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				INFOPLIST_FILE = MedeeCallTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedeeCall.app/MedeeCall";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AEF3BBB25C931760020C6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D01DBA9B38E033DF8E637F61 /* Pods-MedeeCall-MedeeCallUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				INFOPLIST_FILE = MedeeCallUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MedeeCall;
+			};
+			name = Debug;
+		};
+		8AEF3BBC25C931760020C6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D16EF2C1E1E30197EB08B82 /* Pods-MedeeCall-MedeeCallUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39N2S4ZKJ;
+				INFOPLIST_FILE = MedeeCallUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nothing2say.develop.MedeeCallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MedeeCall;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AEF3B5425C931740020C6CA /* Build configuration list for PBXProject "MedeeCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AEF3BAA25C931760020C6CA /* Debug */,
+				8AEF3BAB25C931760020C6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AEF3BAC25C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCall WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AEF3BAD25C931760020C6CA /* Debug */,
+				8AEF3BAE25C931760020C6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AEF3BB025C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCall WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AEF3BB125C931760020C6CA /* Debug */,
+				8AEF3BB225C931760020C6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AEF3BB425C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AEF3BB525C931760020C6CA /* Debug */,
+				8AEF3BB625C931760020C6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AEF3BB725C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AEF3BB825C931760020C6CA /* Debug */,
+				8AEF3BB925C931760020C6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AEF3BBA25C931760020C6CA /* Build configuration list for PBXNativeTarget "MedeeCallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AEF3BBB25C931760020C6CA /* Debug */,
+				8AEF3BBC25C931760020C6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A85E57A260AE90D000A696B /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A85E57B260AE90D000A696B /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A85E57A260AE90D000A696B /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8AEF3B5125C931740020C6CA /* Project object */;
+}

@@ -1,0 +1,1095 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041D7F0E499C11502EBC8318E1E79898 /* Pods-MedeeCallTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CC74762B21C32D5344323457C83F4 /* Pods-MedeeCallTests-dummy.m */; };
+		0BE9A0C32C117DBF3E3E8485E1737258 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */; };
+		106C9EDFBD85B152B0F1B479A9D66F9B /* Pods-MedeeCall WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A58D50885A19AC33CF3E36010F7CF895 /* Pods-MedeeCall WatchKit Extension-dummy.m */; };
+		20984318DA9F74BB436B6525ACC00CE2 /* Pods-MedeeCall WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8B58527D9AE6097DB96270CAB45D6E1 /* Pods-MedeeCall WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30B471398CF185246617537F371BD199 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */; };
+		3D2BCC053B14673603A612112F7C76AE /* Pods-MedeeCall WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD932BD74EEBA53A6A010D3D6A19A7 /* Pods-MedeeCall WatchKit App-dummy.m */; };
+		4B3704D23682875BA5CBA34C4048765A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */; };
+		6F556C3D0C07C759C5C566ADE02989F5 /* Pods-MedeeCall-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C4AAF0F9DDE4BF264594B5B4D1F666D /* Pods-MedeeCall-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		755F456910B013C537CD2C972A674DF6 /* Pods-MedeeCallTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BD6227CED69D3D464C4699E5D6B1E18 /* Pods-MedeeCallTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98C748CF802EB92C0940FA751F31A47D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */; };
+		C6FA0B683ADAFD798C7D97311F9BD058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */; };
+		D28EC6B661BDAA142908B1EF8B486585 /* Pods-MedeeCall-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17912502545CADA1755F0F672F21FC4C /* Pods-MedeeCall-dummy.m */; };
+		D9D1188E763CB25E7D43F222556E1356 /* Pods-MedeeCall-MedeeCallUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B9DC7F02C1422A96843C262A878D158 /* Pods-MedeeCall-MedeeCallUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DACB47E2A35866F9FFD865ED18C240B4 /* Pods-MedeeCall-MedeeCallUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF59288BC41AF8B95108A48F6DF0553 /* Pods-MedeeCall-MedeeCallUITests-dummy.m */; };
+		F2EBD5DF4A71AC718E38C91E057495CD /* Pods-MedeeCall WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC9877EBB1528635A34FC402660E85F /* Pods-MedeeCall WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9D960375C1534831B08B44BC9DC9E0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 981424439385EE78AF842DFFEF225802;
+			remoteInfo = "Pods-MedeeCall";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04505F61DDEB3D22D1CCDD2DF235AD34 /* Pods_MedeeCall_MedeeCallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MedeeCall_MedeeCallUITests.framework; path = "Pods-MedeeCall-MedeeCallUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F3CC74762B21C32D5344323457C83F4 /* Pods-MedeeCallTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MedeeCallTests-dummy.m"; sourceTree = "<group>"; };
+		16BC88151DEECBBD37F97922060FAFAB /* Pods-MedeeCall WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MedeeCall WatchKit App.modulemap"; sourceTree = "<group>"; };
+		17912502545CADA1755F0F672F21FC4C /* Pods-MedeeCall-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MedeeCall-dummy.m"; sourceTree = "<group>"; };
+		18113AF67945F24620FA31685D7533CD /* Pods-MedeeCallTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MedeeCallTests.modulemap"; sourceTree = "<group>"; };
+		1BD6227CED69D3D464C4699E5D6B1E18 /* Pods-MedeeCallTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MedeeCallTests-umbrella.h"; sourceTree = "<group>"; };
+		21E8388561B5B7643610A7A78B269A60 /* Pods-MedeeCall WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MedeeCall WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		229D69E35CC416CD66051913226C8CDC /* Pods-MedeeCall-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MedeeCall-acknowledgements.markdown"; sourceTree = "<group>"; };
+		22DE6988CAD193DA390B71B9B18A306A /* Pods-MedeeCall WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCall WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		2C542D4D99AC332169F13DCB647707A9 /* Pods-MedeeCall-MedeeCallUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCall-MedeeCallUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3AA3F59DF3800C7374C19E9CBF7F8F00 /* Pods-MedeeCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCall.release.xcconfig"; sourceTree = "<group>"; };
+		3EF59288BC41AF8B95108A48F6DF0553 /* Pods-MedeeCall-MedeeCallUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MedeeCall-MedeeCallUITests-dummy.m"; sourceTree = "<group>"; };
+		452F53740A2902FBE30EA3C47B37A80B /* Pods-MedeeCallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCallTests.release.xcconfig"; sourceTree = "<group>"; };
+		4B1110DBE55FED6FD7ED97A114B45CC3 /* Pods-MedeeCall-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCall-acknowledgements.plist"; sourceTree = "<group>"; };
+		4BCD7B41F8B120015487AF6B84F4EF12 /* Pods-MedeeCall WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCall WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		4E578865ACF23D65B21FF68C02A2F7E5 /* Pods-MedeeCall-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCall-Info.plist"; sourceTree = "<group>"; };
+		5BC60CB81FF86DFE45120204EC1C7CDC /* Pods-MedeeCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCall.debug.xcconfig"; sourceTree = "<group>"; };
+		5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		64A785B8B55F764057D8B18F1F5FC1A7 /* Pods-MedeeCall WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCall WatchKit App-Info.plist"; sourceTree = "<group>"; };
+		66AF9D87EE8902A0F46691F0DB0A64D7 /* Pods_MedeeCallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MedeeCallTests.framework; path = "Pods-MedeeCallTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C4AAF0F9DDE4BF264594B5B4D1F666D /* Pods-MedeeCall-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MedeeCall-umbrella.h"; sourceTree = "<group>"; };
+		825B9708667BAC0DDA454A6754A7EA8E /* Pods-MedeeCall WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCall WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		87CCBB06687D36B51153FCF7CE95B78C /* Pods-MedeeCall-MedeeCallUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCall-MedeeCallUITests-Info.plist"; sourceTree = "<group>"; };
+		8C31EF5D333B0D71EC2A9A2D18B068DC /* Pods-MedeeCall-MedeeCallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCall-MedeeCallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9313C8522D8B9E001D3DD5789CD63C53 /* Pods-MedeeCallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCallTests.debug.xcconfig"; sourceTree = "<group>"; };
+		97ADE2C8512C0ABD4781E9DAA8D5A837 /* Pods_MedeeCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MedeeCall.framework; path = "Pods-MedeeCall.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99368E9E9854EB900B4AAA93764A5D12 /* Pods-MedeeCallTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MedeeCallTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9B9DC7F02C1422A96843C262A878D158 /* Pods-MedeeCall-MedeeCallUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MedeeCall-MedeeCallUITests-umbrella.h"; sourceTree = "<group>"; };
+		9BDD932BD74EEBA53A6A010D3D6A19A7 /* Pods-MedeeCall WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MedeeCall WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		9D65773CA83E619A8345B71E1E5D1C5E /* Pods-MedeeCall WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCall WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4CDB754348515B05FFD6F311FB42FFA /* Pods-MedeeCall.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MedeeCall.modulemap"; sourceTree = "<group>"; };
+		A58D50885A19AC33CF3E36010F7CF895 /* Pods-MedeeCall WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MedeeCall WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
+		ACC9877EBB1528635A34FC402660E85F /* Pods-MedeeCall WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MedeeCall WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		AFE9F5DF44202ABEFAEF00E64E62B3E3 /* Pods-MedeeCall-MedeeCallUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MedeeCall-MedeeCallUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BFD62F64CCAB814D1F270543F569488F /* Pods-MedeeCall WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCall WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		C12A8E16B8754DE104E48D45C3B61BFE /* Pods-MedeeCall WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCall WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
+		C2A04501AE84B3AF9097634605A341E2 /* Pods-MedeeCallTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCallTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C8B58527D9AE6097DB96270CAB45D6E1 /* Pods-MedeeCall WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MedeeCall WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
+		CC60BFF31DC69A55CA09BAEA5C617700 /* Pods-MedeeCall-MedeeCallUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MedeeCall-MedeeCallUITests.modulemap"; sourceTree = "<group>"; };
+		D4F3AB101DA7EE7B28C1A4E445F576A4 /* Pods-MedeeCall WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MedeeCall WatchKit Extension.modulemap"; sourceTree = "<group>"; };
+		D685A8499785AD95774813E00412DE0C /* Pods_MedeeCall_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MedeeCall_WatchKit_App.framework; path = "Pods-MedeeCall WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C3F9ACCA955EC75F4A72FFD2C77EFB /* Pods_MedeeCall_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MedeeCall_WatchKit_Extension.framework; path = "Pods-MedeeCall WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7FCA47C592B594453B13787E5D1E21C /* Pods-MedeeCall WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MedeeCall WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EC2042E80F2440345322BCCA253D3272 /* Pods-MedeeCallTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MedeeCallTests-Info.plist"; sourceTree = "<group>"; };
+		EF63557F0583C0BDBE880ED8350CCB26 /* Pods-MedeeCall-MedeeCallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCall-MedeeCallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F982AB0116A36C3A97504687384FC2F3 /* Pods-MedeeCall WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MedeeCall WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		313632D3B3B49AEB3F20EA827F11EBA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BE9A0C32C117DBF3E3E8485E1737258 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5899E8C6A745A96081A4CE5F12B5FF47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C748CF802EB92C0940FA751F31A47D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B7D94C5A33F1EE22B4FF46EE3EB3A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B471398CF185246617537F371BD199 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFC6DD0587899E928899BBED014921C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6FA0B683ADAFD798C7D97311F9BD058 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED54DA9F10B5A9335A0375507A704D93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3704D23682875BA5CBA34C4048765A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03FBABE5ACCBF0D21AB61D364299D310 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A982A9433AACEF8A61353293CF443 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		112C48BF8FC889CC3FAD42244595CF5B /* Pods-MedeeCall WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				16BC88151DEECBBD37F97922060FAFAB /* Pods-MedeeCall WatchKit App.modulemap */,
+				21E8388561B5B7643610A7A78B269A60 /* Pods-MedeeCall WatchKit App-acknowledgements.markdown */,
+				22DE6988CAD193DA390B71B9B18A306A /* Pods-MedeeCall WatchKit App-acknowledgements.plist */,
+				9BDD932BD74EEBA53A6A010D3D6A19A7 /* Pods-MedeeCall WatchKit App-dummy.m */,
+				64A785B8B55F764057D8B18F1F5FC1A7 /* Pods-MedeeCall WatchKit App-Info.plist */,
+				ACC9877EBB1528635A34FC402660E85F /* Pods-MedeeCall WatchKit App-umbrella.h */,
+				4BCD7B41F8B120015487AF6B84F4EF12 /* Pods-MedeeCall WatchKit App.debug.xcconfig */,
+				F982AB0116A36C3A97504687384FC2F3 /* Pods-MedeeCall WatchKit App.release.xcconfig */,
+			);
+			name = "Pods-MedeeCall WatchKit App";
+			path = "Target Support Files/Pods-MedeeCall WatchKit App";
+			sourceTree = "<group>";
+		};
+		54CCD06893F300F5B2C02DAFD57093E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03FBABE5ACCBF0D21AB61D364299D310 /* iOS */,
+				8B063FB5829CC11F1F48DAAF9305FCB4 /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		649D7916AA0BC229BC1FA5D01B833D45 /* Pods-MedeeCallTests */ = {
+			isa = PBXGroup;
+			children = (
+				18113AF67945F24620FA31685D7533CD /* Pods-MedeeCallTests.modulemap */,
+				99368E9E9854EB900B4AAA93764A5D12 /* Pods-MedeeCallTests-acknowledgements.markdown */,
+				C2A04501AE84B3AF9097634605A341E2 /* Pods-MedeeCallTests-acknowledgements.plist */,
+				0F3CC74762B21C32D5344323457C83F4 /* Pods-MedeeCallTests-dummy.m */,
+				EC2042E80F2440345322BCCA253D3272 /* Pods-MedeeCallTests-Info.plist */,
+				1BD6227CED69D3D464C4699E5D6B1E18 /* Pods-MedeeCallTests-umbrella.h */,
+				9313C8522D8B9E001D3DD5789CD63C53 /* Pods-MedeeCallTests.debug.xcconfig */,
+				452F53740A2902FBE30EA3C47B37A80B /* Pods-MedeeCallTests.release.xcconfig */,
+			);
+			name = "Pods-MedeeCallTests";
+			path = "Target Support Files/Pods-MedeeCallTests";
+			sourceTree = "<group>";
+		};
+		79ECC8063C8B4A024EAC3EDC85ABACD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97ADE2C8512C0ABD4781E9DAA8D5A837 /* Pods_MedeeCall.framework */,
+				04505F61DDEB3D22D1CCDD2DF235AD34 /* Pods_MedeeCall_MedeeCallUITests.framework */,
+				D685A8499785AD95774813E00412DE0C /* Pods_MedeeCall_WatchKit_App.framework */,
+				E6C3F9ACCA955EC75F4A72FFD2C77EFB /* Pods_MedeeCall_WatchKit_Extension.framework */,
+				66AF9D87EE8902A0F46691F0DB0A64D7 /* Pods_MedeeCallTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B063FB5829CC11F1F48DAAF9305FCB4 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				FCE35B7430FD7C91E8CC808A3540CF2E /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		910BE23E16E66DCE3B8A675F40A38552 /* Pods-MedeeCall WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D4F3AB101DA7EE7B28C1A4E445F576A4 /* Pods-MedeeCall WatchKit Extension.modulemap */,
+				E7FCA47C592B594453B13787E5D1E21C /* Pods-MedeeCall WatchKit Extension-acknowledgements.markdown */,
+				825B9708667BAC0DDA454A6754A7EA8E /* Pods-MedeeCall WatchKit Extension-acknowledgements.plist */,
+				A58D50885A19AC33CF3E36010F7CF895 /* Pods-MedeeCall WatchKit Extension-dummy.m */,
+				C12A8E16B8754DE104E48D45C3B61BFE /* Pods-MedeeCall WatchKit Extension-Info.plist */,
+				C8B58527D9AE6097DB96270CAB45D6E1 /* Pods-MedeeCall WatchKit Extension-umbrella.h */,
+				BFD62F64CCAB814D1F270543F569488F /* Pods-MedeeCall WatchKit Extension.debug.xcconfig */,
+				9D65773CA83E619A8345B71E1E5D1C5E /* Pods-MedeeCall WatchKit Extension.release.xcconfig */,
+			);
+			name = "Pods-MedeeCall WatchKit Extension";
+			path = "Target Support Files/Pods-MedeeCall WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		A1A23BF3147ED34F577CA03FBDD30D44 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFF7B0B464AA98B2C3FD8DD18DD73914 /* Pods-MedeeCall */,
+				112C48BF8FC889CC3FAD42244595CF5B /* Pods-MedeeCall WatchKit App */,
+				910BE23E16E66DCE3B8A675F40A38552 /* Pods-MedeeCall WatchKit Extension */,
+				D02D461D0EAFD5005948C5083433FA5D /* Pods-MedeeCall-MedeeCallUITests */,
+				649D7916AA0BC229BC1FA5D01B833D45 /* Pods-MedeeCallTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AFF7B0B464AA98B2C3FD8DD18DD73914 /* Pods-MedeeCall */ = {
+			isa = PBXGroup;
+			children = (
+				A4CDB754348515B05FFD6F311FB42FFA /* Pods-MedeeCall.modulemap */,
+				229D69E35CC416CD66051913226C8CDC /* Pods-MedeeCall-acknowledgements.markdown */,
+				4B1110DBE55FED6FD7ED97A114B45CC3 /* Pods-MedeeCall-acknowledgements.plist */,
+				17912502545CADA1755F0F672F21FC4C /* Pods-MedeeCall-dummy.m */,
+				4E578865ACF23D65B21FF68C02A2F7E5 /* Pods-MedeeCall-Info.plist */,
+				6C4AAF0F9DDE4BF264594B5B4D1F666D /* Pods-MedeeCall-umbrella.h */,
+				5BC60CB81FF86DFE45120204EC1C7CDC /* Pods-MedeeCall.debug.xcconfig */,
+				3AA3F59DF3800C7374C19E9CBF7F8F00 /* Pods-MedeeCall.release.xcconfig */,
+			);
+			name = "Pods-MedeeCall";
+			path = "Target Support Files/Pods-MedeeCall";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				54CCD06893F300F5B2C02DAFD57093E1 /* Frameworks */,
+				79ECC8063C8B4A024EAC3EDC85ABACD8 /* Products */,
+				A1A23BF3147ED34F577CA03FBDD30D44 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D02D461D0EAFD5005948C5083433FA5D /* Pods-MedeeCall-MedeeCallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC60BFF31DC69A55CA09BAEA5C617700 /* Pods-MedeeCall-MedeeCallUITests.modulemap */,
+				AFE9F5DF44202ABEFAEF00E64E62B3E3 /* Pods-MedeeCall-MedeeCallUITests-acknowledgements.markdown */,
+				2C542D4D99AC332169F13DCB647707A9 /* Pods-MedeeCall-MedeeCallUITests-acknowledgements.plist */,
+				3EF59288BC41AF8B95108A48F6DF0553 /* Pods-MedeeCall-MedeeCallUITests-dummy.m */,
+				87CCBB06687D36B51153FCF7CE95B78C /* Pods-MedeeCall-MedeeCallUITests-Info.plist */,
+				9B9DC7F02C1422A96843C262A878D158 /* Pods-MedeeCall-MedeeCallUITests-umbrella.h */,
+				8C31EF5D333B0D71EC2A9A2D18B068DC /* Pods-MedeeCall-MedeeCallUITests.debug.xcconfig */,
+				EF63557F0583C0BDBE880ED8350CCB26 /* Pods-MedeeCall-MedeeCallUITests.release.xcconfig */,
+			);
+			name = "Pods-MedeeCall-MedeeCallUITests";
+			path = "Target Support Files/Pods-MedeeCall-MedeeCallUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9301B1B1A75A540BAF5548B488EB2418 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2EBD5DF4A71AC718E38C91E057495CD /* Pods-MedeeCall WatchKit App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D3923321666188D7CB8BF99D4A9BBD6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F556C3D0C07C759C5C566ADE02989F5 /* Pods-MedeeCall-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC3EE1F7A95A795B33440283A009CA44 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D1188E763CB25E7D43F222556E1356 /* Pods-MedeeCall-MedeeCallUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEADF017CCE0A495F26919E250FEF7D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20984318DA9F74BB436B6525ACC00CE2 /* Pods-MedeeCall WatchKit Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3F3CCBF9539E4734603696D096E3EE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755F456910B013C537CD2C972A674DF6 /* Pods-MedeeCallTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		01EB72FD21C91388DCC4D53BE2498910 /* Pods-MedeeCall WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D727D839363949DB7D9155F67F8C6644 /* Build configuration list for PBXNativeTarget "Pods-MedeeCall WatchKit App" */;
+			buildPhases = (
+				9301B1B1A75A540BAF5548B488EB2418 /* Headers */,
+				D5D61AD2E980B78A0FFB4F5069365648 /* Sources */,
+				ED54DA9F10B5A9335A0375507A704D93 /* Frameworks */,
+				FEECFF1D9EEC7F95DBE3AEDCB04E89F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MedeeCall WatchKit App";
+			productName = "Pods-MedeeCall WatchKit App";
+			productReference = D685A8499785AD95774813E00412DE0C /* Pods_MedeeCall_WatchKit_App.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2A893DB76EA8F3FAD752DEB4EFAB72E2 /* Pods-MedeeCallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1D02822D62E04D143C7FBD686F2DEF0 /* Build configuration list for PBXNativeTarget "Pods-MedeeCallTests" */;
+			buildPhases = (
+				D3F3CCBF9539E4734603696D096E3EE4 /* Headers */,
+				9019478AE7A9BD6F8BCF537BC3E36398 /* Sources */,
+				CFC6DD0587899E928899BBED014921C5 /* Frameworks */,
+				C7B5379ECCA54B95FC5F6B74DE32847C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66A59DAFA266AA05759A372164ED276D /* PBXTargetDependency */,
+			);
+			name = "Pods-MedeeCallTests";
+			productName = "Pods-MedeeCallTests";
+			productReference = 66AF9D87EE8902A0F46691F0DB0A64D7 /* Pods_MedeeCallTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		981424439385EE78AF842DFFEF225802 /* Pods-MedeeCall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62F0C0225C2B23E446D493DD7CD01D44 /* Build configuration list for PBXNativeTarget "Pods-MedeeCall" */;
+			buildPhases = (
+				9D3923321666188D7CB8BF99D4A9BBD6 /* Headers */,
+				8E67BB2F331CC077B824B958A85A868F /* Sources */,
+				5B7D94C5A33F1EE22B4FF46EE3EB3A87 /* Frameworks */,
+				F06DBDDF6AD10D4843AE5D2C847A47E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MedeeCall";
+			productName = "Pods-MedeeCall";
+			productReference = 97ADE2C8512C0ABD4781E9DAA8D5A837 /* Pods_MedeeCall.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0DC7827D22131B58E3DB67EBC13316F /* Pods-MedeeCall WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E8A5F3AC79B557AA5BDE8F58EA359AE /* Build configuration list for PBXNativeTarget "Pods-MedeeCall WatchKit Extension" */;
+			buildPhases = (
+				BEADF017CCE0A495F26919E250FEF7D6 /* Headers */,
+				3B5BC545C57A9FFC1CBEA5A7AF67FFD4 /* Sources */,
+				313632D3B3B49AEB3F20EA827F11EBA1 /* Frameworks */,
+				DFF42B0C484AD6F92A633C077B23355C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MedeeCall WatchKit Extension";
+			productName = "Pods-MedeeCall WatchKit Extension";
+			productReference = E6C3F9ACCA955EC75F4A72FFD2C77EFB /* Pods_MedeeCall_WatchKit_Extension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DB9E114853903BBB540CC5178BC12520 /* Pods-MedeeCall-MedeeCallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E05BE0342FD98250AA05772C058894F8 /* Build configuration list for PBXNativeTarget "Pods-MedeeCall-MedeeCallUITests" */;
+			buildPhases = (
+				BC3EE1F7A95A795B33440283A009CA44 /* Headers */,
+				91FCFC48127BED7CBD7363305000910E /* Sources */,
+				5899E8C6A745A96081A4CE5F12B5FF47 /* Frameworks */,
+				CF090B4BEE15B23AEE84239ACC0F1C59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MedeeCall-MedeeCallUITests";
+			productName = "Pods-MedeeCall-MedeeCallUITests";
+			productReference = 04505F61DDEB3D22D1CCDD2DF235AD34 /* Pods_MedeeCall_MedeeCallUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 79ECC8063C8B4A024EAC3EDC85ABACD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				981424439385EE78AF842DFFEF225802 /* Pods-MedeeCall */,
+				01EB72FD21C91388DCC4D53BE2498910 /* Pods-MedeeCall WatchKit App */,
+				C0DC7827D22131B58E3DB67EBC13316F /* Pods-MedeeCall WatchKit Extension */,
+				DB9E114853903BBB540CC5178BC12520 /* Pods-MedeeCall-MedeeCallUITests */,
+				2A893DB76EA8F3FAD752DEB4EFAB72E2 /* Pods-MedeeCallTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7B5379ECCA54B95FC5F6B74DE32847C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF090B4BEE15B23AEE84239ACC0F1C59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF42B0C484AD6F92A633C077B23355C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06DBDDF6AD10D4843AE5D2C847A47E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEECFF1D9EEC7F95DBE3AEDCB04E89F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B5BC545C57A9FFC1CBEA5A7AF67FFD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106C9EDFBD85B152B0F1B479A9D66F9B /* Pods-MedeeCall WatchKit Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E67BB2F331CC077B824B958A85A868F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D28EC6B661BDAA142908B1EF8B486585 /* Pods-MedeeCall-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9019478AE7A9BD6F8BCF537BC3E36398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041D7F0E499C11502EBC8318E1E79898 /* Pods-MedeeCallTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FCFC48127BED7CBD7363305000910E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACB47E2A35866F9FFD865ED18C240B4 /* Pods-MedeeCall-MedeeCallUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D61AD2E980B78A0FFB4F5069365648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2BCC053B14673603A612112F7C76AE /* Pods-MedeeCall WatchKit App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66A59DAFA266AA05759A372164ED276D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MedeeCall";
+			target = 981424439385EE78AF842DFFEF225802 /* Pods-MedeeCall */;
+			targetProxy = A9D960375C1534831B08B44BC9DC9E0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		163FEF99E93964329D1B53BF5A2F6792 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BC60CB81FF86DFE45120204EC1C7CDC /* Pods-MedeeCall.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCall/Pods-MedeeCall-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCall/Pods-MedeeCall.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2F1AB4A931A1E9B8E7248B05FF7ECBB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		36BB6968F6940B2B5D4DA5DD11E84265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BCD7B41F8B120015487AF6B84F4EF12 /* Pods-MedeeCall WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCall WatchKit App/Pods-MedeeCall WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCall WatchKit App/Pods-MedeeCall WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		44EA3D43BEEBF915767649BCB9E392E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D65773CA83E619A8345B71E1E5D1C5E /* Pods-MedeeCall WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCall WatchKit Extension/Pods-MedeeCall WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCall WatchKit Extension/Pods-MedeeCall WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		69500F41A46159830CF9BA8C7D7D1D54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		6AAEBE53A8B8DB929ECCF38347074344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C31EF5D333B0D71EC2A9A2D18B068DC /* Pods-MedeeCall-MedeeCallUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCall-MedeeCallUITests/Pods-MedeeCall-MedeeCallUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCall-MedeeCallUITests/Pods-MedeeCall-MedeeCallUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6AF3AA0E4C34F17730B9BECC96833AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452F53740A2902FBE30EA3C47B37A80B /* Pods-MedeeCallTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCallTests/Pods-MedeeCallTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCallTests/Pods-MedeeCallTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ACF9A0A2224A3078198AF882694EE6B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA3F59DF3800C7374C19E9CBF7F8F00 /* Pods-MedeeCall.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCall/Pods-MedeeCall-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCall/Pods-MedeeCall.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C28F04A62AF7FA63C3190F1B8BCDE820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF63557F0583C0BDBE880ED8350CCB26 /* Pods-MedeeCall-MedeeCallUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCall-MedeeCallUITests/Pods-MedeeCall-MedeeCallUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCall-MedeeCallUITests/Pods-MedeeCall-MedeeCallUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA39B5338EF0C0BE18417EFC8CAFEF8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9313C8522D8B9E001D3DD5789CD63C53 /* Pods-MedeeCallTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCallTests/Pods-MedeeCallTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCallTests/Pods-MedeeCallTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E430AFA45894E8FA3C207C574E3B1AF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFD62F64CCAB814D1F270543F569488F /* Pods-MedeeCall WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCall WatchKit Extension/Pods-MedeeCall WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCall WatchKit Extension/Pods-MedeeCall WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		EEA6F469A2FE89349271C68901951390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F982AB0116A36C3A97504687384FC2F3 /* Pods-MedeeCall WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MedeeCall WatchKit App/Pods-MedeeCall WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MedeeCall WatchKit App/Pods-MedeeCall WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F1AB4A931A1E9B8E7248B05FF7ECBB1 /* Debug */,
+				69500F41A46159830CF9BA8C7D7D1D54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62F0C0225C2B23E446D493DD7CD01D44 /* Build configuration list for PBXNativeTarget "Pods-MedeeCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163FEF99E93964329D1B53BF5A2F6792 /* Debug */,
+				ACF9A0A2224A3078198AF882694EE6B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E8A5F3AC79B557AA5BDE8F58EA359AE /* Build configuration list for PBXNativeTarget "Pods-MedeeCall WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E430AFA45894E8FA3C207C574E3B1AF0 /* Debug */,
+				44EA3D43BEEBF915767649BCB9E392E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1D02822D62E04D143C7FBD686F2DEF0 /* Build configuration list for PBXNativeTarget "Pods-MedeeCallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA39B5338EF0C0BE18417EFC8CAFEF8B /* Debug */,
+				6AF3AA0E4C34F17730B9BECC96833AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D727D839363949DB7D9155F67F8C6644 /* Build configuration list for PBXNativeTarget "Pods-MedeeCall WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36BB6968F6940B2B5D4DA5DD11E84265 /* Debug */,
+				EEA6F469A2FE89349271C68901951390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E05BE0342FD98250AA05772C058894F8 /* Build configuration list for PBXNativeTarget "Pods-MedeeCall-MedeeCallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AAEBE53A8B8DB929ECCF38347074344 /* Debug */,
+				C28F04A62AF7FA63C3190F1B8BCDE820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
