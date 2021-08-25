@@ -5,4 +5,4 @@
 - OpenCV
 
 
-To install OpenCV: https://docs.opencv.org/master/d0/db2/tutorial_macos_install.html
+To install OpenCV for iOS: https://docs.opencv.org/4.5.2/d5/da3/tutorial_ios_install.html
