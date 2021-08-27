@@ -219,6 +219,20 @@ CV_EXPORTS @interface Features2d : NSObject
 
 
 //
+//  void cv::drawMatches(Mat img1, vector_KeyPoint keypoints1, Mat img2, vector_KeyPoint keypoints2, vector_DMatch matches1to2, Mat& outImg, int matchesThickness, Scalar matchColor = Scalar::all(-1), Scalar singlePointColor = Scalar::all(-1), vector_char matchesMask = std::vector<char>(), DrawMatchesFlags flags = DrawMatchesFlags::DEFAULT)
+//
++ (void)drawMatches:(Mat*)img1 keypoints1:(NSArray<KeyPoint*>*)keypoints1 img2:(Mat*)img2 keypoints2:(NSArray<KeyPoint*>*)keypoints2 matches1to2:(NSArray<DMatch*>*)matches1to2 outImg:(Mat*)outImg matchesThickness:(int)matchesThickness matchColor:(Scalar*)matchColor singlePointColor:(Scalar*)singlePointColor matchesMask:(ByteVector*)matchesMask flags:(DrawMatchesFlags)flags NS_SWIFT_NAME(drawMatches(img1:keypoints1:img2:keypoints2:matches1to2:outImg:matchesThickness:matchColor:singlePointColor:matchesMask:flags:));
+
++ (void)drawMatches:(Mat*)img1 keypoints1:(NSArray<KeyPoint*>*)keypoints1 img2:(Mat*)img2 keypoints2:(NSArray<KeyPoint*>*)keypoints2 matches1to2:(NSArray<DMatch*>*)matches1to2 outImg:(Mat*)outImg matchesThickness:(int)matchesThickness matchColor:(Scalar*)matchColor singlePointColor:(Scalar*)singlePointColor matchesMask:(ByteVector*)matchesMask NS_SWIFT_NAME(drawMatches(img1:keypoints1:img2:keypoints2:matches1to2:outImg:matchesThickness:matchColor:singlePointColor:matchesMask:));
+
++ (void)drawMatches:(Mat*)img1 keypoints1:(NSArray<KeyPoint*>*)keypoints1 img2:(Mat*)img2 keypoints2:(NSArray<KeyPoint*>*)keypoints2 matches1to2:(NSArray<DMatch*>*)matches1to2 outImg:(Mat*)outImg matchesThickness:(int)matchesThickness matchColor:(Scalar*)matchColor singlePointColor:(Scalar*)singlePointColor NS_SWIFT_NAME(drawMatches(img1:keypoints1:img2:keypoints2:matches1to2:outImg:matchesThickness:matchColor:singlePointColor:));
+
++ (void)drawMatches:(Mat*)img1 keypoints1:(NSArray<KeyPoint*>*)keypoints1 img2:(Mat*)img2 keypoints2:(NSArray<KeyPoint*>*)keypoints2 matches1to2:(NSArray<DMatch*>*)matches1to2 outImg:(Mat*)outImg matchesThickness:(int)matchesThickness matchColor:(Scalar*)matchColor NS_SWIFT_NAME(drawMatches(img1:keypoints1:img2:keypoints2:matches1to2:outImg:matchesThickness:matchColor:));
+
++ (void)drawMatches:(Mat*)img1 keypoints1:(NSArray<KeyPoint*>*)keypoints1 img2:(Mat*)img2 keypoints2:(NSArray<KeyPoint*>*)keypoints2 matches1to2:(NSArray<DMatch*>*)matches1to2 outImg:(Mat*)outImg matchesThickness:(int)matchesThickness NS_SWIFT_NAME(drawMatches(img1:keypoints1:img2:keypoints2:matches1to2:outImg:matchesThickness:));
+
+
+//
 //  void cv::drawMatches(Mat img1, vector_KeyPoint keypoints1, Mat img2, vector_KeyPoint keypoints2, vector_vector_DMatch matches1to2, Mat& outImg, Scalar matchColor = Scalar::all(-1), Scalar singlePointColor = Scalar::all(-1), vector_vector_char matchesMask = std::vector<std::vector<char> >(), DrawMatchesFlags flags = DrawMatchesFlags::DEFAULT)
 //
 + (void)drawMatchesKnn:(Mat*)img1 keypoints1:(NSArray<KeyPoint*>*)keypoints1 img2:(Mat*)img2 keypoints2:(NSArray<KeyPoint*>*)keypoints2 matches1to2:(NSArray<NSArray<DMatch*>*>*)matches1to2 outImg:(Mat*)outImg matchColor:(Scalar*)matchColor singlePointColor:(Scalar*)singlePointColor matchesMask:(NSArray<ByteVector*>*)matchesMask flags:(DrawMatchesFlags)flags NS_SWIFT_NAME(drawMatches(img1:keypoints1:img2:keypoints2:matches1to2:outImg:matchColor:singlePointColor:matchesMask:flags:));

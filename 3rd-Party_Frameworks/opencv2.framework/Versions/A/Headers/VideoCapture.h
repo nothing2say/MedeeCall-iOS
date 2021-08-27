@@ -13,6 +13,7 @@
 #import <Foundation/Foundation.h>
 
 
+@class IntVector;
 @class Mat;
 
 
@@ -109,6 +110,19 @@ CV_EXPORTS @interface VideoCapture : NSObject
 
 
 //
+//   cv::VideoCapture::VideoCapture(String filename, int apiPreference, vector_int params)
+//
+/**
+ *
+ *     Opens a video file or a capturing device or an IP video stream for video capturing with API Preference and parameters
+ *
+ *     The `params` parameter allows to specify extra parameters encoded as pairs `(paramId_1, paramValue_1, paramId_2, paramValue_2, ...)`.
+ *     See cv::VideoCaptureProperties
+ */
+- (instancetype)initWithFilename:(NSString*)filename apiPreference:(int)apiPreference params:(IntVector*)params;
+
+
+//
 //   cv::VideoCapture::VideoCapture(int index, int apiPreference = CAP_ANY)
 //
 /**
@@ -135,6 +149,19 @@ CV_EXPORTS @interface VideoCapture : NSObject
  *     @see `cv::VideoCaptureAPIs`
  */
 - (instancetype)initWithIndex:(int)index;
+
+
+//
+//   cv::VideoCapture::VideoCapture(int index, int apiPreference, vector_int params)
+//
+/**
+ *
+ *     Opens a camera for video capturing with API Preference and parameters
+ *
+ *     The `params` parameter allows to specify extra parameters encoded as pairs `(paramId_1, paramValue_1, paramId_2, paramValue_2, ...)`.
+ *     See cv::VideoCaptureProperties
+ */
+- (instancetype)initWithIndex:(int)index apiPreference:(int)apiPreference params:(IntVector*)params;
 
 
 //
@@ -166,6 +193,24 @@ CV_EXPORTS @interface VideoCapture : NSObject
 
 
 //
+//  bool cv::VideoCapture::open(String filename, int apiPreference, vector_int params)
+//
+/**
+ *  Opens a camera for video capturing
+ *
+ *     
+ *
+ *     The `params` parameter allows to specify extra parameters encoded as pairs `(paramId_1, paramValue_1, paramId_2, paramValue_2, ...)`.
+ *     See cv::VideoCaptureProperties
+ *
+ *     @return `true` if the file has been successfully opened
+ *
+ *     The method first calls VideoCapture::release to close the already opened file or camera.
+ */
+- (BOOL)open:(NSString*)filename apiPreference:(int)apiPreference params:(IntVector*)params NS_SWIFT_NAME(open(filename:apiPreference:params:));
+
+
+//
 //  bool cv::VideoCapture::open(int index, int apiPreference = CAP_ANY)
 //
 /**
@@ -191,6 +236,24 @@ CV_EXPORTS @interface VideoCapture : NSObject
  *     The method first calls VideoCapture::release to close the already opened file or camera.
  */
 - (BOOL)openWithIndex:(int)index NS_SWIFT_NAME(open(index:));
+
+
+//
+//  bool cv::VideoCapture::open(int index, int apiPreference, vector_int params)
+//
+/**
+ * Returns true if video capturing has been initialized already.
+ *
+ *     
+ *
+ *     The `params` parameter allows to specify extra parameters encoded as pairs `(paramId_1, paramValue_1, paramId_2, paramValue_2, ...)`.
+ *     See cv::VideoCaptureProperties
+ *
+ *     @return `true` if the camera has been successfully opened.
+ *
+ *     The method first calls VideoCapture::release to close the already opened file or camera.
+ */
+- (BOOL)openWithIndexAndParameters:(int)index apiPreference:(int)apiPreference params:(IntVector*)params NS_SWIFT_NAME(open(index:apiPreference:params:));
 
 
 //

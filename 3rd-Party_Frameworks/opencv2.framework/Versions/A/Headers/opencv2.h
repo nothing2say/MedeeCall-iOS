@@ -66,6 +66,7 @@ FOUNDATION_EXPORT const unsigned char opencv2VersionString[];
 #import <opencv2/GeneralizedHoughGuil.h>
 #import <opencv2/LineSegmentDetector.h>
 #import <opencv2/Subdiv2D.h>
+#import <opencv2/IntelligentScissorsMB.h>
 #import <opencv2/Ml.h>
 #import <opencv2/ANN_MLP.h>
 #import <opencv2/Boost.h>
@@ -140,6 +141,7 @@ FOUNDATION_EXPORT const unsigned char opencv2VersionString[];
 #import <opencv2/SimpleBlobDetector.h>
 #import <opencv2/SimpleBlobDetectorParams.h>
 #import <opencv2/Mat+Converters.h>
+#import <opencv2/Mat+QuickLook.h>
 #import <opencv2/Imgcodecs.h>
 #import <opencv2/Text.h>
 #import <opencv2/BaseOCR.h>
@@ -185,6 +187,8 @@ FOUNDATION_EXPORT const unsigned char opencv2VersionString[];
 #import <opencv2/SparseOpticalFlow.h>
 #import <opencv2/SparsePyrLKOpticalFlow.h>
 #import <opencv2/Tracker.h>
+#import <opencv2/TrackerDaSiamRPN.h>
+#import <opencv2/TrackerDaSiamRPNParams.h>
 #import <opencv2/TrackerGOTURN.h>
 #import <opencv2/TrackerGOTURNParams.h>
 #import <opencv2/TrackerMIL.h>
@@ -215,6 +219,8 @@ FOUNDATION_EXPORT const unsigned char opencv2VersionString[];
 #import <opencv2/DisparityWLSFilter.h>
 #import <opencv2/EdgeAwareInterpolator.h>
 #import <opencv2/EdgeBoxes.h>
+#import <opencv2/EdgeDrawing.h>
+#import <opencv2/EdgeDrawingParams.h>
 #import <opencv2/FastBilateralSolverFilter.h>
 #import <opencv2/FastGlobalSmootherFilter.h>
 #import <opencv2/FastLineDetector.h>

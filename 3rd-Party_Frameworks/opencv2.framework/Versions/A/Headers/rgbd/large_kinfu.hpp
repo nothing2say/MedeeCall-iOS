@@ -41,6 +41,9 @@ struct CV_EXPORTS_W Params
     /** @brief camera intrinsics */
     CV_PROP_RW Matx33f intr;
 
+    /** @brief rgb camera intrinsics */
+    CV_PROP_RW Matx33f rgb_intr;
+
     /** @brief pre-scale per 1 meter for input values
         Typical values are:
              * 5000 per 1 meter for the 16-bit PNG files of TUM database
@@ -122,8 +125,8 @@ class CV_EXPORTS_W LargeKinfu
 
     virtual const Params& getParams() const = 0;
 
-    CV_WRAP virtual void render(OutputArray image,
-                                const Matx44f& cameraPose = Matx44f::eye()) const = 0;
+    CV_WRAP virtual void render(OutputArray image) const = 0;
+    CV_WRAP virtual void render(OutputArray image, const Matx44f& cameraPose) const = 0;
 
     CV_WRAP virtual void getCloud(OutputArray points, OutputArray normals) const = 0;
 

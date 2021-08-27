@@ -6,6 +6,7 @@
 #ifdef __cplusplus
 //#import "opencv.hpp"
 #import "opencv2/imgproc.hpp"
+#import "imgproc/bindings.hpp"
 #else
 #define CV_EXPORTS
 #endif
@@ -279,9 +280,13 @@ typedef NS_ENUM(int, ColormapTypes) {
 
 // C++: enum ConnectedComponentsAlgorithmsTypes (cv.ConnectedComponentsAlgorithmsTypes)
 typedef NS_ENUM(int, ConnectedComponentsAlgorithmsTypes) {
-    CCL_WU = 0,
     CCL_DEFAULT = -1,
-    CCL_GRANA = 1
+    CCL_WU = 0,
+    CCL_GRANA = 1,
+    CCL_BOLELLI = 2,
+    CCL_SAUF = 3,
+    CCL_BBDT = 4,
+    CCL_SPAGHETTI = 5
 };
 
 
@@ -538,7 +543,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The Imgproc module
  *
- * Member classes: `GeneralizedHough`, `GeneralizedHoughBallard`, `GeneralizedHoughGuil`, `CLAHE`, `Subdiv2D`, `LineSegmentDetector`, `Moments`
+ * Member classes: `GeneralizedHough`, `GeneralizedHoughBallard`, `GeneralizedHoughGuil`, `CLAHE`, `Subdiv2D`, `LineSegmentDetector`, `IntelligentScissorsMB`, `Moments`
  *
  * Member enums: `SpecialFilter`, `MorphTypes`, `MorphShapes`, `InterpolationFlags`, `WarpPolarMode`, `InterpolationMasks`, `DistanceTypes`, `DistanceTransformMasks`, `ThresholdTypes`, `AdaptiveThresholdTypes`, `GrabCutClasses`, `GrabCutModes`, `DistanceTransformLabelTypes`, `FloodFillFlags`, `ConnectedComponentsTypes`, `ConnectedComponentsAlgorithmsTypes`, `RetrievalModes`, `ContourApproximationModes`, `ShapeMatchModes`, `HoughModes`, `LineSegmentDetectorModes`, `HistCompMethods`, `ColorConversionCodes`, `RectanglesIntersectTypes`, `LineTypes`, `HersheyFonts`, `MarkerTypes`, `TemplateMatchModes`, `ColormapTypes`
  */
@@ -565,7 +570,7 @@ CV_EXPORTS @interface Imgproc : NSObject
 
 
 //
-//  Ptr_LineSegmentDetector cv::createLineSegmentDetector(LineSegmentDetectorModes _refine = LSD_REFINE_STD, double _scale = 0.8, double _sigma_scale = 0.6, double _quant = 2.0, double _ang_th = 22.5, double _log_eps = 0, double _density_th = 0.7, int _n_bins = 1024)
+//  Ptr_LineSegmentDetector cv::createLineSegmentDetector(int refine = LSD_REFINE_STD, double scale = 0.8, double sigma_scale = 0.6, double quant = 2.0, double ang_th = 22.5, double log_eps = 0, double density_th = 0.7, int n_bins = 1024)
 //
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -573,19 +578,18 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * @param _refine The way found lines will be refined, see #LineSegmentDetectorModes
- * @param _scale The scale of the image that will be used to find the lines. Range (0..1].
- * @param _sigma_scale Sigma for Gaussian filter. It is computed as sigma = _sigma_scale/_scale.
- * @param _quant Bound to the quantization error on the gradient norm.
- * @param _ang_th Gradient angle tolerance in degrees.
- * @param _log_eps Detection threshold: -log10(NFA) \> log_eps. Used only when advance refinement
- * is chosen.
- * @param _density_th Minimal density of aligned region points in the enclosing rectangle.
- * @param _n_bins Number of bins in pseudo-ordering of gradient modulus.
+ * @param refine The way found lines will be refined, see #LineSegmentDetectorModes
+ * @param scale The scale of the image that will be used to find the lines. Range (0..1].
+ * @param sigma_scale Sigma for Gaussian filter. It is computed as sigma = sigma_scale/scale.
+ * @param quant Bound to the quantization error on the gradient norm.
+ * @param ang_th Gradient angle tolerance in degrees.
+ * @param log_eps Detection threshold: -log10(NFA) \> log_eps. Used only when advance refinement is chosen.
+ * @param density_th Minimal density of aligned region points in the enclosing rectangle.
+ * @param n_bins Number of bins in pseudo-ordering of gradient modulus.
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
-+ (LineSegmentDetector*)createLineSegmentDetector:(LineSegmentDetectorModes)_refine _scale:(double)_scale _sigma_scale:(double)_sigma_scale _quant:(double)_quant _ang_th:(double)_ang_th _log_eps:(double)_log_eps _density_th:(double)_density_th _n_bins:(int)_n_bins NS_SWIFT_NAME(createLineSegmentDetector(_refine:_scale:_sigma_scale:_quant:_ang_th:_log_eps:_density_th:_n_bins:));
++ (LineSegmentDetector*)createLineSegmentDetector:(int)refine scale:(double)scale sigma_scale:(double)sigma_scale quant:(double)quant ang_th:(double)ang_th log_eps:(double)log_eps density_th:(double)density_th n_bins:(int)n_bins NS_SWIFT_NAME(createLineSegmentDetector(refine:scale:sigma_scale:quant:ang_th:log_eps:density_th:n_bins:));
 
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -593,18 +597,17 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * @param _refine The way found lines will be refined, see #LineSegmentDetectorModes
- * @param _scale The scale of the image that will be used to find the lines. Range (0..1].
- * @param _sigma_scale Sigma for Gaussian filter. It is computed as sigma = _sigma_scale/_scale.
- * @param _quant Bound to the quantization error on the gradient norm.
- * @param _ang_th Gradient angle tolerance in degrees.
- * @param _log_eps Detection threshold: -log10(NFA) \> log_eps. Used only when advance refinement
- * is chosen.
- * @param _density_th Minimal density of aligned region points in the enclosing rectangle.
+ * @param refine The way found lines will be refined, see #LineSegmentDetectorModes
+ * @param scale The scale of the image that will be used to find the lines. Range (0..1].
+ * @param sigma_scale Sigma for Gaussian filter. It is computed as sigma = sigma_scale/scale.
+ * @param quant Bound to the quantization error on the gradient norm.
+ * @param ang_th Gradient angle tolerance in degrees.
+ * @param log_eps Detection threshold: -log10(NFA) \> log_eps. Used only when advance refinement is chosen.
+ * @param density_th Minimal density of aligned region points in the enclosing rectangle.
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
-+ (LineSegmentDetector*)createLineSegmentDetector:(LineSegmentDetectorModes)_refine _scale:(double)_scale _sigma_scale:(double)_sigma_scale _quant:(double)_quant _ang_th:(double)_ang_th _log_eps:(double)_log_eps _density_th:(double)_density_th NS_SWIFT_NAME(createLineSegmentDetector(_refine:_scale:_sigma_scale:_quant:_ang_th:_log_eps:_density_th:));
++ (LineSegmentDetector*)createLineSegmentDetector:(int)refine scale:(double)scale sigma_scale:(double)sigma_scale quant:(double)quant ang_th:(double)ang_th log_eps:(double)log_eps density_th:(double)density_th NS_SWIFT_NAME(createLineSegmentDetector(refine:scale:sigma_scale:quant:ang_th:log_eps:density_th:));
 
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -612,17 +615,16 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * @param _refine The way found lines will be refined, see #LineSegmentDetectorModes
- * @param _scale The scale of the image that will be used to find the lines. Range (0..1].
- * @param _sigma_scale Sigma for Gaussian filter. It is computed as sigma = _sigma_scale/_scale.
- * @param _quant Bound to the quantization error on the gradient norm.
- * @param _ang_th Gradient angle tolerance in degrees.
- * @param _log_eps Detection threshold: -log10(NFA) \> log_eps. Used only when advance refinement
- * is chosen.
+ * @param refine The way found lines will be refined, see #LineSegmentDetectorModes
+ * @param scale The scale of the image that will be used to find the lines. Range (0..1].
+ * @param sigma_scale Sigma for Gaussian filter. It is computed as sigma = sigma_scale/scale.
+ * @param quant Bound to the quantization error on the gradient norm.
+ * @param ang_th Gradient angle tolerance in degrees.
+ * @param log_eps Detection threshold: -log10(NFA) \> log_eps. Used only when advance refinement is chosen.
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
-+ (LineSegmentDetector*)createLineSegmentDetector:(LineSegmentDetectorModes)_refine _scale:(double)_scale _sigma_scale:(double)_sigma_scale _quant:(double)_quant _ang_th:(double)_ang_th _log_eps:(double)_log_eps NS_SWIFT_NAME(createLineSegmentDetector(_refine:_scale:_sigma_scale:_quant:_ang_th:_log_eps:));
++ (LineSegmentDetector*)createLineSegmentDetector:(int)refine scale:(double)scale sigma_scale:(double)sigma_scale quant:(double)quant ang_th:(double)ang_th log_eps:(double)log_eps NS_SWIFT_NAME(createLineSegmentDetector(refine:scale:sigma_scale:quant:ang_th:log_eps:));
 
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -630,16 +632,15 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * @param _refine The way found lines will be refined, see #LineSegmentDetectorModes
- * @param _scale The scale of the image that will be used to find the lines. Range (0..1].
- * @param _sigma_scale Sigma for Gaussian filter. It is computed as sigma = _sigma_scale/_scale.
- * @param _quant Bound to the quantization error on the gradient norm.
- * @param _ang_th Gradient angle tolerance in degrees.
- * is chosen.
+ * @param refine The way found lines will be refined, see #LineSegmentDetectorModes
+ * @param scale The scale of the image that will be used to find the lines. Range (0..1].
+ * @param sigma_scale Sigma for Gaussian filter. It is computed as sigma = sigma_scale/scale.
+ * @param quant Bound to the quantization error on the gradient norm.
+ * @param ang_th Gradient angle tolerance in degrees.
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
-+ (LineSegmentDetector*)createLineSegmentDetector:(LineSegmentDetectorModes)_refine _scale:(double)_scale _sigma_scale:(double)_sigma_scale _quant:(double)_quant _ang_th:(double)_ang_th NS_SWIFT_NAME(createLineSegmentDetector(_refine:_scale:_sigma_scale:_quant:_ang_th:));
++ (LineSegmentDetector*)createLineSegmentDetector:(int)refine scale:(double)scale sigma_scale:(double)sigma_scale quant:(double)quant ang_th:(double)ang_th NS_SWIFT_NAME(createLineSegmentDetector(refine:scale:sigma_scale:quant:ang_th:));
 
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -647,15 +648,14 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * @param _refine The way found lines will be refined, see #LineSegmentDetectorModes
- * @param _scale The scale of the image that will be used to find the lines. Range (0..1].
- * @param _sigma_scale Sigma for Gaussian filter. It is computed as sigma = _sigma_scale/_scale.
- * @param _quant Bound to the quantization error on the gradient norm.
- * is chosen.
+ * @param refine The way found lines will be refined, see #LineSegmentDetectorModes
+ * @param scale The scale of the image that will be used to find the lines. Range (0..1].
+ * @param sigma_scale Sigma for Gaussian filter. It is computed as sigma = sigma_scale/scale.
+ * @param quant Bound to the quantization error on the gradient norm.
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
-+ (LineSegmentDetector*)createLineSegmentDetector:(LineSegmentDetectorModes)_refine _scale:(double)_scale _sigma_scale:(double)_sigma_scale _quant:(double)_quant NS_SWIFT_NAME(createLineSegmentDetector(_refine:_scale:_sigma_scale:_quant:));
++ (LineSegmentDetector*)createLineSegmentDetector:(int)refine scale:(double)scale sigma_scale:(double)sigma_scale quant:(double)quant NS_SWIFT_NAME(createLineSegmentDetector(refine:scale:sigma_scale:quant:));
 
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -663,14 +663,13 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * @param _refine The way found lines will be refined, see #LineSegmentDetectorModes
- * @param _scale The scale of the image that will be used to find the lines. Range (0..1].
- * @param _sigma_scale Sigma for Gaussian filter. It is computed as sigma = _sigma_scale/_scale.
- * is chosen.
+ * @param refine The way found lines will be refined, see #LineSegmentDetectorModes
+ * @param scale The scale of the image that will be used to find the lines. Range (0..1].
+ * @param sigma_scale Sigma for Gaussian filter. It is computed as sigma = sigma_scale/scale.
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
-+ (LineSegmentDetector*)createLineSegmentDetector:(LineSegmentDetectorModes)_refine _scale:(double)_scale _sigma_scale:(double)_sigma_scale NS_SWIFT_NAME(createLineSegmentDetector(_refine:_scale:_sigma_scale:));
++ (LineSegmentDetector*)createLineSegmentDetector:(int)refine scale:(double)scale sigma_scale:(double)sigma_scale NS_SWIFT_NAME(createLineSegmentDetector(refine:scale:sigma_scale:));
 
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -678,13 +677,12 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * @param _refine The way found lines will be refined, see #LineSegmentDetectorModes
- * @param _scale The scale of the image that will be used to find the lines. Range (0..1].
- * is chosen.
+ * @param refine The way found lines will be refined, see #LineSegmentDetectorModes
+ * @param scale The scale of the image that will be used to find the lines. Range (0..1].
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
-+ (LineSegmentDetector*)createLineSegmentDetector:(LineSegmentDetectorModes)_refine _scale:(double)_scale NS_SWIFT_NAME(createLineSegmentDetector(_refine:_scale:));
++ (LineSegmentDetector*)createLineSegmentDetector:(int)refine scale:(double)scale NS_SWIFT_NAME(createLineSegmentDetector(refine:scale:));
 
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -692,12 +690,11 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * @param _refine The way found lines will be refined, see #LineSegmentDetectorModes
- * is chosen.
+ * @param refine The way found lines will be refined, see #LineSegmentDetectorModes
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
-+ (LineSegmentDetector*)createLineSegmentDetector:(LineSegmentDetectorModes)_refine NS_SWIFT_NAME(createLineSegmentDetector(_refine:));
++ (LineSegmentDetector*)createLineSegmentDetector:(int)refine NS_SWIFT_NAME(createLineSegmentDetector(refine:));
 
 /**
  * Creates a smart pointer to a LineSegmentDetector object and initializes it.
@@ -705,7 +702,6 @@ CV_EXPORTS @interface Imgproc : NSObject
  * The LineSegmentDetector algorithm is defined using the standard values. Only advanced users may want
  * to edit those, as to tailor it for their own application.
  *
- * is chosen.
  *
  * NOTE: Implementation has been removed due original code license conflict
  */
@@ -1180,7 +1176,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * variance and standard deviation around the neighborhood of a pixel.
  *
  * @param src input image
- * @param dst output image of the same size and type as _src
+ * @param dst output image of the same size and type as src
  * @param ddepth the output image depth (-1 to use src.depth())
  * @param ksize kernel size
  * @param anchor kernel anchor point. The default value of Point(-1, -1) denotes that the anchor is at the kernel
@@ -1201,7 +1197,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * variance and standard deviation around the neighborhood of a pixel.
  *
  * @param src input image
- * @param dst output image of the same size and type as _src
+ * @param dst output image of the same size and type as src
  * @param ddepth the output image depth (-1 to use src.depth())
  * @param ksize kernel size
  * @param anchor kernel anchor point. The default value of Point(-1, -1) denotes that the anchor is at the kernel
@@ -1221,7 +1217,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * variance and standard deviation around the neighborhood of a pixel.
  *
  * @param src input image
- * @param dst output image of the same size and type as _src
+ * @param dst output image of the same size and type as src
  * @param ddepth the output image depth (-1 to use src.depth())
  * @param ksize kernel size
  * @param anchor kernel anchor point. The default value of Point(-1, -1) denotes that the anchor is at the kernel
@@ -1240,7 +1236,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * variance and standard deviation around the neighborhood of a pixel.
  *
  * @param src input image
- * @param dst output image of the same size and type as _src
+ * @param dst output image of the same size and type as src
  * @param ddepth the output image depth (-1 to use src.depth())
  * @param ksize kernel size
  * center.
@@ -2618,6 +2614,140 @@ CV_EXPORTS @interface Imgproc : NSObject
 
 
 //
+//  void cv::goodFeaturesToTrack(Mat image, Mat& corners, int maxCorners, double qualityLevel, double minDistance, Mat mask, Mat& cornersQuality, int blockSize = 3, int gradientSize = 3, bool useHarrisDetector = false, double k = 0.04)
+//
+/**
+ * Same as above, but returns also quality measure of the detected corners.
+ *
+ * @param image Input 8-bit or floating-point 32-bit, single-channel image.
+ * @param corners Output vector of detected corners.
+ * @param maxCorners Maximum number of corners to return. If there are more corners than are found,
+ * the strongest of them is returned. `maxCorners <= 0` implies that no limit on the maximum is set
+ * and all detected corners are returned.
+ * @param qualityLevel Parameter characterizing the minimal accepted quality of image corners. The
+ * parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue
+ * (see #cornerMinEigenVal ) or the Harris function response (see #cornerHarris ). The corners with the
+ * quality measure less than the product are rejected. For example, if the best corner has the
+ * quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure
+ * less than 15 are rejected.
+ * @param minDistance Minimum possible Euclidean distance between the returned corners.
+ * @param mask Region of interest. If the image is not empty (it needs to have the type
+ * CV_8UC1 and the same size as image ), it specifies the region in which the corners are detected.
+ * @param cornersQuality Output vector of quality measure of the detected corners.
+ * @param blockSize Size of an average block for computing a derivative covariation matrix over each
+ * pixel neighborhood. See cornerEigenValsAndVecs .
+ * @param gradientSize Aperture parameter for the Sobel operator used for derivatives computation.
+ * See cornerEigenValsAndVecs .
+ * @param useHarrisDetector Parameter indicating whether to use a Harris detector (see #cornerHarris)
+ * or #cornerMinEigenVal.
+ * @param k Free parameter of the Harris detector.
+ */
++ (void)goodFeaturesToTrackWithQuality:(Mat*)image corners:(Mat*)corners maxCorners:(int)maxCorners qualityLevel:(double)qualityLevel minDistance:(double)minDistance mask:(Mat*)mask cornersQuality:(Mat*)cornersQuality blockSize:(int)blockSize gradientSize:(int)gradientSize useHarrisDetector:(BOOL)useHarrisDetector k:(double)k NS_SWIFT_NAME(goodFeaturesToTrack(image:corners:maxCorners:qualityLevel:minDistance:mask:cornersQuality:blockSize:gradientSize:useHarrisDetector:k:));
+
+/**
+ * Same as above, but returns also quality measure of the detected corners.
+ *
+ * @param image Input 8-bit or floating-point 32-bit, single-channel image.
+ * @param corners Output vector of detected corners.
+ * @param maxCorners Maximum number of corners to return. If there are more corners than are found,
+ * the strongest of them is returned. `maxCorners <= 0` implies that no limit on the maximum is set
+ * and all detected corners are returned.
+ * @param qualityLevel Parameter characterizing the minimal accepted quality of image corners. The
+ * parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue
+ * (see #cornerMinEigenVal ) or the Harris function response (see #cornerHarris ). The corners with the
+ * quality measure less than the product are rejected. For example, if the best corner has the
+ * quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure
+ * less than 15 are rejected.
+ * @param minDistance Minimum possible Euclidean distance between the returned corners.
+ * @param mask Region of interest. If the image is not empty (it needs to have the type
+ * CV_8UC1 and the same size as image ), it specifies the region in which the corners are detected.
+ * @param cornersQuality Output vector of quality measure of the detected corners.
+ * @param blockSize Size of an average block for computing a derivative covariation matrix over each
+ * pixel neighborhood. See cornerEigenValsAndVecs .
+ * @param gradientSize Aperture parameter for the Sobel operator used for derivatives computation.
+ * See cornerEigenValsAndVecs .
+ * @param useHarrisDetector Parameter indicating whether to use a Harris detector (see #cornerHarris)
+ * or #cornerMinEigenVal.
+ */
++ (void)goodFeaturesToTrackWithQuality:(Mat*)image corners:(Mat*)corners maxCorners:(int)maxCorners qualityLevel:(double)qualityLevel minDistance:(double)minDistance mask:(Mat*)mask cornersQuality:(Mat*)cornersQuality blockSize:(int)blockSize gradientSize:(int)gradientSize useHarrisDetector:(BOOL)useHarrisDetector NS_SWIFT_NAME(goodFeaturesToTrack(image:corners:maxCorners:qualityLevel:minDistance:mask:cornersQuality:blockSize:gradientSize:useHarrisDetector:));
+
+/**
+ * Same as above, but returns also quality measure of the detected corners.
+ *
+ * @param image Input 8-bit or floating-point 32-bit, single-channel image.
+ * @param corners Output vector of detected corners.
+ * @param maxCorners Maximum number of corners to return. If there are more corners than are found,
+ * the strongest of them is returned. `maxCorners <= 0` implies that no limit on the maximum is set
+ * and all detected corners are returned.
+ * @param qualityLevel Parameter characterizing the minimal accepted quality of image corners. The
+ * parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue
+ * (see #cornerMinEigenVal ) or the Harris function response (see #cornerHarris ). The corners with the
+ * quality measure less than the product are rejected. For example, if the best corner has the
+ * quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure
+ * less than 15 are rejected.
+ * @param minDistance Minimum possible Euclidean distance between the returned corners.
+ * @param mask Region of interest. If the image is not empty (it needs to have the type
+ * CV_8UC1 and the same size as image ), it specifies the region in which the corners are detected.
+ * @param cornersQuality Output vector of quality measure of the detected corners.
+ * @param blockSize Size of an average block for computing a derivative covariation matrix over each
+ * pixel neighborhood. See cornerEigenValsAndVecs .
+ * @param gradientSize Aperture parameter for the Sobel operator used for derivatives computation.
+ * See cornerEigenValsAndVecs .
+ * or #cornerMinEigenVal.
+ */
++ (void)goodFeaturesToTrackWithQuality:(Mat*)image corners:(Mat*)corners maxCorners:(int)maxCorners qualityLevel:(double)qualityLevel minDistance:(double)minDistance mask:(Mat*)mask cornersQuality:(Mat*)cornersQuality blockSize:(int)blockSize gradientSize:(int)gradientSize NS_SWIFT_NAME(goodFeaturesToTrack(image:corners:maxCorners:qualityLevel:minDistance:mask:cornersQuality:blockSize:gradientSize:));
+
+/**
+ * Same as above, but returns also quality measure of the detected corners.
+ *
+ * @param image Input 8-bit or floating-point 32-bit, single-channel image.
+ * @param corners Output vector of detected corners.
+ * @param maxCorners Maximum number of corners to return. If there are more corners than are found,
+ * the strongest of them is returned. `maxCorners <= 0` implies that no limit on the maximum is set
+ * and all detected corners are returned.
+ * @param qualityLevel Parameter characterizing the minimal accepted quality of image corners. The
+ * parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue
+ * (see #cornerMinEigenVal ) or the Harris function response (see #cornerHarris ). The corners with the
+ * quality measure less than the product are rejected. For example, if the best corner has the
+ * quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure
+ * less than 15 are rejected.
+ * @param minDistance Minimum possible Euclidean distance between the returned corners.
+ * @param mask Region of interest. If the image is not empty (it needs to have the type
+ * CV_8UC1 and the same size as image ), it specifies the region in which the corners are detected.
+ * @param cornersQuality Output vector of quality measure of the detected corners.
+ * @param blockSize Size of an average block for computing a derivative covariation matrix over each
+ * pixel neighborhood. See cornerEigenValsAndVecs .
+ * See cornerEigenValsAndVecs .
+ * or #cornerMinEigenVal.
+ */
++ (void)goodFeaturesToTrackWithQuality:(Mat*)image corners:(Mat*)corners maxCorners:(int)maxCorners qualityLevel:(double)qualityLevel minDistance:(double)minDistance mask:(Mat*)mask cornersQuality:(Mat*)cornersQuality blockSize:(int)blockSize NS_SWIFT_NAME(goodFeaturesToTrack(image:corners:maxCorners:qualityLevel:minDistance:mask:cornersQuality:blockSize:));
+
+/**
+ * Same as above, but returns also quality measure of the detected corners.
+ *
+ * @param image Input 8-bit or floating-point 32-bit, single-channel image.
+ * @param corners Output vector of detected corners.
+ * @param maxCorners Maximum number of corners to return. If there are more corners than are found,
+ * the strongest of them is returned. `maxCorners <= 0` implies that no limit on the maximum is set
+ * and all detected corners are returned.
+ * @param qualityLevel Parameter characterizing the minimal accepted quality of image corners. The
+ * parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue
+ * (see #cornerMinEigenVal ) or the Harris function response (see #cornerHarris ). The corners with the
+ * quality measure less than the product are rejected. For example, if the best corner has the
+ * quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure
+ * less than 15 are rejected.
+ * @param minDistance Minimum possible Euclidean distance between the returned corners.
+ * @param mask Region of interest. If the image is not empty (it needs to have the type
+ * CV_8UC1 and the same size as image ), it specifies the region in which the corners are detected.
+ * @param cornersQuality Output vector of quality measure of the detected corners.
+ * pixel neighborhood. See cornerEigenValsAndVecs .
+ * See cornerEigenValsAndVecs .
+ * or #cornerMinEigenVal.
+ */
++ (void)goodFeaturesToTrackWithQuality:(Mat*)image corners:(Mat*)corners maxCorners:(int)maxCorners qualityLevel:(double)qualityLevel minDistance:(double)minDistance mask:(Mat*)mask cornersQuality:(Mat*)cornersQuality NS_SWIFT_NAME(goodFeaturesToTrack(image:corners:maxCorners:qualityLevel:minDistance:mask:cornersQuality:));
+
+
+//
 //  void cv::HoughLines(Mat image, Mat& lines, double rho, double theta, int threshold, double srn = 0, double stn = 0, double min_theta = 0, double max_theta = CV_PI)
 //
 /**
@@ -2851,15 +2981,15 @@ CV_EXPORTS @interface Imgproc : NSObject
 
 
 //
-//  void cv::HoughLinesPointSet(Mat _point, Mat& _lines, int lines_max, int threshold, double min_rho, double max_rho, double rho_step, double min_theta, double max_theta, double theta_step)
+//  void cv::HoughLinesPointSet(Mat point, Mat& lines, int lines_max, int threshold, double min_rho, double max_rho, double rho_step, double min_theta, double max_theta, double theta_step)
 //
 /**
  * Finds lines in a set of points using the standard Hough transform.
  *
  * The function finds lines in a set of points using a modification of the Hough transform.
  * INCLUDE: snippets/imgproc_HoughLinesPointSet.cpp
- * @param _point Input vector of points. Each vector must be encoded as a Point vector `$$(x,y)$$`. Type must be CV_32FC2 or CV_32SC2.
- * @param _lines Output vector of found lines. Each vector is encoded as a vector<Vec3d> `$$(votes, rho, theta)$$`.
+ * @param point Input vector of points. Each vector must be encoded as a Point vector `$$(x,y)$$`. Type must be CV_32FC2 or CV_32SC2.
+ * @param lines Output vector of found lines. Each vector is encoded as a vector<Vec3d> `$$(votes, rho, theta)$$`.
  * The larger the value of 'votes', the higher the reliability of the Hough line.
  * @param lines_max Max count of hough lines.
  * @param threshold Accumulator threshold parameter. Only those lines are returned that get enough
@@ -2871,7 +3001,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * @param max_theta Maximum angle value of the accumulator in radians.
  * @param theta_step Angle resolution of the accumulator in radians.
  */
-+ (void)HoughLinesPointSet:(Mat*)_point _lines:(Mat*)_lines lines_max:(int)lines_max threshold:(int)threshold min_rho:(double)min_rho max_rho:(double)max_rho rho_step:(double)rho_step min_theta:(double)min_theta max_theta:(double)max_theta theta_step:(double)theta_step NS_SWIFT_NAME(HoughLinesPointSet(_point:_lines:lines_max:threshold:min_rho:max_rho:rho_step:min_theta:max_theta:theta_step:));
++ (void)HoughLinesPointSet:(Mat*)point lines:(Mat*)lines lines_max:(int)lines_max threshold:(int)threshold min_rho:(double)min_rho max_rho:(double)max_rho rho_step:(double)rho_step min_theta:(double)min_theta max_theta:(double)max_theta theta_step:(double)theta_step NS_SWIFT_NAME(HoughLinesPointSet(point:lines:lines_max:threshold:min_rho:max_rho:rho_step:min_theta:max_theta:theta_step:));
 
 
 //
@@ -3487,7 +3617,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * @param src input image.
  * @param dst output image; it has the size dsize (when it is non-zero) or the size computed from
  * src.size(), fx, and fy; the type of dst is the same as of src.
- * @param dsize output image size; if it equals zero, it is computed as:
+ * @param dsize output image size; if it equals zero (`None` in Python), it is computed as:
  *  `$$\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}$$`
  *  Either dsize or both fx and fy must be non-zero.
  * @param fx scale factor along the horizontal axis; when it equals 0, it is computed as
@@ -3524,7 +3654,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * @param src input image.
  * @param dst output image; it has the size dsize (when it is non-zero) or the size computed from
  * src.size(), fx, and fy; the type of dst is the same as of src.
- * @param dsize output image size; if it equals zero, it is computed as:
+ * @param dsize output image size; if it equals zero (`None` in Python), it is computed as:
  *  `$$\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}$$`
  *  Either dsize or both fx and fy must be non-zero.
  * @param fx scale factor along the horizontal axis; when it equals 0, it is computed as
@@ -3560,7 +3690,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * @param src input image.
  * @param dst output image; it has the size dsize (when it is non-zero) or the size computed from
  * src.size(), fx, and fy; the type of dst is the same as of src.
- * @param dsize output image size; if it equals zero, it is computed as:
+ * @param dsize output image size; if it equals zero (`None` in Python), it is computed as:
  *  `$$\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}$$`
  *  Either dsize or both fx and fy must be non-zero.
  * @param fx scale factor along the horizontal axis; when it equals 0, it is computed as
@@ -3595,7 +3725,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * @param src input image.
  * @param dst output image; it has the size dsize (when it is non-zero) or the size computed from
  * src.size(), fx, and fy; the type of dst is the same as of src.
- * @param dsize output image size; if it equals zero, it is computed as:
+ * @param dsize output image size; if it equals zero (`None` in Python), it is computed as:
  *  `$$\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}$$`
  *  Either dsize or both fx and fy must be non-zero.
  * `$$\texttt{(double)dsize.width/src.cols}$$`
@@ -4746,6 +4876,41 @@ CV_EXPORTS @interface Imgproc : NSObject
 
 
 //
+//  void cv::divSpectrums(Mat a, Mat b, Mat& c, int flags, bool conjB = false)
+//
+/**
+ * Performs the per-element division of the first Fourier spectrum by the second Fourier spectrum.
+ *
+ * The function cv::divSpectrums performs the per-element division of the first array by the second array.
+ * The arrays are CCS-packed or complex matrices that are results of a real or complex Fourier transform.
+ *
+ * @param a first input array.
+ * @param b second input array of the same size and type as src1 .
+ * @param c output array of the same size and type as src1 .
+ * @param flags operation flags; currently, the only supported flag is cv::DFT_ROWS, which indicates that
+ * each row of src1 and src2 is an independent 1D Fourier spectrum. If you do not want to use this flag, then simply add a `0` as value.
+ * @param conjB optional flag that conjugates the second input array before the multiplication (true)
+ * or not (false).
+ */
++ (void)divSpectrums:(Mat*)a b:(Mat*)b c:(Mat*)c flags:(int)flags conjB:(BOOL)conjB NS_SWIFT_NAME(divSpectrums(a:b:c:flags:conjB:));
+
+/**
+ * Performs the per-element division of the first Fourier spectrum by the second Fourier spectrum.
+ *
+ * The function cv::divSpectrums performs the per-element division of the first array by the second array.
+ * The arrays are CCS-packed or complex matrices that are results of a real or complex Fourier transform.
+ *
+ * @param a first input array.
+ * @param b second input array of the same size and type as src1 .
+ * @param c output array of the same size and type as src1 .
+ * @param flags operation flags; currently, the only supported flag is cv::DFT_ROWS, which indicates that
+ * each row of src1 and src2 is an independent 1D Fourier spectrum. If you do not want to use this flag, then simply add a `0` as value.
+ * or not (false).
+ */
++ (void)divSpectrums:(Mat*)a b:(Mat*)b c:(Mat*)c flags:(int)flags NS_SWIFT_NAME(divSpectrums(a:b:c:flags:));
+
+
+//
 //  double cv::threshold(Mat src, Mat& dst, double thresh, double maxval, ThresholdTypes type)
 //
 /**
@@ -5160,8 +5325,6 @@ CV_EXPORTS @interface Imgproc : NSObject
  * size as image .
  *
  * @see `+findContours:contours:hierarchy:mode:method:offset:`
- *
- *  imgproc_misc
  */
 + (void)watershed:(Mat*)image markers:(Mat*)markers NS_SWIFT_NAME(watershed(image:markers:));
 
@@ -5840,6 +6003,12 @@ CV_EXPORTS @interface Imgproc : NSObject
 
 
 //
+//  void cv::blendLinear(Mat src1, Mat src2, Mat weights1, Mat weights2, Mat& dst)
+//
++ (void)blendLinear:(Mat*)src1 src2:(Mat*)src2 weights1:(Mat*)weights1 weights2:(Mat*)weights2 dst:(Mat*)dst NS_SWIFT_NAME(blendLinear(src1:src2:weights1:weights2:dst:));
+
+
+//
 //  void cv::cvtColor(Mat src, Mat& dst, ColorConversionCodes code, int dstCn = 0)
 //
 /**
@@ -6282,6 +6451,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * in contours of the next and previous contours at the same hierarchical level, the first child
  * contour and the parent contour, respectively. If for the contour i there are no next, previous,
  * parent, or nested contours, the corresponding elements of hierarchy[i] will be negative.
+ * NOTE: In Python, hierarchy is nested inside a top level array. Use hierarchy[0][i] to access hierarchical elements of i-th contour.
  * @param mode Contour retrieval mode, see #RetrievalModes
  * @param method Contour approximation method, see #ContourApproximationModes
  * @param offset Optional offset by which every contour point is shifted. This is useful if the
@@ -6310,6 +6480,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  * in contours of the next and previous contours at the same hierarchical level, the first child
  * contour and the parent contour, respectively. If for the contour i there are no next, previous,
  * parent, or nested contours, the corresponding elements of hierarchy[i] will be negative.
+ * NOTE: In Python, hierarchy is nested inside a top level array. Use hierarchy[0][i] to access hierarchical elements of i-th contour.
  * @param mode Contour retrieval mode, see #RetrievalModes
  * @param method Contour approximation method, see #ContourApproximationModes
  * contours are extracted from the image ROI and then they should be analyzed in the whole image
@@ -6624,14 +6795,14 @@ CV_EXPORTS @interface Imgproc : NSObject
 
 
 //
-//  float cv::intersectConvexConvex(Mat _p1, Mat _p2, Mat& _p12, bool handleNested = true)
+//  float cv::intersectConvexConvex(Mat p1, Mat p2, Mat& p12, bool handleNested = true)
 //
 /**
  * Finds intersection of two convex polygons
  *
- * @param _p1 First polygon
- * @param _p2 Second polygon
- * @param _p12 Output polygon describing the intersecting area
+ * @param p1 First polygon
+ * @param p2 Second polygon
+ * @param p12 Output polygon describing the intersecting area
  * @param handleNested When true, an intersection is found if one of the polygons is fully enclosed in the other.
  * When false, no intersection is found. If the polygons share a side or the vertex of one polygon lies on an edge
  * of the other, they are not considered nested and an intersection will be found regardless of the value of handleNested.
@@ -6640,14 +6811,14 @@ CV_EXPORTS @interface Imgproc : NSObject
  *
  * NOTE: intersectConvexConvex doesn't confirm that both polygons are convex and will return invalid results if they aren't.
  */
-+ (float)intersectConvexConvex:(Mat*)_p1 _p2:(Mat*)_p2 _p12:(Mat*)_p12 handleNested:(BOOL)handleNested NS_SWIFT_NAME(intersectConvexConvex(_p1:_p2:_p12:handleNested:));
++ (float)intersectConvexConvex:(Mat*)p1 p2:(Mat*)p2 p12:(Mat*)p12 handleNested:(BOOL)handleNested NS_SWIFT_NAME(intersectConvexConvex(p1:p2:p12:handleNested:));
 
 /**
  * Finds intersection of two convex polygons
  *
- * @param _p1 First polygon
- * @param _p2 Second polygon
- * @param _p12 Output polygon describing the intersecting area
+ * @param p1 First polygon
+ * @param p2 Second polygon
+ * @param p12 Output polygon describing the intersecting area
  * When false, no intersection is found. If the polygons share a side or the vertex of one polygon lies on an edge
  * of the other, they are not considered nested and an intersection will be found regardless of the value of handleNested.
  *
@@ -6655,7 +6826,7 @@ CV_EXPORTS @interface Imgproc : NSObject
  *
  * NOTE: intersectConvexConvex doesn't confirm that both polygons are convex and will return invalid results if they aren't.
  */
-+ (float)intersectConvexConvex:(Mat*)_p1 _p2:(Mat*)_p2 _p12:(Mat*)_p12 NS_SWIFT_NAME(intersectConvexConvex(_p1:_p2:_p12:));
++ (float)intersectConvexConvex:(Mat*)p1 p2:(Mat*)p2 p12:(Mat*)p12 NS_SWIFT_NAME(intersectConvexConvex(p1:p2:p12:));
 
 
 //
@@ -7957,6 +8128,55 @@ CV_EXPORTS @interface Imgproc : NSObject
  * @see `cv::putText`
  */
 + (double)getFontScaleFromHeight:(int)fontFace pixelHeight:(int)pixelHeight NS_SWIFT_NAME(getFontScaleFromHeight(fontFace:pixelHeight:));
+
+
+//
+//  void cv::HoughLinesWithAccumulator(Mat image, Mat& lines, double rho, double theta, int threshold, double srn = 0, double stn = 0, double min_theta = 0, double max_theta = CV_PI)
+//
+/**
+ * Finds lines in a binary image using the standard Hough transform and get accumulator.
+ *
+ * NOTE: This function is for bindings use only. Use original function in C++ code
+ *
+ * @see `+HoughLines:lines:rho:theta:threshold:srn:stn:min_theta:max_theta:`
+ */
++ (void)HoughLinesWithAccumulator:(Mat*)image lines:(Mat*)lines rho:(double)rho theta:(double)theta threshold:(int)threshold srn:(double)srn stn:(double)stn min_theta:(double)min_theta max_theta:(double)max_theta NS_SWIFT_NAME(HoughLinesWithAccumulator(image:lines:rho:theta:threshold:srn:stn:min_theta:max_theta:));
+
+/**
+ * Finds lines in a binary image using the standard Hough transform and get accumulator.
+ *
+ * NOTE: This function is for bindings use only. Use original function in C++ code
+ *
+ * @see `+HoughLines:lines:rho:theta:threshold:srn:stn:min_theta:max_theta:`
+ */
++ (void)HoughLinesWithAccumulator:(Mat*)image lines:(Mat*)lines rho:(double)rho theta:(double)theta threshold:(int)threshold srn:(double)srn stn:(double)stn min_theta:(double)min_theta NS_SWIFT_NAME(HoughLinesWithAccumulator(image:lines:rho:theta:threshold:srn:stn:min_theta:));
+
+/**
+ * Finds lines in a binary image using the standard Hough transform and get accumulator.
+ *
+ * NOTE: This function is for bindings use only. Use original function in C++ code
+ *
+ * @see `+HoughLines:lines:rho:theta:threshold:srn:stn:min_theta:max_theta:`
+ */
++ (void)HoughLinesWithAccumulator:(Mat*)image lines:(Mat*)lines rho:(double)rho theta:(double)theta threshold:(int)threshold srn:(double)srn stn:(double)stn NS_SWIFT_NAME(HoughLinesWithAccumulator(image:lines:rho:theta:threshold:srn:stn:));
+
+/**
+ * Finds lines in a binary image using the standard Hough transform and get accumulator.
+ *
+ * NOTE: This function is for bindings use only. Use original function in C++ code
+ *
+ * @see `+HoughLines:lines:rho:theta:threshold:srn:stn:min_theta:max_theta:`
+ */
++ (void)HoughLinesWithAccumulator:(Mat*)image lines:(Mat*)lines rho:(double)rho theta:(double)theta threshold:(int)threshold srn:(double)srn NS_SWIFT_NAME(HoughLinesWithAccumulator(image:lines:rho:theta:threshold:srn:));
+
+/**
+ * Finds lines in a binary image using the standard Hough transform and get accumulator.
+ *
+ * NOTE: This function is for bindings use only. Use original function in C++ code
+ *
+ * @see `+HoughLines:lines:rho:theta:threshold:srn:stn:min_theta:max_theta:`
+ */
++ (void)HoughLinesWithAccumulator:(Mat*)image lines:(Mat*)lines rho:(double)rho theta:(double)theta threshold:(int)threshold NS_SWIFT_NAME(HoughLinesWithAccumulator(image:lines:rho:theta:threshold:));
 
 
 

@@ -14,11 +14,11 @@
 		8A2A849025F74328001FA5EC /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924AE25D66205004D8A49 /* HeartRateManager.swift */; };
 		8A2A849125F74328001FA5EC /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924A825D66205004D8A49 /* AuthorizationManager.swift */; };
 		8A2A849225F74328001FA5EC /* WatchToPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD924AC25D66205004D8A49 /* WatchToPhone.swift */; };
+		8A3AC6FF26D870640032791F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3AC6FE26D870640032791F /* opencv2.framework */; };
 		8A6A7E4F25D641B500CE29A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6A7E4E25D641B500CE29A2 /* Preview Assets.xcassets */; };
 		8A85E57C260AE90D000A696B /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 8A85E57B260AE90D000A696B /* Charts */; };
 		8A8A972526085C5E002D92AF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8A972426085C5E002D92AF /* AVFoundation.framework */; };
 		8A8A972726085C6A002D92AF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8A972626085C6A002D92AF /* CoreMedia.framework */; };
-		8A8A972926085D04002D92AF /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8A972826085D04002D92AF /* opencv2.framework */; };
 		8A8A973D26085D81002D92AF /* libDSPFiltersiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8A973626085D56002D92AF /* libDSPFiltersiOS.a */; };
 		8A8A979226085FC4002D92AF /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A979126085FC4002D92AF /* haarcascade_frontalface_default.xml */; };
 		8A8A97AC26087141002D92AF /* OpenCVImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A97AB26087141002D92AF /* OpenCVImageProcessor.mm */; };
@@ -303,10 +303,10 @@
 		8A2A846825F605EC001FA5EC /* MedeePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MedeePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8A2A847325F64A38001FA5EC /* MedeeCall WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MedeeCall WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		8A2A847425F64A38001FA5EC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		8A3AC6FE26D870640032791F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "3rd-Party_Frameworks/opencv2.framework"; sourceTree = SOURCE_ROOT; };
 		8A6A7E4E25D641B500CE29A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A8A972426085C5E002D92AF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		8A8A972626085C6A002D92AF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
-		8A8A972826085D04002D92AF /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "3rd-Party_Frameworks/opencv2.framework"; sourceTree = SOURCE_ROOT; };
 		8A8A972E26085D56002D92AF /* DSPFilters.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DSPFilters.xcodeproj; path = "3rd-Party_Frameworks/DSPFilters/DSPFilters.xcodeproj"; sourceTree = "<group>"; };
 		8A8A979126085FC4002D92AF /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
 		8A8A97A326087100002D92AF /* MedeeCall-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedeeCall-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -534,10 +534,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8A972726085C6A002D92AF /* CoreMedia.framework in Frameworks */,
+				8A3AC6FF26D870640032791F /* opencv2.framework in Frameworks */,
 				8AA5017C25C9ACBE001CDC17 /* HealthKit.framework in Frameworks */,
 				8A85E57C260AE90D000A696B /* Charts in Frameworks */,
 				8A8A973D26085D81002D92AF /* libDSPFiltersiOS.a in Frameworks */,
-				8A8A972926085D04002D92AF /* opencv2.framework in Frameworks */,
 				8A8A972526085C5E002D92AF /* AVFoundation.framework in Frameworks */,
 				3E51166FA9FA5F54F80BE3F2 /* Pods_MedeeCall.framework in Frameworks */,
 			);
@@ -949,7 +949,7 @@
 		8AD923CF25D65B14004D8A49 /* 3rdPartyFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A8A972826085D04002D92AF /* opencv2.framework */,
+				8A3AC6FE26D870640032791F /* opencv2.framework */,
 			);
 			path = 3rdPartyFrameworks;
 			sourceTree = "<group>";
@@ -2262,6 +2262,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-Party_Frameworks",
+					"$(PROJECT_DIR)/MedeeCall/Resources/3rdPartyFrameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MedeeCall/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2298,6 +2299,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-Party_Frameworks",
+					"$(PROJECT_DIR)/MedeeCall/Resources/3rdPartyFrameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MedeeCall/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

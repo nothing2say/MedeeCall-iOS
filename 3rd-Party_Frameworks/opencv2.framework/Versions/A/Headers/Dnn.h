@@ -860,6 +860,17 @@ CV_EXPORTS @interface Dnn : NSObject
 
 
 //
+//  String cv::dnn::getInferenceEngineCPUType()
+//
+/**
+ * Returns Inference Engine CPU type.
+ *
+ * Specify OpenVINO plugin: CPU or ARM.
+ */
++ (NSString*)getInferenceEngineCPUType NS_SWIFT_NAME(getInferenceEngineCPUType());
+
+
+//
 //  void cv::dnn::releaseHDDLPlugin()
 //
 /**

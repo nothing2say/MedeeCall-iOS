@@ -71,6 +71,15 @@ using GOptRunArgP = util::variant<
 >;
 using GOptRunArgsP = std::vector<GOptRunArgP>;
 
+using GOptRunArg = util::variant<
+    optional<cv::Mat>,
+    optional<cv::RMat>,
+    optional<cv::Scalar>,
+    optional<cv::detail::VectorRef>,
+    optional<cv::detail::OpaqueRef>
+>;
+using GOptRunArgs = std::vector<GOptRunArg>;
+
 namespace detail {
 
 template<typename T> inline GOptRunArgP wrap_opt_arg(optional<T>& arg) {
@@ -180,7 +189,10 @@ public:
      * @param ins vector of inputs to process.
      * @sa gin
      */
-    GAPI_WRAP void setSource(GRunArgs &&ins);
+    void setSource(GRunArgs &&ins);
+
+    /// @private -- Exclude this function from OpenCV documentation
+    GAPI_WRAP void setSource(const cv::detail::ExtractArgsCallback& callback);
 
     /**
      * @brief Specify an input video stream for a single-input
@@ -193,7 +205,7 @@ public:
      * @param s a shared pointer to IStreamSource representing the
      * input video stream.
      */
-    GAPI_WRAP void setSource(const gapi::wip::IStreamSource::Ptr& s);
+    void setSource(const gapi::wip::IStreamSource::Ptr& s);
 
     /**
      * @brief Constructs and specifies an input video stream for a
@@ -251,7 +263,8 @@ public:
     bool pull(cv::GRunArgsP &&outs);
 
     // NB: Used from python
-    GAPI_WRAP std::tuple<bool, cv::GRunArgs> pull();
+    /// @private -- Exclude this function from OpenCV documentation
+    GAPI_WRAP std::tuple<bool, cv::util::variant<cv::GRunArgs, cv::GOptRunArgs>> pull();
 
     /**
      * @brief Get some next available data from the pipeline.
@@ -366,6 +379,41 @@ protected:
     std::shared_ptr<Priv> m_priv;
 };
 /** @} */
+
+namespace gapi {
+
+/**
+ * @brief This namespace contains G-API functions, structures, and
+ * symbols related to the Streaming execution mode.
+ *
+ * Some of the operations defined in this namespace (e.g. size(),
+ * BGR(), etc.) can be used in the traditional execution mode too.
+ */
+namespace streaming {
+/**
+ * @brief Specify queue capacity for streaming execution.
+ *
+ * In the streaming mode the pipeline steps are connected with queues
+ * and this compile argument controls every queue's size.
+ */
+struct GAPI_EXPORTS_W_SIMPLE queue_capacity
+{
+    GAPI_WRAP
+    explicit queue_capacity(size_t cap = 1) : capacity(cap) { };
+    GAPI_PROP_RW
+    size_t capacity;
+};
+/** @} */
+} // namespace streaming
+} // namespace gapi
+
+namespace detail
+{
+template<> struct CompileArgTag<cv::gapi::streaming::queue_capacity>
+{
+    static const char* tag() { return "gapi.queue_capacity"; }
+};
+}
 
 }
 

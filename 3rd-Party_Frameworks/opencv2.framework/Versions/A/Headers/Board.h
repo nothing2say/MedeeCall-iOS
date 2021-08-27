@@ -65,6 +65,21 @@ CV_EXPORTS @interface Board : NSObject
 + (Board*)create:(NSArray<Mat*>*)objPoints dictionary:(Dictionary*)dictionary ids:(Mat*)ids NS_SWIFT_NAME(create(objPoints:dictionary:ids:));
 
 
+//
+//  void cv::aruco::Board::setIds(Mat ids)
+//
+/**
+ * Set ids vector
+ *
+ * @param ids vector of the identifiers of the markers in the board (should be the same size
+ * as objPoints)
+ *
+ * Recommended way to set ids vector, which will fail if the size of ids does not match size
+ * of objPoints.
+ */
+- (void)setIdsMat:(Mat*)ids NS_SWIFT_NAME(setIds(ids:));
+
+
     //
     // C++: vector_vector_Point3f cv::aruco::Board::objPoints
     //
@@ -81,7 +96,7 @@ CV_EXPORTS @interface Board : NSObject
     // C++: vector_int cv::aruco::Board::ids
     //
 
-@property (readonly) IntVector* ids;
+@property IntVector* ids;
 
 
 @end

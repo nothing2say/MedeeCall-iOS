@@ -45,6 +45,8 @@
 #ifndef OPENCV_CORE_CVDEF_H
 #define OPENCV_CORE_CVDEF_H
 
+#include "opencv2/core/version.hpp"
+
 //! @addtogroup core_utils
 //! @{
 
@@ -269,6 +271,8 @@ namespace cv {
 
 #define CV_CPU_MSA              150
 
+#define CV_CPU_RISCVV           170
+
 #define CV_CPU_VSX              200
 #define CV_CPU_VSX3             201
 
@@ -322,6 +326,8 @@ enum CpuFeatures {
     CPU_NEON            = 100,
 
     CPU_MSA             = 150,
+
+    CPU_RISCVV          = 170,
 
     CPU_VSX             = 200,
     CPU_VSX3            = 201,
@@ -388,7 +394,9 @@ typedef union Cv64suf
 }
 Cv64suf;
 
+#ifndef OPENCV_ABI_COMPATIBILITY
 #define OPENCV_ABI_COMPATIBILITY 400
+#endif
 
 #ifdef __OPENCV_BUILD
 #  define DISABLE_OPENCV_3_COMPATIBILITY
@@ -676,7 +684,7 @@ __CV_ENUM_FLAGS_BITWISE_XOR_EQ   (EnumType, EnumType)                           
 #  define CV_XADD(addr, delta) (int)_InterlockedExchangeAdd((long volatile*)addr, delta)
 #else
   #ifdef OPENCV_FORCE_UNSAFE_XADD
-    CV_INLINE CV_XADD(int* addr, int delta) { int tmp = *addr; *addr += delta; return tmp; }
+    CV_INLINE int CV_XADD(int* addr, int delta) { int tmp = *addr; *addr += delta; return tmp; }
   #else
     #error "OpenCV: can't define safe CV_XADD macro for current platform (unsupported). Define CV_XADD macro through custom port header (see OPENCV_INCLUDE_PORT_FILE)"
   #endif

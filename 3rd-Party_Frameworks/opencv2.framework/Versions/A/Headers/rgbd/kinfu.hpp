@@ -74,14 +74,22 @@ struct CV_EXPORTS_W Params
     */
     CV_WRAP static Ptr<Params> hashTSDFParams(bool isCoarse);
 
+    /** @brief ColoredTSDF parameters
+      A set of parameters suitable for use with ColoredTSDFVolume
+    */
+    CV_WRAP static Ptr<Params> coloredTSDFParams(bool isCoarse);
+
     /** @brief frame size in pixels */
     CV_PROP_RW Size frameSize;
 
+    /** @brief rgb frame size in pixels */
     CV_PROP_RW kinfu::VolumeType volumeType;
 
     /** @brief camera intrinsics */
     CV_PROP_RW Matx33f intr;
 
+    /** @brief rgb camera intrinsics */
+    CV_PROP_RW Matx33f rgb_intr;
     /** @brief pre-scale per 1 meter for input values
 
     Typical values are:
@@ -196,11 +204,21 @@ public:
       Light pose is fixed in KinFu params.
 
         @param image resulting image
+    */
+
+    CV_WRAP virtual void render(OutputArray image) const = 0;
+
+    /** @brief Renders a volume into an image
+
+      Renders a 0-surface of TSDF using Phong shading into a CV_8UC4 Mat.
+      Light pose is fixed in KinFu params.
+
+        @param image resulting image
         @param cameraPose pose of camera to render from. If empty then render from current pose
         which is a last frame camera pose.
     */
 
-    CV_WRAP virtual void render(OutputArray image, const Matx44f& cameraPose = Matx44f::eye()) const = 0;
+    CV_WRAP virtual void render(OutputArray image, const Matx44f& cameraPose) const = 0;
 
     /** @brief Gets points and normals of current 3d mesh
 

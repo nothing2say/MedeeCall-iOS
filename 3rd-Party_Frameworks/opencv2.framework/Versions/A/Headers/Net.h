@@ -17,6 +17,7 @@
 @class ByteVector;
 @class DictValue;
 @class DoubleVector;
+@class FloatVector;
 @class IntVector;
 @class Layer;
 @class Mat;
@@ -250,6 +251,40 @@ CV_EXPORTS @interface Net : NSObject
  * @param outBlobNames names for layers which outputs are needed to get
  */
 - (void)forwardAndRetrieve:(NSMutableArray<NSMutableArray<Mat*>*>*)outputBlobs outBlobNames:(NSArray<NSString*>*)outBlobNames NS_SWIFT_NAME(forwardAndRetrieve(outputBlobs:outBlobNames:));
+
+
+//
+//  Net cv::dnn::Net::quantize(vector_Mat calibData, int inputsDtype, int outputsDtype)
+//
+/**
+ * Returns a quantized Net from a floating-point Net.
+ * @param calibData Calibration data to compute the quantization parameters.
+ * @param inputsDtype Datatype of quantized net's inputs. Can be CV_32F or CV_8S.
+ * @param outputsDtype Datatype of quantized net's outputs. Can be CV_32F or CV_8S.
+ */
+- (Net*)quantize:(NSArray<Mat*>*)calibData inputsDtype:(int)inputsDtype outputsDtype:(int)outputsDtype NS_SWIFT_NAME(quantize(calibData:inputsDtype:outputsDtype:));
+
+
+//
+//  void cv::dnn::Net::getInputDetails(vector_float& scales, vector_int& zeropoints)
+//
+/**
+ * Returns input scale and zeropoint for a quantized Net.
+ * @param scales output parameter for returning input scales.
+ * @param zeropoints output parameter for returning input zeropoints.
+ */
+- (void)getInputDetails:(FloatVector*)scales zeropoints:(IntVector*)zeropoints NS_SWIFT_NAME(getInputDetails(scales:zeropoints:));
+
+
+//
+//  void cv::dnn::Net::getOutputDetails(vector_float& scales, vector_int& zeropoints)
+//
+/**
+ * Returns output scale and zeropoint for a quantized Net.
+ * @param scales output parameter for returning output scales.
+ * @param zeropoints output parameter for returning output zeropoints.
+ */
+- (void)getOutputDetails:(FloatVector*)scales zeropoints:(IntVector*)zeropoints NS_SWIFT_NAME(getOutputDetails(scales:zeropoints:));
 
 
 //
@@ -515,8 +550,10 @@ CV_EXPORTS @interface Net : NSObject
 //
 /**
  * Returns overall time for inference and timings (in ticks) for layers.
+ *
  * Indexes in returned vector correspond to layers ids. Some layers can be fused with others,
- * in this case zero ticks count will be return for that skipped layers.
+ * in this case zero ticks count will be return for that skipped layers. Supported by DNN_BACKEND_OPENCV on DNN_TARGET_CPU only.
+ *
  * @param timings vector for tick timings for all layers.
  * @return overall ticks for model inference.
  */

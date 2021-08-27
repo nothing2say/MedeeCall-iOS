@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The Video module
  *
- * Member classes: `KalmanFilter`, `DenseOpticalFlow`, `SparseOpticalFlow`, `FarnebackOpticalFlow`, `VariationalRefinement`, `DISOpticalFlow`, `SparsePyrLKOpticalFlow`, `Tracker`, `TrackerMIL`, `TrackerMILParams`, `TrackerGOTURN`, `TrackerGOTURNParams`, `BackgroundSubtractor`, `BackgroundSubtractorMOG2`, `BackgroundSubtractorKNN`
+ * Member classes: `KalmanFilter`, `DenseOpticalFlow`, `SparseOpticalFlow`, `FarnebackOpticalFlow`, `VariationalRefinement`, `DISOpticalFlow`, `SparsePyrLKOpticalFlow`, `Tracker`, `TrackerMIL`, `TrackerMILParams`, `TrackerGOTURN`, `TrackerGOTURNParams`, `TrackerDaSiamRPN`, `TrackerDaSiamRPNParams`, `BackgroundSubtractor`, `BackgroundSubtractorMOG2`, `BackgroundSubtractorKNN`
  *
  */
 CV_EXPORTS @interface Video : NSObject
@@ -600,6 +600,18 @@ CV_EXPORTS @interface Video : NSObject
  * computeECC, estimateAffine2D, estimateAffinePartial2D, findHomography
  */
 + (double)findTransformECC:(Mat*)templateImage inputImage:(Mat*)inputImage warpMatrix:(Mat*)warpMatrix motionType:(int)motionType criteria:(TermCriteria*)criteria inputMask:(Mat*)inputMask gaussFiltSize:(int)gaussFiltSize NS_SWIFT_NAME(findTransformECC(templateImage:inputImage:warpMatrix:motionType:criteria:inputMask:gaussFiltSize:));
+
+
+//
+//  double cv::findTransformECC(Mat templateImage, Mat inputImage, Mat& warpMatrix, int motionType = MOTION_AFFINE, TermCriteria criteria = TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 50, 0.001), Mat inputMask = Mat())
+//
++ (double)findTransformECC:(Mat*)templateImage inputImage:(Mat*)inputImage warpMatrix:(Mat*)warpMatrix motionType:(int)motionType criteria:(TermCriteria*)criteria inputMask:(Mat*)inputMask NS_SWIFT_NAME(findTransformECC(templateImage:inputImage:warpMatrix:motionType:criteria:inputMask:));
+
++ (double)findTransformECC:(Mat*)templateImage inputImage:(Mat*)inputImage warpMatrix:(Mat*)warpMatrix motionType:(int)motionType criteria:(TermCriteria*)criteria NS_SWIFT_NAME(findTransformECC(templateImage:inputImage:warpMatrix:motionType:criteria:));
+
++ (double)findTransformECC:(Mat*)templateImage inputImage:(Mat*)inputImage warpMatrix:(Mat*)warpMatrix motionType:(int)motionType NS_SWIFT_NAME(findTransformECC(templateImage:inputImage:warpMatrix:motionType:));
+
++ (double)findTransformECC:(Mat*)templateImage inputImage:(Mat*)inputImage warpMatrix:(Mat*)warpMatrix NS_SWIFT_NAME(findTransformECC(templateImage:inputImage:warpMatrix:));
 
 
 //

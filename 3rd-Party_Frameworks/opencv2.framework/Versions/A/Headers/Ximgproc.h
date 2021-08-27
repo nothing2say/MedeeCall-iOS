@@ -18,6 +18,7 @@
 @class DisparityWLSFilter;
 @class EdgeAwareInterpolator;
 @class EdgeBoxes;
+@class EdgeDrawing;
 @class FastBilateralSolverFilter;
 @class FastGlobalSmootherFilter;
 @class FastLineDetector;
@@ -125,9 +126,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The Ximgproc module
  *
- * Member classes: `DisparityFilter`, `DisparityWLSFilter`, `DTFilter`, `GuidedFilter`, `AdaptiveManifoldFilter`, `FastBilateralSolverFilter`, `FastGlobalSmootherFilter`, `SuperpixelSLIC`, `RFFeatureGetter`, `StructuredEdgeDetection`, `SuperpixelLSC`, `EdgeBoxes`, `GraphSegmentation`, `SelectiveSearchSegmentationStrategy`, `SelectiveSearchSegmentationStrategyColor`, `SelectiveSearchSegmentationStrategySize`, `SelectiveSearchSegmentationStrategyTexture`, `SelectiveSearchSegmentationStrategyFill`, `SelectiveSearchSegmentationStrategyMultiple`, `SelectiveSearchSegmentation`, `ContourFitting`, `SparseMatchInterpolator`, `EdgeAwareInterpolator`, `RICInterpolator`, `RidgeDetectionFilter`, `SuperpixelSEEDS`, `FastLineDetector`
+ * Member classes: `DisparityFilter`, `DisparityWLSFilter`, `DTFilter`, `GuidedFilter`, `AdaptiveManifoldFilter`, `FastBilateralSolverFilter`, `FastGlobalSmootherFilter`, `SuperpixelSLIC`, `RFFeatureGetter`, `StructuredEdgeDetection`, `SuperpixelLSC`, `EdgeBoxes`, `GraphSegmentation`, `SelectiveSearchSegmentationStrategy`, `SelectiveSearchSegmentationStrategyColor`, `SelectiveSearchSegmentationStrategySize`, `SelectiveSearchSegmentationStrategyTexture`, `SelectiveSearchSegmentationStrategyFill`, `SelectiveSearchSegmentationStrategyMultiple`, `SelectiveSearchSegmentation`, `ContourFitting`, `SparseMatchInterpolator`, `EdgeAwareInterpolator`, `RICInterpolator`, `EdgeDrawing`, `EdgeDrawingParams`, `RidgeDetectionFilter`, `SuperpixelSEEDS`, `FastLineDetector`
  *
- * Member enums: `ThinningTypes`, `LocalBinarizationMethods`, `EdgeAwareFiltersList`, `SLICType`, `WMFWeightType`, `AngleRangeOption`, `HoughOp`, `HoughDeskewOption`
+ * Member enums: `ThinningTypes`, `LocalBinarizationMethods`, `EdgeAwareFiltersList`, `SLICType`, `WMFWeightType`, `AngleRangeOption`, `HoughOp`, `HoughDeskewOption`, `GradientOperator`
  */
 CV_EXPORTS @interface Ximgproc : NSObject
 
@@ -2297,6 +2298,15 @@ CV_EXPORTS @interface Ximgproc : NSObject
 
 
 //
+//  Ptr_EdgeDrawing cv::ximgproc::createEdgeDrawing()
+//
+/**
+ * Creates a smart pointer to a EdgeDrawing object and initializes it
+ */
++ (EdgeDrawing*)createEdgeDrawing NS_SWIFT_NAME(createEdgeDrawing());
+
+
+//
 //  Ptr_SuperpixelSEEDS cv::ximgproc::createSuperpixelSEEDS(int image_width, int image_height, int image_channels, int num_superpixels, int num_levels, int prior = 2, int histogram_bins = 5, bool double_step = false)
 //
 /**
@@ -2423,117 +2433,82 @@ CV_EXPORTS @interface Ximgproc : NSObject
 
 
 //
-//  Ptr_FastLineDetector cv::ximgproc::createFastLineDetector(int _length_threshold = 10, float _distance_threshold = 1.414213562f, double _canny_th1 = 50.0, double _canny_th2 = 50.0, int _canny_aperture_size = 3, bool _do_merge = false)
+//  Ptr_FastLineDetector cv::ximgproc::createFastLineDetector(int length_threshold = 10, float distance_threshold = 1.414213562f, double canny_th1 = 50.0, double canny_th2 = 50.0, int canny_aperture_size = 3, bool do_merge = false)
 //
 /**
  * Creates a smart pointer to a FastLineDetector object and initializes it
  *
- * @param _length_threshold    10         - Segment shorter than this will be discarded
- * @param _distance_threshold  1.41421356 - A point placed from a hypothesis line
- *                                          segment farther than this will be
- *                                          regarded as an outlier
- * @param _canny_th1           50         - First threshold for
- *                                          hysteresis procedure in Canny()
- * @param _canny_th2           50         - Second threshold for
- *                                          hysteresis procedure in Canny()
- * @param _canny_aperture_size 3          - Aperturesize for the sobel operator in Canny().
- *                                          If zero, Canny() is not applied and the input
- *                                          image is taken as an edge image.
- * @param _do_merge            false      - If true, incremental merging of segments
- *                                          will be perfomred
+ * @param length_threshold    Segment shorter than this will be discarded
+ * @param distance_threshold  A point placed from a hypothesis line
+ *                            segment farther than this will be regarded as an outlier
+ * @param canny_th1           First threshold for hysteresis procedure in Canny()
+ * @param canny_th2           Second threshold for hysteresis procedure in Canny()
+ * @param canny_aperture_size Aperturesize for the sobel operator in Canny().
+ *                            If zero, Canny() is not applied and the input image is taken as an edge image.
+ * @param do_merge            If true, incremental merging of segments will be performed
  */
-+ (FastLineDetector*)createFastLineDetector:(int)_length_threshold _distance_threshold:(float)_distance_threshold _canny_th1:(double)_canny_th1 _canny_th2:(double)_canny_th2 _canny_aperture_size:(int)_canny_aperture_size _do_merge:(BOOL)_do_merge NS_SWIFT_NAME(createFastLineDetector(_length_threshold:_distance_threshold:_canny_th1:_canny_th2:_canny_aperture_size:_do_merge:));
++ (FastLineDetector*)createFastLineDetector:(int)length_threshold distance_threshold:(float)distance_threshold canny_th1:(double)canny_th1 canny_th2:(double)canny_th2 canny_aperture_size:(int)canny_aperture_size do_merge:(BOOL)do_merge NS_SWIFT_NAME(createFastLineDetector(length_threshold:distance_threshold:canny_th1:canny_th2:canny_aperture_size:do_merge:));
 
 /**
  * Creates a smart pointer to a FastLineDetector object and initializes it
  *
- * @param _length_threshold    10         - Segment shorter than this will be discarded
- * @param _distance_threshold  1.41421356 - A point placed from a hypothesis line
- *                                          segment farther than this will be
- *                                          regarded as an outlier
- * @param _canny_th1           50         - First threshold for
- *                                          hysteresis procedure in Canny()
- * @param _canny_th2           50         - Second threshold for
- *                                          hysteresis procedure in Canny()
- * @param _canny_aperture_size 3          - Aperturesize for the sobel operator in Canny().
- *                                          If zero, Canny() is not applied and the input
- *                                          image is taken as an edge image.
- *                                          will be perfomred
+ * @param length_threshold    Segment shorter than this will be discarded
+ * @param distance_threshold  A point placed from a hypothesis line
+ *                            segment farther than this will be regarded as an outlier
+ * @param canny_th1           First threshold for hysteresis procedure in Canny()
+ * @param canny_th2           Second threshold for hysteresis procedure in Canny()
+ * @param canny_aperture_size Aperturesize for the sobel operator in Canny().
+ *                            If zero, Canny() is not applied and the input image is taken as an edge image.
  */
-+ (FastLineDetector*)createFastLineDetector:(int)_length_threshold _distance_threshold:(float)_distance_threshold _canny_th1:(double)_canny_th1 _canny_th2:(double)_canny_th2 _canny_aperture_size:(int)_canny_aperture_size NS_SWIFT_NAME(createFastLineDetector(_length_threshold:_distance_threshold:_canny_th1:_canny_th2:_canny_aperture_size:));
++ (FastLineDetector*)createFastLineDetector:(int)length_threshold distance_threshold:(float)distance_threshold canny_th1:(double)canny_th1 canny_th2:(double)canny_th2 canny_aperture_size:(int)canny_aperture_size NS_SWIFT_NAME(createFastLineDetector(length_threshold:distance_threshold:canny_th1:canny_th2:canny_aperture_size:));
 
 /**
  * Creates a smart pointer to a FastLineDetector object and initializes it
  *
- * @param _length_threshold    10         - Segment shorter than this will be discarded
- * @param _distance_threshold  1.41421356 - A point placed from a hypothesis line
- *                                          segment farther than this will be
- *                                          regarded as an outlier
- * @param _canny_th1           50         - First threshold for
- *                                          hysteresis procedure in Canny()
- * @param _canny_th2           50         - Second threshold for
- *                                          hysteresis procedure in Canny()
- *                                          If zero, Canny() is not applied and the input
- *                                          image is taken as an edge image.
- *                                          will be perfomred
+ * @param length_threshold    Segment shorter than this will be discarded
+ * @param distance_threshold  A point placed from a hypothesis line
+ *                            segment farther than this will be regarded as an outlier
+ * @param canny_th1           First threshold for hysteresis procedure in Canny()
+ * @param canny_th2           Second threshold for hysteresis procedure in Canny()
+ *                            If zero, Canny() is not applied and the input image is taken as an edge image.
  */
-+ (FastLineDetector*)createFastLineDetector:(int)_length_threshold _distance_threshold:(float)_distance_threshold _canny_th1:(double)_canny_th1 _canny_th2:(double)_canny_th2 NS_SWIFT_NAME(createFastLineDetector(_length_threshold:_distance_threshold:_canny_th1:_canny_th2:));
++ (FastLineDetector*)createFastLineDetector:(int)length_threshold distance_threshold:(float)distance_threshold canny_th1:(double)canny_th1 canny_th2:(double)canny_th2 NS_SWIFT_NAME(createFastLineDetector(length_threshold:distance_threshold:canny_th1:canny_th2:));
 
 /**
  * Creates a smart pointer to a FastLineDetector object and initializes it
  *
- * @param _length_threshold    10         - Segment shorter than this will be discarded
- * @param _distance_threshold  1.41421356 - A point placed from a hypothesis line
- *                                          segment farther than this will be
- *                                          regarded as an outlier
- * @param _canny_th1           50         - First threshold for
- *                                          hysteresis procedure in Canny()
- *                                          hysteresis procedure in Canny()
- *                                          If zero, Canny() is not applied and the input
- *                                          image is taken as an edge image.
- *                                          will be perfomred
+ * @param length_threshold    Segment shorter than this will be discarded
+ * @param distance_threshold  A point placed from a hypothesis line
+ *                            segment farther than this will be regarded as an outlier
+ * @param canny_th1           First threshold for hysteresis procedure in Canny()
+ *                            If zero, Canny() is not applied and the input image is taken as an edge image.
  */
-+ (FastLineDetector*)createFastLineDetector:(int)_length_threshold _distance_threshold:(float)_distance_threshold _canny_th1:(double)_canny_th1 NS_SWIFT_NAME(createFastLineDetector(_length_threshold:_distance_threshold:_canny_th1:));
++ (FastLineDetector*)createFastLineDetector:(int)length_threshold distance_threshold:(float)distance_threshold canny_th1:(double)canny_th1 NS_SWIFT_NAME(createFastLineDetector(length_threshold:distance_threshold:canny_th1:));
 
 /**
  * Creates a smart pointer to a FastLineDetector object and initializes it
  *
- * @param _length_threshold    10         - Segment shorter than this will be discarded
- * @param _distance_threshold  1.41421356 - A point placed from a hypothesis line
- *                                          segment farther than this will be
- *                                          regarded as an outlier
- *                                          hysteresis procedure in Canny()
- *                                          hysteresis procedure in Canny()
- *                                          If zero, Canny() is not applied and the input
- *                                          image is taken as an edge image.
- *                                          will be perfomred
+ * @param length_threshold    Segment shorter than this will be discarded
+ * @param distance_threshold  A point placed from a hypothesis line
+ *                            segment farther than this will be regarded as an outlier
+ *                            If zero, Canny() is not applied and the input image is taken as an edge image.
  */
-+ (FastLineDetector*)createFastLineDetector:(int)_length_threshold _distance_threshold:(float)_distance_threshold NS_SWIFT_NAME(createFastLineDetector(_length_threshold:_distance_threshold:));
++ (FastLineDetector*)createFastLineDetector:(int)length_threshold distance_threshold:(float)distance_threshold NS_SWIFT_NAME(createFastLineDetector(length_threshold:distance_threshold:));
 
 /**
  * Creates a smart pointer to a FastLineDetector object and initializes it
  *
- * @param _length_threshold    10         - Segment shorter than this will be discarded
- *                                          segment farther than this will be
- *                                          regarded as an outlier
- *                                          hysteresis procedure in Canny()
- *                                          hysteresis procedure in Canny()
- *                                          If zero, Canny() is not applied and the input
- *                                          image is taken as an edge image.
- *                                          will be perfomred
+ * @param length_threshold    Segment shorter than this will be discarded
+ *                            segment farther than this will be regarded as an outlier
+ *                            If zero, Canny() is not applied and the input image is taken as an edge image.
  */
-+ (FastLineDetector*)createFastLineDetector:(int)_length_threshold NS_SWIFT_NAME(createFastLineDetector(_length_threshold:));
++ (FastLineDetector*)createFastLineDetector:(int)length_threshold NS_SWIFT_NAME(createFastLineDetector(length_threshold:));
 
 /**
  * Creates a smart pointer to a FastLineDetector object and initializes it
  *
- *                                          segment farther than this will be
- *                                          regarded as an outlier
- *                                          hysteresis procedure in Canny()
- *                                          hysteresis procedure in Canny()
- *                                          If zero, Canny() is not applied and the input
- *                                          image is taken as an edge image.
- *                                          will be perfomred
+ *                            segment farther than this will be regarded as an outlier
+ *                            If zero, Canny() is not applied and the input image is taken as an edge image.
  */
 + (FastLineDetector*)createFastLineDetector NS_SWIFT_NAME(createFastLineDetector());
 
